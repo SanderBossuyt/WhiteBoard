@@ -1,0 +1,34 @@
+// eigen mixins
+@mixin rotate($radius) {
+	-webkit-transform: rotate($radius);
+	-ms-transform: rotate($radius);
+	-moz-transform: rotate($radius);
+	-o-transform: rotate($radius);
+	transform: rotate($radius);
+}
+
+@mixin box-shadow {
+	box-shadow: 0 0 25px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 0 25px rgba(0, 0, 0, .4);
+	-o-box-shadow: 0 0 25px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 25px rgba(0, 0, 0, .4);
+}
+
+@mixin translate($one, $two) {
+	transform: translate($one, $two);
+}
+
+
+@mixin skew($one, $two) {
+	-webkit-transform: skew($one, $two);
+	-moz-transform: skew($one, $two);
+	-o-transform: skew($one, $two);
+	transform: skew($one, $two);
+}
+
+@mixin transition($one, $two) {
+	-moz-transition: $one $two;
+	-o-transition: $one $two;
+	-webkit-transition: $one $two;
+	transition: $one $two;
+}
