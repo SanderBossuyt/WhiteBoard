@@ -13,9 +13,9 @@ $routes = array(
     	'controller' => 'WhiteBoards',
     	'action' => 'detail'
 	),
-    'done' => array(
+    'drawing' => array(
         'controller' => 'WhiteBoards',
-        'action' => 'done'
+        'action' => 'drawing'
     ),
     'register' => array(
         'controller' => 'Users',
@@ -29,9 +29,9 @@ $routes = array(
         'controller' => 'Users',
         'action' => 'logout'
     ),
-    'upload' => array(
+    'expl' => array(
         'controller' => 'WhiteBoards',
-        'action' => 'upload'
+        'action' => 'expl'
     ) 
 );
 

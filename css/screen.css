@@ -67,3 +67,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 html {
   font-size: 62.5%;
 }
+
+/* line 8, ../_scss/screen.scss */
+body {
+  color: #000000;
+  background-color: #fbf780;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.6em;
+  line-height: 1.9em;
+}
+
+/* line 17, ../_scss/screen.scss */
+h1 {
+  font-size: 1.8em;
+}
+
+/* line 21, ../_scss/screen.scss */
+.box {
+  background-color: #81b9e4;
+  display: block;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+/* line 28, ../_scss/screen.scss */
+.error {
+  color: #7a1919;
+  font-size: 17px;
+  display: block;
+}
+
+/* line 34, ../_scss/screen.scss */
+.info {
+  color: #f9f9f9;
+  font-size: 17px;
+  display: block;
+}
+
+/* line 40, ../_scss/screen.scss */
+.hidden {
+  display: none;
+}
+
+/* line 44, ../_scss/screen.scss */
+.boards {
+  height: 350px;
+  width: 400px;
+  overflow: scroll;
+  border: 2px solid black;
+}
+
+/* line 51, ../_scss/screen.scss */
+li {
+  background-color: white;
+  width: 180px;
+  height: 110px;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* line 59, ../_scss/screen.scss */
+.whiteboard {
+  height: 400px;
+  background-color: #f9f9f9;
+}
+
+/* line 64, ../_scss/screen.scss */
+header {
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
