@@ -15,7 +15,6 @@ module.exports = (function(){
 		var itemke = new Item(data);
 	}
 		
-
 	return application;
 })();
 

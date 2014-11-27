@@ -30,24 +30,6 @@ class WhiteBoardDAO extends DAO {
 		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function selectBoardPics($board_id) {
-		$sql = "SELECT * FROM `images`
-				WHERE `board_id` = :board_id";
-		$stmt = $this->pdo->prepare($sql);
-		$stmt->bindValue(':board_id', $board_id);
-		$stmt->execute();
-		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
-	}
-
-	public function selectBoardVids($board_id) {
-		$sql = "SELECT * FROM `videos`
-				WHERE `board_id` = :board_id";
-		$stmt = $this->pdo->prepare($sql);
-		$stmt->bindValue(':board_id', $board_id);
-		$stmt->execute();
-		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
-	}
-
 	public function selectById($id) {
 		$sql = "SELECT * FROM `boards` 
 				WHERE `id` = :id";
