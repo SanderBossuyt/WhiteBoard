@@ -5,7 +5,6 @@ module.exports = (function(){
 		if (window.File && window.FileReader && window.FileList && window.Blob) {
 			var imageInput = document.querySelector("input[name=image]");
 			initImageInput(imageInput);
-
 		}
 	}
 

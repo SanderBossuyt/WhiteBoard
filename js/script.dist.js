@@ -6,18 +6,18 @@
 	var formImage = require('./classes/formImageValidation');
 
 	function init() {
-		console.log("init");
+
 		var splitting = document.URL.split("?page=")[1];
 		var splitting2 = splitting.split("&")[0];
 		
 		if (splitting2 === "register") {
-			console.log("reg");
+			
 		new formReg();
 		new formImage();
 		};
 		
 		if (splitting2 === "drawing") {
-			console.log("drawing");
+			
 			new application(document.querySelector('.whiteboard'));
 		};
 
@@ -46,32 +46,18 @@ module.exports = (function(){
 	
 	function application(whiteboard) {
 
-		//$('#newBoard').submit(this.changeHandler.bind(this));
-
-
-		this.whiteboard = whiteboard
+		this.whiteboard = whiteboard;
 		
-		
-
 		var items = this.whiteboard.querySelectorAll(".item");
 		for(var i = 0; i< items.length; i++){
 			this.createPostit(items[i]);
-		}
-		
+		}	
 	}
 	
 	application.prototype.createPostit = function(data) {
 		var itemke = new Item(data);
 	}
 		
-		
-			
-	
-
-	application.prototype.changeHandler = function(e){
-		
- 	}
-
 
 	return application;
 })();
@@ -85,7 +71,6 @@ module.exports = (function(){
 		if (window.File && window.FileReader && window.FileList && window.Blob) {
 			var imageInput = document.querySelector("input[name=image]");
 			initImageInput(imageInput);
-
 		}
 	}
 
@@ -219,7 +204,6 @@ module.exports = (function(){
 	
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
-		console.log(this.el.classList[2]);
 		var splitting = document.URL.split("id=")[1];
 
 		$.ajax({ 

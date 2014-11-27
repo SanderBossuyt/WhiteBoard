@@ -28,7 +28,6 @@ module.exports = (function(){
 	
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
-		console.log(this.el.classList[2]);
 		var splitting = document.URL.split("id=")[1];
 
 		$.ajax({ 

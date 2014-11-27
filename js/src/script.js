@@ -5,18 +5,18 @@
 	var formImage = require('./classes/formImageValidation');
 
 	function init() {
-		console.log("init");
+
 		var splitting = document.URL.split("?page=")[1];
 		var splitting2 = splitting.split("&")[0];
 		
 		if (splitting2 === "register") {
-			console.log("reg");
+			
 		new formReg();
 		new formImage();
 		};
 		
 		if (splitting2 === "drawing") {
-			console.log("drawing");
+			
 			new application(document.querySelector('.whiteboard'));
 		};
 
