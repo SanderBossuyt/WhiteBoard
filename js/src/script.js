@@ -22,7 +22,7 @@
 
 		$('#newBoard').submit(function(event) {
 			event.preventDefault();
-				$.ajax({ 
+				$.ajax({
 					type:"POST",
 					url:"index.php?page=detail", 
 					data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
