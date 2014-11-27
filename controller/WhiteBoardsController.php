@@ -133,12 +133,6 @@ function __construct() {
 	
 	$items = $this->whiteboardDAO->selectBoardPostits($board['id']);
 	$this->set('items', $items);
-
-	/*$pics = $this->whiteboardDAO->selectBoardPics($board['id']);
-	$this->set('pics', $pics);
-
-	$vids = $this->whiteboardDAO->selectBoardVids($board['id']);
-	$this->set('vids', $vids);*/
 }
 
 }
