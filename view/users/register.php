@@ -70,7 +70,7 @@
         </div>
         
         <div class="form-group">
-            <div><input type="submit" value="go go go !" class="reg"></div>
+            <div><input type="submit" value="Let's go for it !" class="reg"></div>
         </div>
     
     </form>

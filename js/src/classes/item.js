@@ -4,7 +4,7 @@ module.exports = (function(){
 		this.teller  = 0;
 		this.el = el;
 		this.el.addEventListener('mousedown', this.mousedownHandler.bind(this));
-		
+
 	}
 	
 	item.prototype.mousedownHandler = function(event){
@@ -35,7 +35,6 @@ module.exports = (function(){
 			url:"index.php?page=drawing&id="+ splitting, 
 			data: "id=" + this.el.classList[2] + "&x=" + (event.x - this.offsetX) + "&y=" + (event.y - this.offsetY) + "&action=" + "Update Position",
 			success:function(response){ 
-				//console.log(response);
 		   	}
 		}); 
 

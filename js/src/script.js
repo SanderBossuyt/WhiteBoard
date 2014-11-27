@@ -23,8 +23,10 @@
 		$('#newBoard').submit(function(event) {
 
 			event.preventDefault();
+
 			//ajax call naar php vernieuwen persoonlijke boards lijst
-			//don't copy this mothef*ckers, SHAME ON YOU GITHUBBERS
+			//don't copy this public code mothef*ckers, SHAME ON YOU GITHUBBERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 				$.ajax({
 					type:"POST",
 					url:"index.php?page=detail", 
@@ -34,7 +36,7 @@
 						var tata = response.split("</h1>")[1];
 						var tatata = tata.split("</form")[0];
 		    			$(".alles").html(tatata);
-		    			
+
 		    		}
 				}); 
 		});
