@@ -27,7 +27,10 @@ function __construct() {
 		}
 
 		
-
+			$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
+			
+		
+		
 
 
 		if (!empty($_POST)) {
@@ -59,7 +62,7 @@ function __construct() {
 			}
 		}
 
-		$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
+		//$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
 		$this->set('boards', $boards);
 
 	}
@@ -71,15 +74,74 @@ function __construct() {
 	}
 
 	public function drawing() {
+
+
 	$board = $this->whiteboardDAO->selectBoard($_GET["id"]);
-		$this->set('board', $board);
-	
+	$this->set('board', $board);
+
+
+
+	if (!empty($_POST)) {
+			if ($_POST["action"] == 'Update Position') {
+
+				if(empty($_POST['x'])) {
+					$errors['x'] = 'Please enter a x';
+				}
+
+				if(empty($_POST['y'])) {
+					$errors['y'] = 'Please enter a y';
+				}
+
+				if(empty($_POST['id'])) {
+					$errors['id'] = 'Please enter an id';
+				}
+
+
+				if(empty($errors)) {
+				
+				$pos = array(
+						"x"=>$_POST['x'],
+						"y"=>$_POST['y'],
+						"id"=>$_POST['id']
+					);
+
+				$insertPos = $this->whiteboardDAO->update($pos);
+				
+				if(!empty($insertPos)) {
+					$_SESSION['info'] = 'your board is added';
+					header('Location: index.php?page=detail');
+					exit();
+				} else {
+					$_SESSION['error'] = 'board add failed';
+				}
+			}else{
+				$this->set('errors', $errors);
+			}
+
+				
+			}
 	}
 
+
+
+
+
+
+
+
+	
+	
+	$items = $this->whiteboardDAO->selectBoardPostits($board['id']);
+	$this->set('items', $items);
+
+	/*$pics = $this->whiteboardDAO->selectBoardPics($board['id']);
+	$this->set('pics', $pics);
+
+	$vids = $this->whiteboardDAO->selectBoardVids($board['id']);
+	$this->set('vids', $vids);*/
 }
 
-
-
+}
 
 
 

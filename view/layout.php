@@ -7,7 +7,7 @@
     <meta name="keywords" content="devine cpIII">
     <link href="css/screen.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="scripts/modernizr.custom.92176.js"></script>
-	<title>Tender</title>
+	<title>Whiteboard - Scrum</title>
 
 </head>
 <body>
@@ -30,7 +30,7 @@
 <?php if(!empty($_SESSION['error'])): ?><div class="error box"><?php echo $_SESSION['error'];?></div><?php endif; ?>
 
 <?php echo $content; ?>
-
+<script src="js/jquery.min.js"></script>
 <script src="js/script.dist.js"></script>
 </body>
 </html>

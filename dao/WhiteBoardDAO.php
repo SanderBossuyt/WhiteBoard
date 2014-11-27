@@ -21,6 +21,33 @@ class WhiteBoardDAO extends DAO {
 		return  $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
+	public function selectBoardPostits($board_id) {
+		$sql = "SELECT * FROM `items`
+				WHERE `board_id` = :board_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':board_id', $board_id);
+		$stmt->execute();
+		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function selectBoardPics($board_id) {
+		$sql = "SELECT * FROM `images`
+				WHERE `board_id` = :board_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':board_id', $board_id);
+		$stmt->execute();
+		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function selectBoardVids($board_id) {
+		$sql = "SELECT * FROM `videos`
+				WHERE `board_id` = :board_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':board_id', $board_id);
+		$stmt->execute();
+		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function selectById($id) {
 		$sql = "SELECT * FROM `boards` 
 				WHERE `id` = :id";
@@ -58,5 +85,45 @@ class WhiteBoardDAO extends DAO {
 		
 		return $errors;
 		}
+
+
+
+
+	public function selectByIdPostit($id) {
+		$sql = "SELECT * FROM `items` 
+				WHERE `id` = :id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':id', $id);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	public function update($data){
+
+		$errors = $this->getValidationErrors2($data);
+		if (empty($errors)) {
+			$sql = "UPDATE `items` SET `x` = :x, `y` = :y WHERE `id` = :id";
+			$stmt = $this->pdo->prepare($sql);
+			$stmt->bindValue(':x', $data['x']);
+			$stmt->bindValue(':y', $data['y']);
+			$stmt->bindValue(':id', $data['id']);
+			if($stmt->execute()) {
+				$selectId=$this->pdo->lastInsertId();
+				return $this->selectByIdPostit($selectId);
+			}
+			
+		}
+		return false;
+	}
+
+	public function getValidationErrors2($data) {
+		$errors = array();
+		if(!isset($data['id'])) {
+			$errors['id'] = "Please fill in a id";
+		}
+		
+		return $errors;
+
+	}
 
 }
