@@ -101,7 +101,13 @@ class WhiteBoardDAO extends DAO {
 	public function getValidationErrors2($data) {
 		$errors = array();
 		if(!isset($data['id'])) {
-			$errors['id'] = "Please fill in a id";
+			$errors['id'] = "Please fill in an id";
+		}
+		if(!isset($data['x'])) {
+			$errors['x'] = "Please fill in an x";
+		}
+		if(!isset($data['y'])) {
+			$errors['y'] = "Please fill in an y";
 		}
 		
 		return $errors;
