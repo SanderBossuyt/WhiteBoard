@@ -26,12 +26,8 @@ function __construct() {
 			header('Location: index.php?page=index');
 		}
 
-		
-			$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
+		$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
 			
-		
-		
-
 
 		if (!empty($_POST)) {
 			if ($_POST["action"] == 'Add New Board') {
@@ -62,15 +58,12 @@ function __construct() {
 			}
 		}
 
-		//$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
 		$this->set('boards', $boards);
 
 	}
 	
 	public function expl() {
-		
-		
-	
+		//nothing to do in php with this page ;)
 	}
 
 	public function drawing() {
@@ -117,21 +110,11 @@ function __construct() {
 			}else{
 				$this->set('errors', $errors);
 			}
-
-				
+	
 			}
 	}
-
-
-
-
-
-
-
-
 	
-	
-	$items = $this->whiteboardDAO->selectBoardPostits($board['id']);
+	$items = $this->whiteboardDAO->selectBoardItems($board['id']);
 	$this->set('items', $items);
 }
 

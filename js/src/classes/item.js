@@ -4,7 +4,7 @@ module.exports = (function(){
 		this.teller  = 0;
 		this.el = el;
 		this.el.addEventListener('mousedown', this.mousedownHandler.bind(this));
-	
+		
 	}
 	
 	item.prototype.mousedownHandler = function(event){

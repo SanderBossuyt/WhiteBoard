@@ -21,7 +21,7 @@ class WhiteBoardDAO extends DAO {
 		return  $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
-	public function selectBoardPostits($board_id) {
+	public function selectBoardItems($board_id) {
 		$sql = "SELECT * FROM `items`
 				WHERE `board_id` = :board_id";
 		$stmt = $this->pdo->prepare($sql);
@@ -71,7 +71,7 @@ class WhiteBoardDAO extends DAO {
 
 
 
-	public function selectByIdPostit($id) {
+	public function selectByIdItem($id) {
 		$sql = "SELECT * FROM `items` 
 				WHERE `id` = :id";
 		$stmt = $this->pdo->prepare($sql);
@@ -91,9 +91,8 @@ class WhiteBoardDAO extends DAO {
 			$stmt->bindValue(':id', $data['id']);
 			if($stmt->execute()) {
 				$selectId=$this->pdo->lastInsertId();
-				return $this->selectByIdPostit($selectId);
+				return $this->selectByIdItem($selectId);
 			}
-			
 		}
 		return false;
 	}
