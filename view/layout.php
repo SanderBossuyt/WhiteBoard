@@ -6,6 +6,7 @@
     <meta name="description" content="whiteboard">
     <meta name="keywords" content="devine cpIII">
     <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/bebas/stylesheet.css"/>
     <script type="text/javascript" src="scripts/modernizr.custom.92176.js"></script>
 	<title>Whiteboard - Scrum</title>
 

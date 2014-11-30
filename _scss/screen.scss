@@ -7,22 +7,32 @@ html {
 
 body{
 	color: #000000;
-	background-color: #fbf780;
+	background-color: #e3e3e3;
 	font-family: helvetica, arial, sans-serif;
 	font-size:1.6em;
 	line-height:1.9em;
 
 }
+//classes
+.lijn{
 
-h1{
-	font-size:1.8em;
+	background: url(../images/assets/Login/Lijn.png);
+	width: 460px;
+	height: 3px;
+	margin: auto;
+	margin-top: 38px;
+	clear: both;
+
 }
-
+//weg??
 .box {
-	background-color: #81b9e4;
+	background-color: #363d50;
     display: block;    
     text-align: center;
     font-size: 1.8em;
+}
+.hidden{
+	display:none;
 }
 
 .error {
@@ -31,15 +41,219 @@ h1{
 	display:block;
 }
 
-.info {
-	color:#f9f9f9;
-	font-size: 17px;
-	display:block;
+
+h1{
+	font-size:1.8em;
 }
 
-.hidden{
-	display:none;
+//Login
+#Login_form{
+
+	margin:auto;
+	width: 460px;
+
+	h1{
+
+		background: url(../images/assets/Login/Logo.png);
+		width: 225px;
+		height: 171px;
+		margin: auto;
+		margin-top: 170px;
+		text-indent: -9999px;
+
+	}
+
+	form{
+
+		float: left;
+
+		input{
+
+			border: none;
+
+		}
+		#email,#password{
+
+			margin-top: 10px;
+			font-family: bebas_neueregular;
+			font-size:1em;
+			width: 459px;
+			height: 50px;
+			background-color: transparent;
+			background-image: url(../images/assets/Login/Input_background.png);
+
+		}
+		#login_button{
+
+			font-family: bebas_neueregular;
+			font-size:1.5em;
+			width: 360px;
+			height: 50px;
+			margin-left: 50px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-color: #363d50;
+			color: #ea5244;
+
+		}
+
+	}
+	#scrum{
+
+		float: left;
+		width: 228px;
+		font-family: bebas_neueregular;
+		font-size:1.5em;
+		
+		a{
+
+			text-decoration: none;
+			color:#363d50;
+			padding-left:84px;
+			margin-top: 10px;
+
+		}
+
+
+	}
+
+	#tussen_lijn{
+
+		float: left;
+		background: url(../images/assets/Login/tussenlijn.png);
+		width: 4px;
+		height: 47px;
+		margin: auto;
+
+	}
+	#create{
+
+		float: left;
+		width: 228px;
+		font-family: bebas_neueregular;
+		font-size:1.5em;
+
+		a{
+
+			text-decoration: none;
+			color:#363d50;
+			padding-left:84px;
+			padding-top: 10px;
+
+		}
+
+	}
+
+
+
+
 }
+
+
+//Registratie
+
+#Registratie_form{
+
+	margin:auto;
+	width: 460px;
+
+	h1{
+
+		background: url(../images/assets/Login/Logo.png);
+		width: 225px;
+		height: 171px;
+		margin: auto;
+		margin-top: 100px;
+		text-indent: -9999px;
+
+	}
+
+	form{
+
+		float: left;
+
+		input{
+
+			border: none;
+
+		}
+		#name_float{
+
+			float: left;
+
+		}
+		#last_float{
+
+			float: left;
+			margin-left: 14px;
+
+		}
+		#name,#last_name{
+
+			margin-top: 10px;
+			font-family: bebas_neueregular;
+			font-size:1em;
+			width: 221px;
+			height: 50px;
+			background-color: transparent;
+			background-image: url(../images/assets/Login/Input_name.png);			
+
+		}
+		#username,#email,#password,#confirm_password{
+
+			margin-top: 10px;
+			font-family: bebas_neueregular;
+			font-size:1em;
+			width: 458px;
+			height: 50px;
+			background-color: transparent;
+			background-image: url(../images/assets/Login/Input_background.png);
+
+		}
+
+		#registratie_button{
+
+			font-family: bebas_neueregular;
+			font-size:1.5em;
+			width: 360px;
+			height: 50px;
+			margin-left: 50px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-color: #363d50;
+			color: #ea5244;
+
+		}
+
+
+	}
+	#lijn_bottom{
+
+		background: url(../images/assets/Login/Lijn.png);
+		width: 460px;
+		height: 3px;
+		margin: auto;
+		margin-top: 38px;
+		margin-bottom: 100px;
+		clear: both;
+
+	}
+	
+
+}
+
+
+//Home
+
+
+
+// .info {
+// 	color:#f9f9f9;
+// 	font-size: 17px;
+// 	display:block;
+// }
+
+
 
 .boards{
 	height:350px;
@@ -61,11 +275,9 @@ li{
 	background: url('../images/assets/pattern.png');
 }
 
-header{
-	padding: 20px;
-	background-color: black;
-	color: white;
-}
+
+
+
 
 //postit---picture---video-----------------------------------------------------------------------------------------
 .postit{
