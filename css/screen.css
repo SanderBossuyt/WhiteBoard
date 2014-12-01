@@ -96,11 +96,13 @@ body {
 }
 
 /* line 34, ../_scss/screen.scss */
-.hidden {
-  display: none;
+.info {
+  color: #f9f9f9;
+  font-size: 17px;
+  display: block;
 }
 
-/* line 38, ../_scss/screen.scss */
+/* line 39, ../_scss/screen.scss */
 .error {
   color: #7a1919;
   font-size: 17px;
@@ -108,16 +110,21 @@ body {
 }
 
 /* line 45, ../_scss/screen.scss */
+.hidden {
+  display: none;
+}
+
+/* line 50, ../_scss/screen.scss */
 h1 {
   font-size: 1.8em;
 }
 
-/* line 50, ../_scss/screen.scss */
+/* line 55, ../_scss/screen.scss */
 #Login_form {
   margin: auto;
   width: 460px;
 }
-/* line 55, ../_scss/screen.scss */
+/* line 60, ../_scss/screen.scss */
 #Login_form h1 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -126,15 +133,15 @@ h1 {
   margin-top: 170px;
   text-indent: -9999px;
 }
-/* line 66, ../_scss/screen.scss */
+/* line 71, ../_scss/screen.scss */
 #Login_form form {
   float: left;
 }
-/* line 70, ../_scss/screen.scss */
+/* line 75, ../_scss/screen.scss */
 #Login_form form input {
   border: none;
 }
-/* line 75, ../_scss/screen.scss */
+/* line 80, ../_scss/screen.scss */
 #Login_form form #email, #Login_form form #password {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -144,7 +151,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_background.png);
 }
-/* line 86, ../_scss/screen.scss */
+/* line 91, ../_scss/screen.scss */
 #Login_form form #login_button {
   font-family: bebas_neueregular;
   font-size: 1.5em;
@@ -156,21 +163,21 @@ h1 {
   background-color: #363d50;
   color: #ea5244;
 }
-/* line 101, ../_scss/screen.scss */
+/* line 106, ../_scss/screen.scss */
 #Login_form #scrum {
   float: left;
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
 }
-/* line 108, ../_scss/screen.scss */
+/* line 113, ../_scss/screen.scss */
 #Login_form #scrum a {
   text-decoration: none;
   color: #363d50;
   padding-left: 84px;
   margin-top: 10px;
 }
-/* line 120, ../_scss/screen.scss */
+/* line 125, ../_scss/screen.scss */
 #Login_form #tussen_lijn {
   float: left;
   background: url(../images/assets/Login/tussenlijn.png);
@@ -178,14 +185,14 @@ h1 {
   height: 47px;
   margin: auto;
 }
-/* line 129, ../_scss/screen.scss */
+/* line 134, ../_scss/screen.scss */
 #Login_form #create {
   float: left;
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
 }
-/* line 136, ../_scss/screen.scss */
+/* line 141, ../_scss/screen.scss */
 #Login_form #create a {
   text-decoration: none;
   color: #363d50;
@@ -193,12 +200,12 @@ h1 {
   padding-top: 10px;
 }
 
-/* line 155, ../_scss/screen.scss */
+/* line 160, ../_scss/screen.scss */
 #Registratie_form {
   margin: auto;
   width: 460px;
 }
-/* line 160, ../_scss/screen.scss */
+/* line 165, ../_scss/screen.scss */
 #Registratie_form h1 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -207,24 +214,24 @@ h1 {
   margin-top: 100px;
   text-indent: -9999px;
 }
-/* line 171, ../_scss/screen.scss */
+/* line 176, ../_scss/screen.scss */
 #Registratie_form form {
   float: left;
 }
-/* line 175, ../_scss/screen.scss */
+/* line 180, ../_scss/screen.scss */
 #Registratie_form form input {
   border: none;
 }
-/* line 180, ../_scss/screen.scss */
+/* line 185, ../_scss/screen.scss */
 #Registratie_form form #name_float {
   float: left;
 }
-/* line 185, ../_scss/screen.scss */
+/* line 190, ../_scss/screen.scss */
 #Registratie_form form #last_float {
   float: left;
   margin-left: 14px;
 }
-/* line 191, ../_scss/screen.scss */
+/* line 196, ../_scss/screen.scss */
 #Registratie_form form #name, #Registratie_form form #last_name {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -234,7 +241,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_name.png);
 }
-/* line 202, ../_scss/screen.scss */
+/* line 207, ../_scss/screen.scss */
 #Registratie_form form #username, #Registratie_form form #email, #Registratie_form form #password, #Registratie_form form #confirm_password {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -244,7 +251,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_background.png);
 }
-/* line 214, ../_scss/screen.scss */
+/* line 219, ../_scss/screen.scss */
 #Registratie_form form #registratie_button {
   font-family: bebas_neueregular;
   font-size: 1.5em;
@@ -256,7 +263,7 @@ h1 {
   background-color: #363d50;
   color: #ea5244;
 }
-/* line 230, ../_scss/screen.scss */
+/* line 235, ../_scss/screen.scss */
 #Registratie_form #lijn_bottom {
   background: url(../images/assets/Login/Lijn.png);
   width: 460px;
@@ -267,7 +274,7 @@ h1 {
   clear: both;
 }
 
-/* line 258, ../_scss/screen.scss */
+/* line 259, ../_scss/screen.scss */
 .boards {
   height: 350px;
   width: 400px;
@@ -275,7 +282,7 @@ h1 {
   border: 2px solid black;
 }
 
-/* line 265, ../_scss/screen.scss */
+/* line 266, ../_scss/screen.scss */
 li {
   background-color: white;
   width: 180px;
@@ -284,13 +291,13 @@ li {
   display: inline-block;
 }
 
-/* line 273, ../_scss/screen.scss */
+/* line 274, ../_scss/screen.scss */
 .whiteboard {
   height: 750px;
   background: url("../images/assets/pattern.png");
 }
 
-/* line 283, ../_scss/screen.scss */
+/* line 284, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -303,12 +310,12 @@ li {
   left: 260px;
   top: 190px;
 }
-/* line 292, ../_scss/screen.scss */
+/* line 293, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 297, ../_scss/screen.scss */
+/* line 298, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -325,12 +332,12 @@ li {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 308, ../_scss/screen.scss */
+/* line 309, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 313, ../_scss/screen.scss */
+/* line 314, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

@@ -31,14 +31,19 @@ body{
     text-align: center;
     font-size: 1.8em;
 }
-.hidden{
-	display:none;
+.info {
+	color:#f9f9f9;
+	font-size: 17px;
+	display:block;
 }
-
 .error {
 	color:#7a1919;
 	font-size: 17px;
 	display:block;
+}
+
+.hidden{
+	display:none;
 }
 
 
@@ -247,11 +252,7 @@ h1{
 
 
 
-// .info {
-// 	color:#f9f9f9;
-// 	font-size: 17px;
-// 	display:block;
-// }
+
 
 
 

@@ -1,5 +1,5 @@
 
-<div id="Login_form">
+<div id="Login_form" class="center">
 
     <header><h1>Register</h1></header>
 
