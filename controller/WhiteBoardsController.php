@@ -1,13 +1,15 @@
 <?php
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 require_once WWW_ROOT . 'dao' . DS . 'WhiteBoardDAO.php';
-
+require_once WWW_ROOT . 'dao' . DS . 'ItemDAO.php';
 
 class WhiteBoardsController extends Controller {
 private $whiteboardDAO;
+private $itemDAO;
 
 function __construct() {
 	$this->whiteboardDAO = new WhiteBoardDAO();
+	$this->itemDAO = new ItemDAO();
 }
 
 	public function index() {
@@ -75,6 +77,8 @@ function __construct() {
 
 
 	if (!empty($_POST)) {
+		$errors = array();
+
 			if ($_POST["action"] == 'Update Position') {
 
 				if(empty($_POST['x'])) {
@@ -91,26 +95,65 @@ function __construct() {
 
 
 				if(empty($errors)) {
-				
-				$pos = array(
-						"x"=>$_POST['x'],
-						"y"=>$_POST['y'],
-						"id"=>$_POST['id']
-					);
-
-				$insertPos = $this->whiteboardDAO->update($pos);
-				
-				if(!empty($insertPos)) {
-					$_SESSION['info'] = 'your board is added';
-					header('Location: index.php?page=detail');
-					exit();
-				} else {
-					$_SESSION['error'] = 'board add failed';
-				}
-			}else{
-				$this->set('errors', $errors);
-			}
+					
+					$pos = array(
+							"x"=>$_POST['x'],
+							"y"=>$_POST['y'],
+							"id"=>$_POST['id']
+						);
 	
+					$insertPos = $this->whiteboardDAO->update($pos);
+					
+					if(!empty($insertPos)) {
+						$_SESSION['info'] = 'your board is added';
+						header('Location: index.php?page=detail');
+						exit();
+					} else {
+						$_SESSION['error'] = 'board add failed';
+					}
+				}else{
+					$this->set('errors', $errors);
+				}
+	
+			}else if($_POST["action"] == 'upload postit'){
+			
+				if(empty($_POST['postit'])) {
+					$errors['postit'] = 'Please enter a name';
+				}
+
+				if(empty($errors)) {
+					
+					$postit = array(
+							"content"=>$_POST["postit"],
+							"origin"=>"postit",
+							"board_id"=>$board['id'],
+							"x"=>200,
+							"y"=>200
+						);
+
+					$insertedpostit = $this->itemDAO->insert($postit);
+					
+					if(!empty($insertedpostit)) {
+						$_SESSION['info'] = 'your postit is added';
+						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
+						//exit();
+					
+					} else {
+						$_SESSION['error'] = 'postit add failed';
+					}
+				} 
+
+				$this->set('errors', $errors);
+
+
+			}else if($_POST["action"] == 'upload image'){
+
+				var_dump("update image");
+
+			}else if($_POST["action"] == 'upload video'){
+
+				var_dump("update vid");
+
 			}
 	}
 	

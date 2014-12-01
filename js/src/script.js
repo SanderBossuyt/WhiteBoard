@@ -43,6 +43,27 @@
 				}); 
 		});
 
+		$('#formuploadpostit').submit(function(event) {
+
+			
+
+			event.preventDefault();
+				$.ajax({
+					type:"POST",
+					url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
+					data: "postit=" + $('.postitje').val() + "&action=" + "upload postit",
+					success:function(response){ 
+						console.log("bambam");
+						var tata = response.split("<br />")[1];
+						var tatata = tata.split("<script")[0];
+						console.log(response);
+		    			$(".whiteboard").html(tatata);
+		    			new application(document.querySelector('.whiteboard'));
+
+		    		}
+				}); 
+		});
+
 	}
 
 

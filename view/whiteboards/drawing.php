@@ -1,4 +1,82 @@
 <a href="index.php?page=detail">go back</a>
+
+
+<div class="leftbalk">
+	
+	<form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadpostit" enctype="multipart/form-data">
+            
+            <div class="input text">
+                <label>
+                    <input type="text" class="postitje" name="postit" value="<?php if(!empty($_POST['postit'])) echo $_POST['postit'];?>" placeholder="postit content" />
+                    <p class="error<?php if(empty($errors['postit'])) echo ' hidden';?>" data-for="postit">Please enter your postits content</p>
+                </label>
+            </div>
+                    
+            <div class="form-group">
+                <div><input type="submit" name="action" value="upload postit" class="uploadpostit"></div>
+            </div>
+        
+    </form>
+
+
+
+
+      <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" id="formuploadimage" enctype="multipart/form-data">
+                <div class="form-group<?php if(!empty($errors['image'])) echo ' has-error'; ?>">
+            <label for="addImageImage">Image:</label>     
+                <input type="file" name="image" id="addImageImage" class="form-control" value="<?php if(!empty($_POST['image'])) echo $_POST['image'];?>" />
+                </br>
+                <span class="error hidden"><?php
+                    if(empty($errors['image'])) echo 'Please select a square image';
+                    else echo $errors['image'];
+                ?>
+                </span>      
+        </div>
+                <input type="submit" name="action" value="upload image" class="uploadimage">
+     </form>
+
+
+
+
+
+	<form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadvideo" enctype="multipart/form-data">
+            
+            <div class="input-text">
+                
+                <label for="addimage">Upload Video:</label>        
+                    <input type="file" name="video" id="addvideo" value="<?php if(!empty($_POST['video'])) echo $_POST['video'];?>" />
+                    <span class="error"<?php if(empty($error['video'])) echo 'style="display: none;"';?>><?php
+                    if(empty($error['video'])) echo 'gelieve een video te selecteren';
+                    else echo $error['video'];
+                    ?></span> 
+                
+            </div>
+                    
+            
+                <div><input type="submit" name="action" value="upload video" class="uploadvideo"></div>
+            
+        
+    </form>
+
+
+</div>
+
+
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="whiteboard">
 	<p> Board : <?php echo $board['name'] ?></p>
 	<p> aangemaakt op : <?php echo $board['creation_date'] ?></p>
