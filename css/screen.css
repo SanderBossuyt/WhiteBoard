@@ -78,6 +78,11 @@ body {
 }
 
 /* line 17, ../_scss/screen.scss */
+.dummy {
+  clear: both;
+}
+
+/* line 22, ../_scss/screen.scss */
 .lijn {
   background: url(../images/assets/Login/Lijn.png);
   width: 460px;
@@ -87,7 +92,7 @@ body {
   clear: both;
 }
 
-/* line 28, ../_scss/screen.scss */
+/* line 33, ../_scss/screen.scss */
 .box {
   background-color: #363d50;
   display: block;
@@ -95,36 +100,36 @@ body {
   font-size: 1.8em;
 }
 
-/* line 34, ../_scss/screen.scss */
+/* line 39, ../_scss/screen.scss */
 .info {
   color: #f9f9f9;
   font-size: 17px;
   display: block;
 }
 
-/* line 39, ../_scss/screen.scss */
+/* line 44, ../_scss/screen.scss */
 .error {
   color: #7a1919;
   font-size: 17px;
   display: block;
 }
 
-/* line 45, ../_scss/screen.scss */
+/* line 50, ../_scss/screen.scss */
 .hidden {
   display: none;
 }
 
-/* line 50, ../_scss/screen.scss */
-h1 {
+/* line 57, ../_scss/screen.scss */
+header h1 {
   font-size: 1.8em;
 }
 
-/* line 55, ../_scss/screen.scss */
+/* line 63, ../_scss/screen.scss */
 #Login_form {
   margin: auto;
   width: 460px;
 }
-/* line 60, ../_scss/screen.scss */
+/* line 68, ../_scss/screen.scss */
 #Login_form h1 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -133,15 +138,15 @@ h1 {
   margin-top: 170px;
   text-indent: -9999px;
 }
-/* line 71, ../_scss/screen.scss */
+/* line 79, ../_scss/screen.scss */
 #Login_form form {
   float: left;
 }
-/* line 75, ../_scss/screen.scss */
+/* line 83, ../_scss/screen.scss */
 #Login_form form input {
   border: none;
 }
-/* line 80, ../_scss/screen.scss */
+/* line 88, ../_scss/screen.scss */
 #Login_form form #email, #Login_form form #password {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -151,7 +156,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_background.png);
 }
-/* line 91, ../_scss/screen.scss */
+/* line 99, ../_scss/screen.scss */
 #Login_form form #login_button {
   font-family: bebas_neueregular;
   font-size: 1.5em;
@@ -163,21 +168,21 @@ h1 {
   background-color: #363d50;
   color: #ea5244;
 }
-/* line 106, ../_scss/screen.scss */
+/* line 114, ../_scss/screen.scss */
 #Login_form #scrum {
   float: left;
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
 }
-/* line 113, ../_scss/screen.scss */
+/* line 121, ../_scss/screen.scss */
 #Login_form #scrum a {
   text-decoration: none;
   color: #363d50;
   padding-left: 84px;
   margin-top: 10px;
 }
-/* line 125, ../_scss/screen.scss */
+/* line 133, ../_scss/screen.scss */
 #Login_form #tussen_lijn {
   float: left;
   background: url(../images/assets/Login/tussenlijn.png);
@@ -185,14 +190,14 @@ h1 {
   height: 47px;
   margin: auto;
 }
-/* line 134, ../_scss/screen.scss */
+/* line 142, ../_scss/screen.scss */
 #Login_form #create {
   float: left;
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
 }
-/* line 141, ../_scss/screen.scss */
+/* line 149, ../_scss/screen.scss */
 #Login_form #create a {
   text-decoration: none;
   color: #363d50;
@@ -200,12 +205,12 @@ h1 {
   padding-top: 10px;
 }
 
-/* line 160, ../_scss/screen.scss */
+/* line 163, ../_scss/screen.scss */
 #Registratie_form {
   margin: auto;
   width: 460px;
 }
-/* line 165, ../_scss/screen.scss */
+/* line 168, ../_scss/screen.scss */
 #Registratie_form h1 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -214,24 +219,24 @@ h1 {
   margin-top: 100px;
   text-indent: -9999px;
 }
-/* line 176, ../_scss/screen.scss */
+/* line 179, ../_scss/screen.scss */
 #Registratie_form form {
   float: left;
 }
-/* line 180, ../_scss/screen.scss */
+/* line 183, ../_scss/screen.scss */
 #Registratie_form form input {
   border: none;
 }
-/* line 185, ../_scss/screen.scss */
+/* line 188, ../_scss/screen.scss */
 #Registratie_form form #name_float {
   float: left;
 }
-/* line 190, ../_scss/screen.scss */
+/* line 193, ../_scss/screen.scss */
 #Registratie_form form #last_float {
   float: left;
   margin-left: 14px;
 }
-/* line 196, ../_scss/screen.scss */
+/* line 199, ../_scss/screen.scss */
 #Registratie_form form #name, #Registratie_form form #last_name {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -241,7 +246,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_name.png);
 }
-/* line 207, ../_scss/screen.scss */
+/* line 210, ../_scss/screen.scss */
 #Registratie_form form #username, #Registratie_form form #email, #Registratie_form form #password, #Registratie_form form #confirm_password {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -251,7 +256,7 @@ h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_background.png);
 }
-/* line 219, ../_scss/screen.scss */
+/* line 222, ../_scss/screen.scss */
 #Registratie_form form #registratie_button {
   font-family: bebas_neueregular;
   font-size: 1.5em;
@@ -263,7 +268,7 @@ h1 {
   background-color: #363d50;
   color: #ea5244;
 }
-/* line 235, ../_scss/screen.scss */
+/* line 238, ../_scss/screen.scss */
 #Registratie_form #lijn_bottom {
   background: url(../images/assets/Login/Lijn.png);
   width: 460px;
@@ -274,7 +279,83 @@ h1 {
   clear: both;
 }
 
-/* line 259, ../_scss/screen.scss */
+/* line 253, ../_scss/screen.scss */
+nav {
+  background-color: #363d50;
+  height: 80px;
+}
+/* line 258, ../_scss/screen.scss */
+nav header {
+  float: left;
+}
+/* line 262, ../_scss/screen.scss */
+nav header h1 {
+  background: url(../images/assets/Login/Logo.png);
+  width: 225px;
+  height: 171px;
+  margin-left: 20px;
+  margin-top: -10px;
+  text-indent: -9999px;
+}
+/* line 274, ../_scss/screen.scss */
+nav ul {
+  list-style-type: none;
+  width: 430px;
+  height: 60px;
+  margin: auto;
+  padding-top: 30px;
+}
+/* line 282, ../_scss/screen.scss */
+nav ul li {
+  float: left;
+}
+/* line 286, ../_scss/screen.scss */
+nav ul li a {
+  text-decoration: none;
+  margin-left: 25px;
+  font-family: bebas_neueregular;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+/* line 294, ../_scss/screen.scss */
+nav ul li a:hover {
+  color: #ea5244;
+  text-decoration: underline;
+}
+/* line 306, ../_scss/screen.scss */
+nav #userinfo {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  width: 300px;
+}
+/* line 313, ../_scss/screen.scss */
+nav #userinfo p {
+  float: left;
+  color: #ffffff;
+  font-family: bebas_neueregular;
+  font-size: 1.2em;
+  margin-top: 17px;
+  margin-right: 5px;
+}
+/* line 322, ../_scss/screen.scss */
+nav #userinfo p span {
+  color: #ea5244;
+  margin: 0 5px;
+}
+/* line 330, ../_scss/screen.scss */
+nav #userinfo img {
+  float: left;
+  border: 1px solid #ea5244;
+}
+/* line 336, ../_scss/screen.scss */
+nav #userinfo a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* line 355, ../_scss/screen.scss */
 .boards {
   height: 350px;
   width: 400px;
@@ -282,22 +363,13 @@ h1 {
   border: 2px solid black;
 }
 
-/* line 266, ../_scss/screen.scss */
-li {
-  background-color: white;
-  width: 180px;
-  height: 110px;
-  margin: 10px;
-  display: inline-block;
-}
-
-/* line 274, ../_scss/screen.scss */
+/* line 361, ../_scss/screen.scss */
 .whiteboard {
   height: 750px;
   background: url("../images/assets/pattern.png");
 }
 
-/* line 284, ../_scss/screen.scss */
+/* line 371, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -310,12 +382,12 @@ li {
   left: 260px;
   top: 190px;
 }
-/* line 293, ../_scss/screen.scss */
+/* line 380, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 298, ../_scss/screen.scss */
+/* line 385, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -332,12 +404,12 @@ li {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 309, ../_scss/screen.scss */
+/* line 396, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 314, ../_scss/screen.scss */
+/* line 401, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

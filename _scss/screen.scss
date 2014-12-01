@@ -14,6 +14,11 @@ body{
 
 }
 //classes
+.dummy{
+
+	clear: both;
+
+}
 .lijn{
 
 	background: url(../images/assets/Login/Lijn.png);
@@ -46,9 +51,12 @@ body{
 	display:none;
 }
 
+header{
 
-h1{
-	font-size:1.8em;
+
+	h1{
+		font-size:1.8em;
+	}
 }
 
 //Login
@@ -146,12 +154,7 @@ h1{
 			padding-top: 10px;
 
 		}
-
 	}
-
-
-
-
 }
 
 
@@ -246,7 +249,100 @@ h1{
 	
 
 }
+//Nav
+nav{
 
+	background-color: #363d50;
+	height: 80px;
+
+	header{
+
+		float: left;
+
+		h1{
+
+			background: url(../images/assets/Login/Logo.png);
+			width: 225px;
+			height: 171px;
+			margin-left: 20px;	
+			margin-top: -10px;		
+			text-indent: -9999px;
+
+		}
+	}
+
+	ul{
+
+		list-style-type: none;
+		width: 430px;
+		height: 60px;
+		margin: auto;
+		padding-top: 30px;
+
+		li{
+
+			float: left;
+
+			a{
+
+			    text-decoration: none;
+			    margin-left: 25px;
+			    font-family: bebas_neueregular;
+			    font-size: 1.5em;
+			    color: #ffffff;
+
+			    &:hover{
+
+					color: #ea5244;
+					text-decoration: underline;
+
+			    }
+
+			}
+		}
+
+	}
+
+	#userinfo{
+
+		position: absolute;
+		top: 10px;
+		right: -30px;
+		width: 300px;
+
+		p{
+
+			float: left;
+			color: #ffffff;
+			font-family: bebas_neueregular;
+			font-size: 1.2em;
+			margin-top: 17px;
+			margin-right: 5px;
+
+			span{
+
+				color: #ea5244;
+				margin: 0 5px;
+
+			}	
+
+		}
+		img{
+
+			float: left;
+			border: 1px solid #ea5244; 
+
+		}
+		a{
+
+			color:#ffffff;
+			text-decoration: none;
+			margin-left: 10px;
+
+		}
+
+	}
+}
 
 //Home
 
@@ -262,15 +358,6 @@ h1{
 	overflow: scroll;
 	border: 2px solid black;
 }
-
-li{
-	background-color: white;
-	width:180px;
-	height:110px;
-	margin: 10px;
-	display: inline-block;
-}
-
 .whiteboard{
 	height: 750px;;
 	background: url('../images/assets/pattern.png');

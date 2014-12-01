@@ -20,15 +20,38 @@
 <?php
     if (!empty($_SESSION['user'])) {
     ?>
-        <p class="signed">Signed in as <?php echo $_SESSION['user']['username'];?> - <a href="index.php?page=logout" class="navbar-link">Logout</a></p>
-         <?php
-         echo "<img src=\"uploads/";
-         echo $_SESSION['user']['picture'];
-         echo "_th.";
-         echo $_SESSION['user']['extension'];
-         echo "\"/>";
-    }
-?>
+
+        <nav>
+
+            <header class="header">
+
+                <h1>Navigatie</h1>
+
+            </header>
+
+            <ul>
+                <li><a href="index.php?page=detail">Boards</a></li>
+                <li><a href="index.php?page=expl">What is scrum?</a></li>
+                <li><a href="index.php?page=settings">Settings</a></li>
+            </ul>
+        
+            <div id="userinfo">
+                <p class="signed">Signed in as <span><?php echo $_SESSION['user']['username'];?></span></p>
+                 <?php
+                     echo "<img src=\"uploads/";
+                     echo $_SESSION['user']['picture'];
+                     echo "_th.";
+                     echo $_SESSION['user']['extension'];
+                     echo "\"/>";
+                ?>
+                <p><a id="logout" href="index.php?page=logout" class="navbar-link">Logout</a></p>
+            </div>
+
+        </nav>
+
+<?php } ?>
+<div class="dummy"></div>
+    
 </header>    
 <?php if(!empty($_SESSION['info'])): ?><div class="info box"><?php echo $_SESSION['info'];?></div><?php endif; ?>
 <?php if(!empty($_SESSION['error'])): ?><div class="error box"><?php echo $_SESSION['error'];?></div><?php endif; ?>
