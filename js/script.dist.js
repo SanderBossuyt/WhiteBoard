@@ -13,7 +13,9 @@
 		if (splitting2 === "register") {
 			
 		new formReg();
+		
 		new formImage();
+
 		};
 		
 		if (splitting2 === "drawing") {
@@ -131,7 +133,7 @@ module.exports = (function(){
 		var regpasswordInput = document.querySelector("input[name=regpassword]");
 		var regconfirmInput = document.querySelector("input[name=confirm_password]");
 		
-		var contactform = document.getElementById("formregister");
+		var contactform = document.getElementById("Registratie_form");
 		
 		regnameInput.addEventListener("blur", this.validateThis);
 		reglastnameInput.addEventListener("blur", this.validateThis);
