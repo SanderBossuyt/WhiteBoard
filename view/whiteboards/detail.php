@@ -21,8 +21,8 @@
 		?>
 	</ul>
 </div>
-<br />
 
+<br />
 <form method="post" id="newBoard" action="index.php?page=detail" class="form-inline">
     <div class="form-group">
 		<div class="input text">
