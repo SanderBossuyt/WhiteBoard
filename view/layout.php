@@ -25,7 +25,7 @@
 
             <header class="header">
 
-                <h1>Navigatie</h1>
+                <h2>Navigatie</h2>
 
             </header>
 
