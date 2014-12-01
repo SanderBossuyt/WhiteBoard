@@ -12,7 +12,9 @@
 		if (splitting2 === "register") {
 			
 		new formReg();
+		
 		new formImage();
+
 		};
 		
 		if (splitting2 === "drawing") {
