@@ -53,8 +53,7 @@
 <div class="dummy"></div>
     
 </header>    
-<?php if(!empty($_SESSION['info'])): ?><div class="info box"><?php echo $_SESSION['info'];?></div><?php endif; ?>
-<?php if(!empty($_SESSION['error'])): ?><div class="error box"><?php echo $_SESSION['error'];?></div><?php endif; ?>
+
 
 <?php echo $content; ?>
 <script src="js/jquery.min.js"></script>

@@ -1,7 +1,7 @@
-<a href="index.php?page=detail">go back</a>
-
-
 <div class="leftbalk">
+
+    <p> Board : <?php echo $board['name'] ?></p>
+    <p> aangemaakt op : <?php echo $board['creation_date'] ?></p>
 	
 	<form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadpostit" enctype="multipart/form-data">
             
@@ -58,28 +58,13 @@
         
     </form>
 
-
+<a href="index.php?page=detail">go back</a>
 </div>
 
 
 <br />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="whiteboard">
-	<p> Board : <?php echo $board['name'] ?></p>
-	<p> aangemaakt op : <?php echo $board['creation_date'] ?></p>
 
 		<?php
     		if (!empty($items)) {
@@ -118,3 +103,4 @@
 
 
 </div>
+<div id="achtergrond_whiteboard"></div>
