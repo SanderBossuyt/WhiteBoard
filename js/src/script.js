@@ -3,15 +3,18 @@
 	var application = require('./classes/application');
 	var formReg = require('./classes/formValidationRegister');
 	var formImage = require('./classes/formImageValidation');
+	var detail = require('./classes/detailPage');
 
 	function init() {
 
 		var splitting = document.URL.split("?page=")[1];
 		var splitting2 = splitting.split("&")[0];
-		
+		new detail();
 		if (splitting2 === "register") {
 			
 		new formReg();
+
+		
 		
 		new formImage();
 
@@ -45,7 +48,6 @@
 
 		$('#formuploadpostit').submit(function(event) {
 
-			
 
 			event.preventDefault();
 				$.ajax({
@@ -53,10 +55,10 @@
 					url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
 					data: "postit=" + $('.postitje').val() + "&action=" + "upload postit",
 					success:function(response){ 
-						console.log("bambam");
+						
 						var tata = response.split("<br />")[1];
 						var tatata = tata.split("<script")[0];
-						console.log(response);
+						
 		    			$(".whiteboard").html(tatata);
 		    			new application(document.querySelector('.whiteboard'));
 

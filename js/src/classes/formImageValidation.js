@@ -2,6 +2,7 @@ module.exports = (function(){
 
 	
 	function formImageValidation() {
+		console.log("bam");
 		if (window.File && window.FileReader && window.FileList && window.Blob) {
 			var imageInput = document.querySelector("input[name=image]");
 			initImageInput(imageInput);

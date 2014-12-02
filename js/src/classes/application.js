@@ -9,7 +9,7 @@ module.exports = (function(){
 		for(var i = 0; i< items.length; i++){
 			this.createPostit(items[i]);
 		}	
-	}
+	};
 	
 	application.prototype.createPostit = function(data) {
 		var itemke = new Item(data);

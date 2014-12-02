@@ -4,15 +4,18 @@
 	var application = require('./classes/application');
 	var formReg = require('./classes/formValidationRegister');
 	var formImage = require('./classes/formImageValidation');
+	var detail = require('./classes/detailPage');
 
 	function init() {
 
 		var splitting = document.URL.split("?page=")[1];
 		var splitting2 = splitting.split("&")[0];
-		
+		new detail();
 		if (splitting2 === "register") {
 			
 		new formReg();
+
+		
 		
 		new formImage();
 
@@ -46,7 +49,6 @@
 
 		$('#formuploadpostit').submit(function(event) {
 
-			
 
 			event.preventDefault();
 				$.ajax({
@@ -54,10 +56,10 @@
 					url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
 					data: "postit=" + $('.postitje').val() + "&action=" + "upload postit",
 					success:function(response){ 
-						console.log("bambam");
+						
 						var tata = response.split("<br />")[1];
 						var tatata = tata.split("<script")[0];
-						console.log(response);
+						
 		    			$(".whiteboard").html(tatata);
 		    			new application(document.querySelector('.whiteboard'));
 
@@ -70,7 +72,7 @@
 
 	init();
 })();
-},{"./classes/application":2,"./classes/formImageValidation":3,"./classes/formValidationRegister":4}],2:[function(require,module,exports){
+},{"./classes/application":2,"./classes/detailPage":3,"./classes/formImageValidation":4,"./classes/formValidationRegister":5}],2:[function(require,module,exports){
 module.exports = (function(){
 	var Item = require('./item');
 	
@@ -82,7 +84,7 @@ module.exports = (function(){
 		for(var i = 0; i< items.length; i++){
 			this.createPostit(items[i]);
 		}	
-	}
+	};
 	
 	application.prototype.createPostit = function(data) {
 		var itemke = new Item(data);
@@ -92,11 +94,45 @@ module.exports = (function(){
 })();
 
 
-},{"./item":5}],3:[function(require,module,exports){
+},{"./item":6}],3:[function(require,module,exports){
+module.exports = (function(){
+
+	
+	
+	function detailPage() {
+
+		
+		var lis = document.querySelectorAll('li');
+		console.log(lis);
+		for(var i = 0; i< lis.length; i++){
+			if (lis[i]) {
+				//delete all selected classes
+			};
+			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
+		}
+
+		
+
+		
+	};
+
+	detailPage.prototype.clickHandler = function(event){
+
+			event.preventDefault();
+			lis
+			this.classList.add("selected");
+			console.log(this);
+		
+	};	
+
+	return detailPage;
+})();
+},{}],4:[function(require,module,exports){
 module.exports = (function(){
 
 	
 	function formImageValidation() {
+		console.log("bam");
 		if (window.File && window.FileReader && window.FileList && window.Blob) {
 			var imageInput = document.querySelector("input[name=image]");
 			initImageInput(imageInput);
@@ -141,7 +177,7 @@ module.exports = (function(){
 
 	return formImageValidation;
 })();
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 module.exports = (function(){
 
 	
@@ -202,13 +238,14 @@ module.exports = (function(){
 
 	return formValidationRegister;
 })();
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = (function(){
 	
 	function item(el) {
 		this.teller  = 0;
 		this.el = el;
 		this.el.addEventListener('mousedown', this.mousedownHandler.bind(this));
+
 
 	}
 	
@@ -229,8 +266,32 @@ module.exports = (function(){
 		this.el.style.border = "4px solid #3ab3da";
 		this.el.style.left = (event.x - this.offsetX) + "px";
 		this.el.style.top = (event.y - this.offsetY) + "px";
+		
+
+		if ((event.y - this.offsetY) <= 100) {
+			console.log("bamanamm");
+			this.el.style.top = 100 + "px";
+		};
+
+		if ((event.x - this.offsetX) <= 280) {
+			console.log("bamanamm");
+			this.el.style.left = 300 + "px";
+		};
+
+		if ((event.x - this.offsetX) >= $(window).width()-240) {
+			console.log("bamanamm");
+			this.el.style.left = $(window).width()-220 + "px";
+		};
+
+		if ((event.y - this.offsetY) >= $(window).height()-240) {
+			console.log("bamanamm");
+			this.el.style.top = $(window).height()-220 + "px";
+		};
+
 	};
 	
+
+
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
 		var splitting = document.URL.split("id=")[1];
