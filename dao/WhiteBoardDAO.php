@@ -61,8 +61,11 @@ class WhiteBoardDAO extends DAO {
 		if(empty($data['user_id'])) {
 			$errors['user_id'] = "Please fill in an user_id";
 		}
+
 		if(empty($data['name'])) {
-			$errors['name'] = "Please fill in a name";
+			$errors['name'] = "Please fill in an name";
+		}else if (strlen($data['name']) > 17){
+			$errors['name'] = "Please fill in an name with maximum 30 characters";
 		}
 		
 		return $errors;

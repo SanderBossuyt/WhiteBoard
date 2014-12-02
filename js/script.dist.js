@@ -10,13 +10,12 @@
 
 		var splitting = document.URL.split("?page=")[1];
 		var splitting2 = splitting.split("&")[0];
+
 		new detail();
+
 		if (splitting2 === "register") {
 			
 		new formReg();
-
-		
-		
 		new formImage();
 
 		};
@@ -26,12 +25,13 @@
 			new application(document.querySelector('.whiteboard'));
 		};
 
+
+		$('.name').on("blur keyup", checkTwoCharacters);
+
+
 		$('#newBoard').submit(function(event) {
 
 			event.preventDefault();
-
-			//ajax call naar php vernieuwen persoonlijke boards lijst
-			//don't copy this public code mothef*ckers, SHAME ON YOU GITHUBBERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 				$.ajax({
 					type:"POST",
@@ -68,6 +68,26 @@
 		});
 
 	}
+
+
+	function checkTwoCharacters(e) {
+
+	var $el = $(this);
+
+	if ($el.val().length > 19) {
+		showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+	}else{
+		showValid($el, $('#errorboard'));
+	}
+}
+function showValid($el, $error){
+	$error.addClass("hidden");
+}
+
+function showInvalid($el, $error, message){
+	$error.removeClass("hidden");
+	$error.text(message);
+}
 
 
 	init();
