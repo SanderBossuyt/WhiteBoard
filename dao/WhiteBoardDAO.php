@@ -5,7 +5,7 @@ class WhiteBoardDAO extends DAO {
 	public function selectByUser($user_id) {
 		$sql = "SELECT * FROM `boards`
 				WHERE `user_id` = :user_id
-				ORDER BY `creation_date`";
+				ORDER BY `creation_date` DESC";
 		$stmt = $this->pdo->prepare($sql);
 		$stmt->bindValue(':user_id', $user_id);
 		$stmt->execute();
