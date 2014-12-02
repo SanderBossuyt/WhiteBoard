@@ -42,6 +42,8 @@
 						var tatata = tata.split("</form")[0];
 		    			$(".alles").html(tatata);
 
+		    			new detail();
+
 		    		}
 				}); 
 		});
@@ -71,22 +73,23 @@
 
 	function checkTwoCharacters(e) {
 
-	var $el = $(this);
+		var $el = $(this);
 
-	if ($el.val().length > 19) {
-		showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
-	}else{
-		showValid($el, $('#errorboard'));
+		if ($el.val().length > 19) {
+			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+		}else{
+			showValid($el, $('#errorboard'));
+		}
 	}
-}
-function showValid($el, $error){
-	$error.addClass("hidden");
-}
-
-function showInvalid($el, $error, message){
-	$error.removeClass("hidden");
-	$error.text(message);
-}
+	
+	function showValid($el, $error){
+		$error.addClass("hidden");
+	}
+	
+	function showInvalid($el, $error, message){
+		$error.removeClass("hidden");
+		$error.text(message);
+	}
 
 
 	init();

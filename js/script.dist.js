@@ -43,6 +43,8 @@
 						var tatata = tata.split("</form")[0];
 		    			$(".alles").html(tatata);
 
+		    			new detail();
+
 		    		}
 				}); 
 		});
@@ -72,22 +74,23 @@
 
 	function checkTwoCharacters(e) {
 
-	var $el = $(this);
+		var $el = $(this);
 
-	if ($el.val().length > 19) {
-		showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
-	}else{
-		showValid($el, $('#errorboard'));
+		if ($el.val().length > 19) {
+			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+		}else{
+			showValid($el, $('#errorboard'));
+		}
 	}
-}
-function showValid($el, $error){
-	$error.addClass("hidden");
-}
-
-function showInvalid($el, $error, message){
-	$error.removeClass("hidden");
-	$error.text(message);
-}
+	
+	function showValid($el, $error){
+		$error.addClass("hidden");
+	}
+	
+	function showInvalid($el, $error, message){
+		$error.removeClass("hidden");
+		$error.text(message);
+	}
 
 
 	init();
@@ -116,33 +119,32 @@ module.exports = (function(){
 
 },{"./item":6}],3:[function(require,module,exports){
 module.exports = (function(){
-
+var lis = document.querySelectorAll('li');
 	
 	
 	function detailPage() {
-
-		
-		var lis = document.querySelectorAll('li');
-		console.log(lis);
-		for(var i = 0; i< lis.length; i++){
-			if (lis[i]) {
-				//delete all selected classes
-			};
+		console.log("detailPage");
+		for(var i = 3; i< lis.length; i++){
+			
+			lis[i].classList.remove("selected");
+			
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
 		}
 
-		
-
-		
 	};
 
 	detailPage.prototype.clickHandler = function(event){
 
-			event.preventDefault();
-			lis
+			//event.preventDefault();
+
+			for(var i = 3; i< lis.length; i++){
+			
+				lis[i].classList.remove("selected");
+		}
+
 			this.classList.add("selected");
-			console.log(this);
-		
+			$('#users h3').text($(this).text());
+			
 	};	
 
 	return detailPage;
