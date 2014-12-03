@@ -119,7 +119,6 @@ module.exports = (function(){
 		console.log(item.el.style.left);
 		var splitting = document.URL.split("id=")[1];
 		
-
 		var data = {
     		id : item.el.classList[2],
     		x : item.el.style.left,
@@ -137,7 +136,6 @@ module.exports = (function(){
 				console.log(response);
 		   	}
 		}); 
-
 
 	};
 		
@@ -345,9 +343,7 @@ module.exports = (function(){
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
 	
-
 		bean.fire(this, "change", this);
-		
 
 		window.removeEventListener('mousemove', this._mousemoveHandler);
 		window.removeEventListener('mouseup', this._mouseupHandler);

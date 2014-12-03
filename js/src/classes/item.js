@@ -54,9 +54,7 @@ module.exports = (function(){
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
 	
-
 		bean.fire(this, "change", this);
-		
 
 		window.removeEventListener('mousemove', this._mousemoveHandler);
 		window.removeEventListener('mouseup', this._mouseupHandler);

@@ -21,16 +21,23 @@ module.exports = (function(){
 		console.log(item.el.style.left);
 		var splitting = document.URL.split("id=")[1];
 		
+		var data = {
+    		id : item.el.classList[2],
+    		x : item.el.style.left,
+    		y : item.el.style.top,
+    		action : "Update Position"
+		};
+
+
 		$.ajax({ 
 			type:"POST",
 			url:"index.php?page=drawing&id="+ splitting, 
 			//data: "id=" + item.el.classList[2] + "&x=" + item.el.style.left + "&y=" + item.el.style.top + "&action=" + "Update Position",
-			data: {item: item},
+			data: {item: data},
 			success:function(response){ 
 				console.log(response);
 		   	}
 		}); 
-
 
 	};
 		

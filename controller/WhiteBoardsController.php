@@ -69,9 +69,7 @@ function __construct() {
 	}
 
 	public function drawing() {
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
+
 	$board = $this->whiteboardDAO->selectBoard($_GET["id"]);
 	$this->set('board', $board);
 
@@ -80,6 +78,8 @@ echo "</pre>";
 	if (!empty($_POST)) {
 	
 		$errors = array();
+
+		if (!empty($_POST["item"]["action"])) {
 
 			if ($_POST["item"]["action"] == 'Update Position') {
 
@@ -117,7 +117,9 @@ echo "</pre>";
 					$this->set('errors', $errors);
 				}
 	
-			}else if($_POST["action"] == 'upload postit'){
+			}
+		}
+			 if($_POST["action"] == 'upload postit'){
 			
 				if(empty($_POST['postit'])) {
 					$errors['postit'] = 'Please enter a name';
