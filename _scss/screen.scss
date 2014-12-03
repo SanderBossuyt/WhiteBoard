@@ -122,7 +122,7 @@ header{
 
 		}
 		#login_button{
-
+			
 			font-family: bebas_neueregular;
 			font-size:1.5em;
 			width: 360px;
@@ -316,8 +316,9 @@ nav{
 			    font-size: 1.5em;
 			    color: #ffffff;
 
-			    &:hover{
 
+			    &:hover{
+					@include transition(0.1s);
 					color: #ea5244;
 					text-decoration: underline;
 
@@ -409,7 +410,7 @@ nav{
 
 
 				a{
-
+					
 					text-decoration: none;
 					color:#ea5144;
 
@@ -477,7 +478,21 @@ nav{
 }
 
 .selected{
+	@include transition(0.1s);
 	background-color: rgb(54,61,80);
+
+	a{
+		
+		position: absolute;
+		margin-left: -80px;
+		margin-top: 30px;
+		width: 160px;
+		background-color: #fff;
+		text-decoration: none;
+		color: #ea5144;
+
+
+	}
 }
 
 //whiteboard
@@ -546,3 +561,7 @@ nav{
 
 
 }
+
+
+
+

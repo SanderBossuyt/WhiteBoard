@@ -342,19 +342,23 @@ nav ul li a {
   font-size: 1.5em;
   color: #ffffff;
 }
-/* line 319, ../_scss/screen.scss */
+/* line 320, ../_scss/screen.scss */
 nav ul li a:hover {
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   color: #ea5244;
   text-decoration: underline;
 }
-/* line 331, ../_scss/screen.scss */
+/* line 332, ../_scss/screen.scss */
 nav #userinfo {
   width: 300px;
   position: absolute;
   top: 10px;
   right: 10px;
 }
-/* line 339, ../_scss/screen.scss */
+/* line 340, ../_scss/screen.scss */
 nav #userinfo p {
   float: left;
   color: #ffffff;
@@ -363,41 +367,41 @@ nav #userinfo p {
   margin-top: 17px;
   margin-right: 5px;
 }
-/* line 348, ../_scss/screen.scss */
+/* line 349, ../_scss/screen.scss */
 nav #userinfo p span {
   color: #ea5244;
   margin: 0 5px;
 }
-/* line 356, ../_scss/screen.scss */
+/* line 357, ../_scss/screen.scss */
 nav #userinfo img {
   float: left;
   border: 1px solid #ea5244;
 }
-/* line 362, ../_scss/screen.scss */
+/* line 363, ../_scss/screen.scss */
 nav #userinfo a {
   color: #ffffff;
   text-decoration: none;
   margin-left: 10px;
 }
 
-/* line 374, ../_scss/screen.scss */
+/* line 375, ../_scss/screen.scss */
 #home {
   margin: auto;
   width: 840px;
   margin-top: -25px;
 }
-/* line 380, ../_scss/screen.scss */
+/* line 381, ../_scss/screen.scss */
 #home h1 {
   color: #363d50;
   font-family: bebas_neueregular;
   font-size: 3em;
   margin-bottom: 10px;
 }
-/* line 389, ../_scss/screen.scss */
+/* line 390, ../_scss/screen.scss */
 #home #my_boards {
   float: left;
 }
-/* line 393, ../_scss/screen.scss */
+/* line 394, ../_scss/screen.scss */
 #home #my_boards .boards {
   height: 480px;
   width: 480px;
@@ -405,7 +409,7 @@ nav #userinfo a {
   border: 3px solid #363d50;
   background-color: #e3e3e3;
 }
-/* line 401, ../_scss/screen.scss */
+/* line 402, ../_scss/screen.scss */
 #home #my_boards .boards li {
   float: left;
   width: 158px;
@@ -414,23 +418,23 @@ nav #userinfo a {
   text-align: center;
   padding-top: 98px;
 }
-/* line 411, ../_scss/screen.scss */
+/* line 412, ../_scss/screen.scss */
 #home #my_boards .boards li a {
   text-decoration: none;
   color: #ea5144;
 }
-/* line 422, ../_scss/screen.scss */
+/* line 423, ../_scss/screen.scss */
 #home #my_boards form {
   margin-top: -20px;
 }
-/* line 426, ../_scss/screen.scss */
+/* line 427, ../_scss/screen.scss */
 #home #my_boards form span {
   float: left;
   color: #ffffff;
   font-family: bebas_neueregular;
   font-size: 1.3em;
 }
-/* line 434, ../_scss/screen.scss */
+/* line 435, ../_scss/screen.scss */
 #home #my_boards form input {
   float: left;
   margin-left: 5px;
@@ -441,7 +445,7 @@ nav #userinfo a {
   border: 1px dotted #ea5144;
   background-color: transparent;
 }
-/* line 446, ../_scss/screen.scss */
+/* line 447, ../_scss/screen.scss */
 #home #my_boards form #add_board {
   border: 1px solid #ea5144;
   background-color: #ea5144;
@@ -449,12 +453,12 @@ nav #userinfo a {
   margin-top: 2px;
   margin-left: 24px;
 }
-/* line 459, ../_scss/screen.scss */
+/* line 460, ../_scss/screen.scss */
 #home #board_users {
   float: left;
   margin-left: 20px;
 }
-/* line 464, ../_scss/screen.scss */
+/* line 465, ../_scss/screen.scss */
 #home #board_users #users {
   width: 320px;
   height: 480px;
@@ -463,12 +467,26 @@ nav #userinfo a {
   background-color: #e3e3e3;
 }
 
-/* line 479, ../_scss/screen.scss */
+/* line 480, ../_scss/screen.scss */
 .selected {
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   background-color: #363d50;
 }
-
 /* line 484, ../_scss/screen.scss */
+.selected a {
+  position: absolute;
+  margin-left: -80px;
+  margin-top: 30px;
+  width: 160px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #ea5144;
+}
+
+/* line 499, ../_scss/screen.scss */
 .leftbalk {
   float: left;
   width: 280px;
@@ -480,12 +498,12 @@ nav #userinfo a {
   z-index: -100;
 }
 
-/* line 498, ../_scss/screen.scss */
+/* line 513, ../_scss/screen.scss */
 .whiteboard {
   height: 750px;
 }
 
-/* line 507, ../_scss/screen.scss */
+/* line 522, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -498,12 +516,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 516, ../_scss/screen.scss */
+/* line 531, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 521, ../_scss/screen.scss */
+/* line 536, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -520,12 +538,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 532, ../_scss/screen.scss */
+/* line 547, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 537, ../_scss/screen.scss */
+/* line 552, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

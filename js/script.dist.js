@@ -161,7 +161,10 @@ var lis = document.querySelectorAll('li');
 
 	detailPage.prototype.clickHandler = function(event){
 
-			//event.preventDefault();
+			if (!$( this ).hasClass( "selected" )) {
+				event.preventDefault();
+			}
+			
 
 			for(var i = 3; i< lis.length; i++){
 			
@@ -169,6 +172,7 @@ var lis = document.querySelectorAll('li');
 		}
 
 			this.classList.add("selected");
+
 			$('#users h3').text($(this).text());
 			
 	};	

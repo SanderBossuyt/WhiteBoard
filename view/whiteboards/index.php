@@ -10,7 +10,8 @@
     	<form role="login" action="index.php?page=login" method="post">
             <input id="email" type="email" name="email" placeholder="your cool email" class="form-control"/>
             <input id="password" type="password" name="password" placeholder=" your supersecret password" class="form-control" />
-            <input id="login_button" type="submit" value="Login" class="login" />
+            <input id="login_button" class="btn btn-5 btn-5a icon-cog" type="submit" value="Login" class="login" />
+            
         </form>
 
     </div>
