@@ -477,6 +477,8 @@ nav #userinfo a {
 }
 /* line 484, ../_scss/screen.scss */
 .selected a {
+  text-transform: uppercase;
+  font-size: 1.2em;
   position: absolute;
   margin-left: -80px;
   margin-top: 30px;
@@ -486,24 +488,27 @@ nav #userinfo a {
   color: #ea5144;
 }
 
-/* line 499, ../_scss/screen.scss */
+/* line 500, ../_scss/screen.scss */
 .leftbalk {
-  float: left;
+  padding: 140px 5px 20px 5px;
   width: 280px;
   height: 100%;
   margin-top: -80px;
+  margin-left: 10px;
   left: 0;
   background-color: #e3e3e3;
-  border-right: 3px solid #363d50;
-  z-index: -100;
+  border: 3px solid #363d50;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 513, ../_scss/screen.scss */
+/* line 515, ../_scss/screen.scss */
 .whiteboard {
-  height: 750px;
+  height: 100%;
 }
 
-/* line 522, ../_scss/screen.scss */
+/* line 524, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -516,12 +521,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 531, ../_scss/screen.scss */
+/* line 533, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 536, ../_scss/screen.scss */
+/* line 538, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -538,12 +543,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 547, ../_scss/screen.scss */
+/* line 549, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 552, ../_scss/screen.scss */
+/* line 554, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
