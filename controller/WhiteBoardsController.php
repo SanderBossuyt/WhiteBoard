@@ -69,37 +69,39 @@ function __construct() {
 	}
 
 	public function drawing() {
-
-
+echo "<pre>";
+var_dump($_POST);
+echo "</pre>";
 	$board = $this->whiteboardDAO->selectBoard($_GET["id"]);
 	$this->set('board', $board);
 
 
 
 	if (!empty($_POST)) {
+	
 		$errors = array();
 
-			if ($_POST["action"] == 'Update Position') {
+			if ($_POST["item"]["action"] == 'Update Position') {
 
-				if(empty($_POST['x'])) {
-					$errors['x'] = 'Please enter a x';
+				if(empty($_POST["item"]['x'])) {
+					$errors["item"]['x'] = 'Please enter a x';
 				}
 
-				if(empty($_POST['y'])) {
-					$errors['y'] = 'Please enter a y';
+				if(empty($_POST["item"]['y'])) {
+					$errors["item"]['y'] = 'Please enter a y';
 				}
 
-				if(empty($_POST['id'])) {
-					$errors['id'] = 'Please enter an id';
+				if(empty($_POST["item"]['id'])) {
+					$errors["item"]['id'] = 'Please enter an id';
 				}
 
 
 				if(empty($errors)) {
 					
 					$pos = array(
-							"x"=>$_POST['x'],
-							"y"=>$_POST['y'],
-							"id"=>$_POST['id']
+							"x"=>$_POST["item"]['x'],
+							"y"=>$_POST["item"]['y'],
+							"id"=>$_POST["item"]['id']
 						);
 	
 					$insertPos = $this->whiteboardDAO->update($pos);

@@ -53,15 +53,10 @@ module.exports = (function(){
 
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
-		var splitting = document.URL.split("id=")[1];
+	
 
-		$.ajax({ 
-			type:"POST",
-			url:"index.php?page=drawing&id="+ splitting, 
-			data: "id=" + this.el.classList[2] + "&x=" + (event.x - this.offsetX) + "&y=" + (event.y - this.offsetY) + "&action=" + "Update Position",
-			success:function(response){ 
-		   	}
-		}); 
+		bean.fire(this, "change", this);
+		
 
 		window.removeEventListener('mousemove', this._mousemoveHandler);
 		window.removeEventListener('mouseup', this._mouseupHandler);

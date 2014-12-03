@@ -56,6 +56,7 @@
 
 
 <?php echo $content; ?>
+<script src="js/bean.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/script.dist.js"></script>
 </body>

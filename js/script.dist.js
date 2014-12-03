@@ -111,7 +111,35 @@ module.exports = (function(){
 	
 	application.prototype.createPostit = function(data) {
 		var itemke = new Item(data);
+		bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
 	}
+
+	application.prototype.itemkeChangeHandler = function(item) {
+		console.log(item.el.classList[2]);
+		console.log(item.el.style.left);
+		var splitting = document.URL.split("id=")[1];
+		
+
+		var data = {
+    		id : item.el.classList[2],
+    		x : item.el.style.left,
+    		y : item.el.style.top,
+    		action : "Update Position"
+		};
+
+
+		$.ajax({ 
+			type:"POST",
+			url:"index.php?page=drawing&id="+ splitting, 
+			//data: "id=" + item.el.classList[2] + "&x=" + item.el.style.left + "&y=" + item.el.style.top + "&action=" + "Update Position",
+			data: {item: data},
+			success:function(response){ 
+				console.log(response);
+		   	}
+		}); 
+
+
+	};
 		
 	return application;
 })();
@@ -316,15 +344,10 @@ module.exports = (function(){
 
 	item.prototype.mouseupHandler = function(event){
 		this.el.style.border = "0px";
-		var splitting = document.URL.split("id=")[1];
+	
 
-		$.ajax({ 
-			type:"POST",
-			url:"index.php?page=drawing&id="+ splitting, 
-			data: "id=" + this.el.classList[2] + "&x=" + (event.x - this.offsetX) + "&y=" + (event.y - this.offsetY) + "&action=" + "Update Position",
-			success:function(response){ 
-		   	}
-		}); 
+		bean.fire(this, "change", this);
+		
 
 		window.removeEventListener('mousemove', this._mousemoveHandler);
 		window.removeEventListener('mouseup', this._mouseupHandler);
