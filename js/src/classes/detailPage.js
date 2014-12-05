@@ -1,4 +1,5 @@
 module.exports = (function(){
+	
 var lis = document.querySelectorAll('li');
 	
 	
