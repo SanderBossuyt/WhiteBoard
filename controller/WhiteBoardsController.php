@@ -172,12 +172,11 @@ function __construct() {
 							$errors['image'] = "image should be square";
 						}
 					}
-		
+
+					//size shizzel
 					if(empty($errors['image'])){
 						$name = preg_replace("/\\.[^.\\s]{3,4}$/", "", $_FILES["image"]["name"]);
 						$pieces = explode($name.'.', $_FILES["image"]["name"])[1];
-
-						$imagecontent=$name + $pieces;
 						
 						$imageresize = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
 						$imageresize->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
@@ -188,13 +187,13 @@ function __construct() {
 						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
 						$imageresize400->resizeToHeight(400);
 						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
-					}
+					}	
 				}
 
 				if(empty($errors)) {
 					
 					$image = array(
-							"content"=>$imagecontent,
+							"content"=>$_FILES['image'],
 							"origin"=>"image",
 							"board_id"=>$board['id'],
 							"x"=>400,
