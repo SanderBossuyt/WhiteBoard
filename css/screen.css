@@ -1,4 +1,4 @@
-/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -318,7 +318,7 @@ nav header h2 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
   height: 171px;
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: -10px;
   text-indent: -9999px;
 }
@@ -493,7 +493,7 @@ nav #userinfo a {
   padding: 140px 5px 20px 5px;
   width: 280px;
   height: 100%;
-  margin-top: -80px;
+  margin-top: -84px;
   margin-left: 10px;
   left: 0;
   background-color: #e3e3e3;
@@ -502,13 +502,106 @@ nav #userinfo a {
   -webkit-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
+/* line 512, ../_scss/screen.scss */
+.leftbalk p {
+  color: #363D50;
+}
+/* line 516, ../_scss/screen.scss */
+.leftbalk p span {
+  color: #EA5244;
+  font-family: bebas_neueregular;
+  font-size: 1.2em;
+}
+/* line 525, ../_scss/screen.scss */
+.leftbalk form {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 275px;
+  height: 60px;
+}
+/* line 533, ../_scss/screen.scss */
+.leftbalk form label {
+  float: left;
+  color: #363D50;
+  font-family: bebas_neueregular;
+  font-size: 1.6em;
+}
+/* line 551, ../_scss/screen.scss */
+.leftbalk #formuploadpostit input {
+  width: 260px;
+  height: 20px;
+  font-size: 15px;
+}
+/* line 559, ../_scss/screen.scss */
+.leftbalk #formuploadpostit .form-group {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+/* line 565, ../_scss/screen.scss */
+.leftbalk #formuploadpostit .form-group input {
+  background-color: transparent;
+  color: #363D50;
+  border: 1px solid #EA5244;
+  width: 120px;
+  height: 30px;
+  font-family: bebas_neueregular;
+  font-size: 1em;
+  padding-top: 5px;
+}
+/* line 585, ../_scss/screen.scss */
+.leftbalk #formuploadimage #addImageImage {
+  width: 262px;
+}
+/* line 591, ../_scss/screen.scss */
+.leftbalk #formuploadimage .uploadimage {
+  float: right;
+  margin-right: 15px;
+  margin-top: 5px;
+  background-color: transparent;
+  color: #363D50;
+  border: 1px solid #EA5244;
+  width: 120px;
+  height: 30px;
+  font-family: bebas_neueregular;
+  font-size: 1em;
+  padding-top: 5px;
+}
+/* line 612, ../_scss/screen.scss */
+.leftbalk #formuploadvideo #addvideo {
+  width: 262px;
+}
+/* line 618, ../_scss/screen.scss */
+.leftbalk #formuploadvideo .uploadvideo {
+  float: right;
+  margin-right: 15px;
+  margin-top: 5px;
+  background-color: transparent;
+  color: #363D50;
+  border: 1px solid #EA5244;
+  width: 120px;
+  height: 30px;
+  font-family: bebas_neueregular;
+  font-size: 1em;
+  padding-top: 5px;
+}
+/* line 639, ../_scss/screen.scss */
+.leftbalk #back_button a {
+  text-decoration: none;
+  color: #EA5244;
+  font-family: bebas_neueregular;
+  font-size: 1.5em;
+  background-image: url("../images/assets/back_button.png");
+  background-repeat: no-repeat;
+  padding: 8px 15px 10px 45px;
+}
 
-/* line 515, ../_scss/screen.scss */
+/* line 657, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 524, ../_scss/screen.scss */
+/* line 668, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -521,12 +614,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 533, ../_scss/screen.scss */
+/* line 677, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 538, ../_scss/screen.scss */
+/* line 682, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -543,12 +636,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 549, ../_scss/screen.scss */
+/* line 693, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 554, ../_scss/screen.scss */
+/* line 698, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

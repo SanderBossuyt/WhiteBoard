@@ -279,7 +279,7 @@ nav{
 
 	background-color: #363d50;
 	height: 80px;
-
+	
 	header{
 
 		float: left;
@@ -289,7 +289,7 @@ nav{
 			background: url(../images/assets/Login/Logo.png);
 			width: 225px;
 			height: 171px;
-			margin-left: 20px;	
+			margin-left: 40px;	
 			margin-top: -10px;		
 			text-indent: -9999px;
 
@@ -498,16 +498,158 @@ nav{
 
 //whiteboard
 .leftbalk{
+
 	padding: 140px 5px 20px 5px;
-	
 	width: 280px;
 	height: 100%;
-	margin-top: -80px;
+	margin-top: -84px;
 	margin-left: 10px;
 	left: 0;
 	background-color: #e3e3e3;
 	border: 3px solid #363d50;
 	@include box-shadow();
+
+	p{
+
+		color: #363D50;
+
+		span{
+
+			color: #EA5244;
+			font-family: bebas_neueregular;
+			font-size: 1.2em;
+
+		}
+		
+	}
+	form{
+
+		margin-top: 20px;
+		margin-bottom: 50px;
+		width: 275px;
+		height: 60px;
+		
+
+		label{
+
+			float: left;
+			color: #363D50;
+			font-family: bebas_neueregular;
+			font-size: 1.6em;
+
+		}
+
+		
+
+
+
+	}
+
+	#formuploadpostit{
+
+
+		input{
+
+			width: 260px;
+			height: 20px;
+			font-size: 15px;
+
+			
+		}
+		.form-group{
+
+			float: right;
+			margin-right: 10px;
+			margin-top: 5px;
+			
+			input{
+
+				background-color:transparent;
+				color:#363D50;
+				border: 1px solid #EA5244;
+				width: 120px;
+				height: 30px;
+
+				font-family: bebas_neueregular;
+				font-size: 1em;
+				padding-top: 5px;
+
+
+			}
+
+		}
+
+	}
+	#formuploadimage{
+
+		#addImageImage{
+
+			width: 262px;
+
+		}
+
+		.uploadimage{
+
+			float: right;
+			margin-right: 15px;
+			margin-top: 5px;
+			background-color:transparent;
+				color:#363D50;
+				border: 1px solid #EA5244;
+			width: 120px;
+			height: 30px;
+
+			font-family: bebas_neueregular;
+			font-size: 1em;
+			padding-top: 5px;
+
+
+		}
+
+	}
+	#formuploadvideo{
+
+		#addvideo{
+
+			width: 262px;
+
+		}
+
+		.uploadvideo{
+
+			float: right;
+			margin-right: 15px;
+			margin-top: 5px;
+			background-color:transparent;
+				color:#363D50;
+				border: 1px solid #EA5244;
+			width: 120px;
+			height: 30px;
+
+			font-family: bebas_neueregular;
+			font-size: 1em;
+			padding-top: 5px;
+
+
+		}
+	}
+
+	#back_button{	
+
+		a{
+
+			text-decoration: none;
+			color:#EA5244;
+			font-family: bebas_neueregular;
+			font-size: 1.5em;
+			background-image: url("../images/assets/back_button.png");
+			background-repeat: no-repeat;
+			padding: 8px 15px 10px 45px;
+
+
+		}
+
+	}
 
 }
 
@@ -515,6 +657,8 @@ nav{
 .whiteboard{
 	height: 100%;
 }
+
+//what is scrum
 
 
 
