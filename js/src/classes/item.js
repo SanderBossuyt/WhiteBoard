@@ -34,7 +34,7 @@ module.exports = (function(){
 
 		if ((event.x - this.offsetX) <= 280) {
 			console.log("bamanamm");
-			this.el.style.left = 300 + "px";
+			this.el.style.left = 330 + "px";
 		};
 
 		if ((event.x - this.offsetX) >= $(window).width()-240) {

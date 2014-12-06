@@ -2,6 +2,7 @@
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 require_once WWW_ROOT . 'dao' . DS . 'WhiteBoardDAO.php';
 require_once WWW_ROOT . 'dao' . DS . 'ItemDAO.php';
+require_once WWW_ROOT . 'php-image-resize' . DS . 'ImageResize.php';
 
 class WhiteBoardsController extends Controller {
 private $whiteboardDAO;
@@ -131,7 +132,7 @@ function __construct() {
 							"content"=>$_POST["postit"],
 							"origin"=>"postit",
 							"board_id"=>$board['id'],
-							"x"=>200,
+							"x"=>400,
 							"y"=>200
 						);
 
@@ -152,7 +153,69 @@ function __construct() {
 
 			}else if($_POST["action"] == 'upload image'){
 
-				var_dump("update image");
+				$size = array();
+	
+				if(!empty($_FILES['image'])){
+					if(!empty($_FILES['image']['error'])){
+						$errors['image'] = "the image could not be uploaded";
+					}
+		
+					if(empty($errors['image'])){
+						$size = getimagesize($_FILES['image']['tmp_name']);
+						if(empty($size)){
+							$errors['image'] = "please upload an image";
+						}
+					}
+		
+					if(empty($errors['image'])){
+						if($size[0] != $size[1]){
+							$errors['image'] = "image should be square";
+						}
+					}
+		
+					if(empty($errors['image'])){
+						$name = preg_replace("/\\.[^.\\s]{3,4}$/", "", $_FILES["image"]["name"]);
+						$pieces = explode($name.'.', $_FILES["image"]["name"])[1];
+
+						$imagecontent=$name + $pieces;
+						
+						$imageresize = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
+						$imageresize->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+						$imageresize->resizeToHeight(60);
+						$imageresize->save(WWW_ROOT . 'uploads' . DS . $name."_th.".$pieces);
+		
+						$imageresize400 = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
+						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+						$imageresize400->resizeToHeight(400);
+						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+					}
+				}
+
+				if(empty($errors)) {
+					
+					$image = array(
+							"content"=>$imagecontent,
+							"origin"=>"image",
+							"board_id"=>$board['id'],
+							"x"=>400,
+							"y"=>200
+						);
+
+					$insertedimage = $this->itemDAO->insert($image);
+					
+					if(!empty($insertedimage)) {
+						$_SESSION['info'] = 'your image is added';
+						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
+						//exit();
+					
+					} else {
+						$_SESSION['error'] = 'image add failed';
+					}
+				} 
+
+				$this->set('errors', $errors);
+
+				
 
 			}else if($_POST["action"] == 'upload video'){
 
