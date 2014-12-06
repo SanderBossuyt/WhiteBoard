@@ -5,8 +5,6 @@
     
     <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadpostit" enctype="multipart/form-data">
             
-            <label>Postit:</label> 
-
             <div class="input text">
                 <label>
                     <input type="text" class="postitje" name="postit" value="<?php if(!empty($_POST['postit'])) echo $_POST['postit'];?>" placeholder="postit content" />
@@ -20,8 +18,6 @@
         
     </form>
 
-
-    <div class="dummy"></div>
 
 
       <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" id="formuploadimage" enctype="multipart/form-data">
@@ -39,9 +35,6 @@
                 
                 <input type="submit" name="action" value="upload image" class="uploadimage">
      </form>
-
-
-    <div class="dummy"></div>
 
 
     <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadvideo" enctype="multipart/form-data">
@@ -63,14 +56,13 @@
         
     </form>
 
-    <div class="dummy"></div>
 
     <div id="back_button"><a href="index.php?page=detail">Go back</a></div>
 
 </div>
 
 
-<br/>
+<br />
 
 <div class="whiteboard">
 
