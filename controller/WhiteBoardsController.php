@@ -220,58 +220,55 @@ function __construct() {
 
 			}else if($_POST["action"] == 'upload video'){
 
-				$size = array();
 	
-				if(!empty($_FILES['video'])){
+				if(!empty($_FILES["video"])){
+
 					if(!empty($_FILES['video']['error'])){
 						$errors['video'] = "the video could not be uploaded";
 					}
-		
+
+
 					if(empty($errors['video'])){
-						$size = getimagesize($_FILES['video']['tmp_name']);
-						if(empty($size)){
-							$errors['video'] = "please upload an video";
-						}
+
+						$type = ($_FILES["video"]["type"]);
+                    	$path = ($_FILES["video"]["tmp_name"]);
+                    	$size = filesize($path);
+
+                    	if($size <=100000000 && $type == "video/mp4"){
+
+	                        $filename = $_FILES["video"]["name"];
+	                        $newPath = WWW_ROOT . 'uploads' . DS . 'board' . DS . 'videos' . DS . $filename;
+
+	                        move_uploaded_file($path,$newPath);
+
+	                        $video = array(
+								"content"=>$filename,
+								"origin"=>"video",
+								"board_id"=>$board['id'],
+								"x"=>400,
+								"y"=>200
+							);
+
+							$insertedvideo = $this->itemDAO->insert($video);
+                		}
+
 					}
-		
-					if(empty($errors['video'])){
-						if($size[0] != $size[1]){
-							$errors['video'] = "video should be square";
-						}
-					}
+                }
 
-					//size shizzel
-					if(empty($errors['video'])){
-						
-						$name = preg_replace("/\\.[^.\\s]{3,4}$/", "", $_FILES["video"]["name"]);
-						$pieces = explode($name.'.', $_FILES["video"]["name"])[1];
-						
-					}	
-				}
-
-				if(empty($errors)) {
-
-					$content=$name.".".$pieces;
+	            if(empty($errors)) {
 					
-					$video = array(
-							"content"=>$content,
-							"origin"=>"video",
-							"board_id"=>$board['id'],
-							"x"=>400,
-							"y"=>200
-						);
-
-					$insertedimage = $this->itemDAO->insert($video);
 					
-					if(!empty($insertedimage)) {
+					
+					if(!empty($insertedvideo)) {
+
 						$_SESSION['info'] = 'your video is added';
-						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
-						//exit();
 					
 					} else {
+
 						$_SESSION['error'] = 'video add failed';
+
 					}
-				} 
+				}
 
 				$this->set('errors', $errors);
 
