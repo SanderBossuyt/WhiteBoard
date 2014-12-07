@@ -179,21 +179,23 @@ function __construct() {
 						$pieces = explode($name.'.', $_FILES["image"]["name"])[1];
 						
 						$imageresize = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
-						$imageresize->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+						$imageresize->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
 						$imageresize->resizeToHeight(60);
-						$imageresize->save(WWW_ROOT . 'uploads' . DS . $name."_th.".$pieces);
+						$imageresize->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name."_th.".$pieces);
 		
 						$imageresize400 = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
-						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+						$imageresize400->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
 						$imageresize400->resizeToHeight(400);
-						$imageresize400->save(WWW_ROOT . 'uploads' . DS . $name.".".$pieces);
+						$imageresize400->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
 					}	
 				}
 
 				if(empty($errors)) {
+
+					$content=$name.".".$pieces;
 					
 					$image = array(
-							"content"=>$_FILES['image'],
+							"content"=>$content,
 							"origin"=>"image",
 							"board_id"=>$board['id'],
 							"x"=>400,
@@ -218,7 +220,60 @@ function __construct() {
 
 			}else if($_POST["action"] == 'upload video'){
 
-				var_dump("update vid");
+				$size = array();
+	
+				if(!empty($_FILES['video'])){
+					if(!empty($_FILES['video']['error'])){
+						$errors['video'] = "the video could not be uploaded";
+					}
+		
+					if(empty($errors['video'])){
+						$size = getimagesize($_FILES['video']['tmp_name']);
+						if(empty($size)){
+							$errors['video'] = "please upload an video";
+						}
+					}
+		
+					if(empty($errors['video'])){
+						if($size[0] != $size[1]){
+							$errors['video'] = "video should be square";
+						}
+					}
+
+					//size shizzel
+					if(empty($errors['video'])){
+						
+						$name = preg_replace("/\\.[^.\\s]{3,4}$/", "", $_FILES["video"]["name"]);
+						$pieces = explode($name.'.', $_FILES["video"]["name"])[1];
+						
+					}	
+				}
+
+				if(empty($errors)) {
+
+					$content=$name.".".$pieces;
+					
+					$video = array(
+							"content"=>$content,
+							"origin"=>"video",
+							"board_id"=>$board['id'],
+							"x"=>400,
+							"y"=>200
+						);
+
+					$insertedimage = $this->itemDAO->insert($video);
+					
+					if(!empty($insertedimage)) {
+						$_SESSION['info'] = 'your video is added';
+						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
+						//exit();
+					
+					} else {
+						$_SESSION['error'] = 'video add failed';
+					}
+				} 
+
+				$this->set('errors', $errors);
 
 			}
 	}
