@@ -2,9 +2,11 @@
 
     <p><span> Board : </span><?php echo $board['name'] ?></p>
     <p><span> aangemaakt op : </span><?php echo $board['creation_date'] ?></p>
-    
-    <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadpostit" enctype="multipart/form-data">
+	
+	<form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadpostit" enctype="multipart/form-data">
             
+            <label>Postit:</label> 
+
             <div class="input text">
                 <label>
                     <input type="text" class="postitje" name="postit" value="<?php if(!empty($_POST['postit'])) echo $_POST['postit'];?>" placeholder="postit content" />
@@ -18,6 +20,8 @@
         
     </form>
 
+
+    <div class="dummy"></div>
 
 
       <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" id="formuploadimage" enctype="multipart/form-data">
@@ -37,7 +41,10 @@
      </form>
 
 
-    <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadvideo" enctype="multipart/form-data">
+    <div class="dummy"></div>
+
+
+	<form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formuploadvideo" enctype="multipart/form-data">
             
             <div class="input-text">
                 
@@ -56,6 +63,7 @@
         
     </form>
 
+    <div class="dummy"></div>
 
     <div id="back_button"><a href="index.php?page=detail">Go back</a></div>
 
@@ -66,42 +74,41 @@
 
 <div class="whiteboard">
 
-        <?php
-            if (!empty($items)) {
-                foreach($items as $item) {
-                    if ($item['origin'] == "postit") {
+		<?php
+    		if (!empty($items)) {
+				foreach($items as $item) {
+					if ($item['origin'] == "postit") {
 
-                        echo "<div class=\"item postit {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
-                            echo "<p>";
-                            echo "{$item['content']}";
-                            echo "</p>";
-                        echo "</div>";
+						echo "<div class=\"item postit {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
+							echo "<p>";
+							echo "{$item['content']}";
+							echo "</p>";
+						echo "</div>";
 
-                    }else if ($item['origin'] == "image"){
+					}else if ($item['origin'] == "image"){
 
-                        echo "<div class=\"item picture {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
-                        
+						echo "<div class=\"item picture {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
+						
                                 echo "<img draggable=\"true\" width=\"200\" height=\"200\" src=\"uploads/board/images/";
                                     echo $item['content'];
                                     
                                 echo "\"/>";
-                        echo "</div>";
+						echo "</div>";
 
-                    }else if($item['origin'] == "video"){
+					}else if($item['origin'] == "video"){
 
-                        echo "<div class=\"item video {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
-                        echo "<video width=\"320\" height=\"240\" controls>";
-                        echo "<source src=\"uploads/board/videos/{$item['content']}\" type=\"video/mp4\">";
-                        echo "</video>";
-                        echo "</div>";
-                        
-                    }
-                            
-                }
-            }
-        ?>
+						echo "<div class=\"item video {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
+						echo "<video width=\"320\" height=\"240\" controls>";
+  						echo "<source src=\"uploads/board/videos/{$item['content']}\" type=\"video/mp4\">";
+						echo "</video>";
+						echo "</div>";
+						
+					}
+							
+				}
+			}
+		?>
 
 
 </div>
 <div id="achtergrond_whiteboard"></div>
-

@@ -38,17 +38,22 @@
 					data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
 					success:function(response){ 
 
-						var tata = response.split("<div class=\"alles\">")[1];
+						var tata = response.split("</h1>")[1];
 						var tatata = tata.split("</form")[0];
-						detail();
 		    			$(".alles").html(tatata);
+
+		    			new detail();
 
 		    		}
 				}); 
 		});
 
-		$('#formuploadpostit').submit(function(event) {
 
+<<<<<<< HEAD
+=======
+		//postit op schermkrijgen met ajax
+		$('#formuploadpostit').submit(function(event) {
+>>>>>>> css whiteboard
 
 			event.preventDefault();
 				$.ajax({
@@ -59,11 +64,9 @@
 						
 						var tata = response.split("<br />")[1];
 						var tatata = tata.split("<script")[0];
-
 						
-
 		    			$(".whiteboard").html(tatata);
-		    			//new application(document.querySelector('.whiteboard'));
+		    			new application(document.querySelector('.whiteboard'));
 
 		    		}
 				}); 

@@ -7,8 +7,6 @@
     <meta name="keywords" content="devine cpIII">
     <link href="css/screen.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="fonts/bebas/stylesheet.css"/>
-    
-
     <script type="text/javascript" src="scripts/modernizr.custom.92176.js"></script>
 	<title>Whiteboard - Scrum</title>
 
@@ -33,8 +31,8 @@
 
             <ul>
                 <li><a href="index.php?page=detail">Boards</a></li>
-                <li><a href="index.php?page=expl">What is sketch?</a></li>
-                <li><a href="index.php?page=settings">Settings</a></li>
+                <li><a href="index.php?page=detail">How to use sketch</a></li>
+                <li><a href="index.php?page=detail">Settings</a></li>
             </ul>
         
             <div id="userinfo">

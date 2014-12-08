@@ -84,7 +84,7 @@ body {
 
 /* line 22, ../_scss/screen.scss */
 .lijn {
-  background: url("../images/assets/Login/Lijn.png");
+  background: url(../images/assets/Login/Lijn.png);
   width: 460px;
   height: 3px;
   margin: auto;
@@ -94,7 +94,7 @@ body {
 
 /* line 32, ../_scss/screen.scss */
 #achtergrond_home {
-  background: url("../images/assets/background_home.png");
+  background: url(../images/assets/background_home.png);
   position: fixed;
   right: 0;
   bottom: 0;
@@ -156,7 +156,7 @@ header h1 {
 }
 /* line 93, ../_scss/screen.scss */
 #Login_form h1 {
-  background: url("../images/assets/Login/Logo.png");
+  background: url(../images/assets/Login/Logo.png);
   width: 225px;
   height: 171px;
   margin: auto;
@@ -179,7 +179,7 @@ header h1 {
   width: 459px;
   height: 50px;
   background-color: transparent;
-  background-image: url("../images/assets/Login/Input_background.png");
+  background-image: url(../images/assets/Login/Input_background.png);
 }
 /* line 124, ../_scss/screen.scss */
 #Login_form form #login_button {
@@ -210,7 +210,7 @@ header h1 {
 /* line 158, ../_scss/screen.scss */
 #Login_form #tussen_lijn {
   float: left;
-  background: url("../images/assets/Login/tussenlijn.png");
+  background: url(../images/assets/Login/tussenlijn.png);
   width: 4px;
   height: 47px;
   margin: auto;
@@ -237,7 +237,7 @@ header h1 {
 }
 /* line 193, ../_scss/screen.scss */
 #Registratie_form h1 {
-  background: url("../images/assets/Login/Logo.png");
+  background: url(../images/assets/Login/Logo.png);
   width: 225px;
   height: 171px;
   margin: auto;
@@ -269,7 +269,7 @@ header h1 {
   width: 221px;
   height: 50px;
   background-color: transparent;
-  background-image: url("../images/assets/Login/Input_name.png");
+  background-image: url(../images/assets/Login/Input_name.png);
 }
 /* line 235, ../_scss/screen.scss */
 #Registratie_form form #username, #Registratie_form form #email, #Registratie_form form #password, #Registratie_form form #confirm_password {
@@ -279,7 +279,7 @@ header h1 {
   width: 458px;
   height: 50px;
   background-color: transparent;
-  background-image: url("../images/assets/Login/Input_background.png");
+  background-image: url(../images/assets/Login/Input_background.png);
 }
 /* line 247, ../_scss/screen.scss */
 #Registratie_form form #registratie_button {
@@ -295,7 +295,7 @@ header h1 {
 }
 /* line 263, ../_scss/screen.scss */
 #Registratie_form #lijn_bottom {
-  background: url("../images/assets/Login/Lijn.png");
+  background: url(../images/assets/Login/Lijn.png);
   width: 460px;
   height: 3px;
   margin: auto;
@@ -315,7 +315,7 @@ nav header {
 }
 /* line 287, ../_scss/screen.scss */
 nav header h2 {
-  background: url("../images/assets/Login/Logo.png");
+  background: url(../images/assets/Login/Logo.png);
   width: 225px;
   height: 171px;
   margin-left: 40px;
@@ -325,7 +325,7 @@ nav header h2 {
 /* line 299, ../_scss/screen.scss */
 nav ul {
   list-style-type: none;
-  width: 500px;
+  width: 430px;
   height: 60px;
   margin: auto;
   padding-top: 30px;
@@ -526,19 +526,19 @@ nav #userinfo a {
   font-family: bebas_neueregular;
   font-size: 1.6em;
 }
-/* line 551, ../_scss/screen.scss */
-.leftbalk #formuploadpostit input {
+/* line 552, ../_scss/screen.scss */
+.leftbalk #formuploadpostit .input input {
   width: 260px;
   height: 20px;
   font-size: 15px;
 }
-/* line 559, ../_scss/screen.scss */
+/* line 560, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group {
   float: right;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 565, ../_scss/screen.scss */
+/* line 566, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group input {
   background-color: transparent;
   color: #363D50;
@@ -549,11 +549,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 585, ../_scss/screen.scss */
+/* line 586, ../_scss/screen.scss */
 .leftbalk #formuploadimage #addImageImage {
   width: 262px;
 }
-/* line 591, ../_scss/screen.scss */
+/* line 592, ../_scss/screen.scss */
 .leftbalk #formuploadimage .uploadimage {
   float: right;
   margin-right: 15px;
@@ -567,11 +567,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 612, ../_scss/screen.scss */
+/* line 613, ../_scss/screen.scss */
 .leftbalk #formuploadvideo #addvideo {
   width: 262px;
 }
-/* line 618, ../_scss/screen.scss */
+/* line 619, ../_scss/screen.scss */
 .leftbalk #formuploadvideo .uploadvideo {
   float: right;
   margin-right: 15px;
@@ -585,7 +585,7 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 639, ../_scss/screen.scss */
+/* line 640, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -596,12 +596,12 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 657, ../_scss/screen.scss */
+/* line 658, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 668, ../_scss/screen.scss */
+/* line 669, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -614,12 +614,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 677, ../_scss/screen.scss */
+/* line 678, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 682, ../_scss/screen.scss */
+/* line 683, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -636,12 +636,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 693, ../_scss/screen.scss */
+/* line 694, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #232323;
 }
 
-/* line 698, ../_scss/screen.scss */
+/* line 699, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

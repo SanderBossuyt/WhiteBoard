@@ -39,10 +39,11 @@
 					data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
 					success:function(response){ 
 
-						var tata = response.split("<div class=\"alles\">")[1];
+						var tata = response.split("</h1>")[1];
 						var tatata = tata.split("</form")[0];
-						detail();
 		    			$(".alles").html(tatata);
+
+		    			new detail();
 
 		    		}
 				}); 
@@ -60,11 +61,9 @@
 						
 						var tata = response.split("<br />")[1];
 						var tatata = tata.split("<script")[0];
-
 						
-
 		    			$(".whiteboard").html(tatata);
-		    			//new application(document.querySelector('.whiteboard'));
+		    			new application(document.querySelector('.whiteboard'));
 
 		    		}
 				}); 
@@ -146,7 +145,6 @@ module.exports = (function(){
 
 },{"./item":6}],3:[function(require,module,exports){
 module.exports = (function(){
-	
 var lis = document.querySelectorAll('li');
 	
 	
@@ -329,7 +327,7 @@ module.exports = (function(){
 
 		if ((event.x - this.offsetX) <= 280) {
 			console.log("bamanamm");
-			this.el.style.left = 330 + "px";
+			this.el.style.left = 300 + "px";
 		};
 
 		if ((event.x - this.offsetX) >= $(window).width()-240) {

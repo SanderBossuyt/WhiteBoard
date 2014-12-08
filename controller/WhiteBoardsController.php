@@ -2,7 +2,6 @@
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 require_once WWW_ROOT . 'dao' . DS . 'WhiteBoardDAO.php';
 require_once WWW_ROOT . 'dao' . DS . 'ItemDAO.php';
-require_once WWW_ROOT . 'php-image-resize' . DS . 'ImageResize.php';
 
 class WhiteBoardsController extends Controller {
 private $whiteboardDAO;
@@ -132,7 +131,7 @@ function __construct() {
 							"content"=>$_POST["postit"],
 							"origin"=>"postit",
 							"board_id"=>$board['id'],
-							"x"=>400,
+							"x"=>200,
 							"y"=>200
 						);
 
@@ -150,127 +149,14 @@ function __construct() {
 
 				$this->set('errors', $errors);
 
-
+			//image/video shizzel
 			}else if($_POST["action"] == 'upload image'){
 
-				$size = array();
-	
-				if(!empty($_FILES['image'])){
-					if(!empty($_FILES['image']['error'])){
-						$errors['image'] = "the image could not be uploaded";
-					}
-		
-					if(empty($errors['image'])){
-						$size = getimagesize($_FILES['image']['tmp_name']);
-						if(empty($size)){
-							$errors['image'] = "please upload an image";
-						}
-					}
-		
-					if(empty($errors['image'])){
-						if($size[0] != $size[1]){
-							$errors['image'] = "image should be square";
-						}
-					}
-
-					//size shizzel
-					if(empty($errors['image'])){
-						$name = preg_replace("/\\.[^.\\s]{3,4}$/", "", $_FILES["image"]["name"]);
-						$pieces = explode($name.'.', $_FILES["image"]["name"])[1];
-						
-						$imageresize = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
-						$imageresize->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
-						$imageresize->resizeToHeight(60);
-						$imageresize->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name."_th.".$pieces);
-		
-						$imageresize400 = new Eventviva\ImageResize($_FILES['image']['tmp_name']);
-						$imageresize400->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
-						$imageresize400->resizeToHeight(400);
-						$imageresize400->save(WWW_ROOT . 'uploads' . DS . 'board' . DS . 'images' . DS . $name.".".$pieces);
-					}	
-				}
-
-				if(empty($errors)) {
-
-					$content=$name.".".$pieces;
-					
-					$image = array(
-							"content"=>$content,
-							"origin"=>"image",
-							"board_id"=>$board['id'],
-							"x"=>400,
-							"y"=>200
-						);
-
-					$insertedimage = $this->itemDAO->insert($image);
-					
-					if(!empty($insertedimage)) {
-						$_SESSION['info'] = 'your image is added';
-						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
-						//exit();
-					
-					} else {
-						$_SESSION['error'] = 'image add failed';
-					}
-				} 
-
-				$this->set('errors', $errors);
-
-				
+				var_dump("update image");
 
 			}else if($_POST["action"] == 'upload video'){
 
-	
-				if(!empty($_FILES["video"])){
-
-					if(!empty($_FILES['video']['error'])){
-						$errors['video'] = "the video could not be uploaded";
-					}
-
-
-					if(empty($errors['video'])){
-
-						$type = ($_FILES["video"]["type"]);
-                    	$path = ($_FILES["video"]["tmp_name"]);
-                    	$size = filesize($path);
-
-                    	if($size <=100000000 && $type == "video/mp4"){
-
-	                        $filename = $_FILES["video"]["name"];
-	                        $newPath = WWW_ROOT . 'uploads' . DS . 'board' . DS . 'videos' . DS . $filename;
-
-	                        move_uploaded_file($path,$newPath);
-
-	                        $video = array(
-								"content"=>$filename,
-								"origin"=>"video",
-								"board_id"=>$board['id'],
-								"x"=>400,
-								"y"=>200
-							);
-
-							$insertedvideo = $this->itemDAO->insert($video);
-                		}
-
-					}
-                }
-
-	            if(empty($errors)) {
-					
-					
-					
-					if(!empty($insertedvideo)) {
-
-						$_SESSION['info'] = 'your video is added';
-					
-					} else {
-
-						$_SESSION['error'] = 'video add failed';
-
-					}
-				}
-
-				$this->set('errors', $errors);
+				var_dump("update vid");
 
 			}
 	}
