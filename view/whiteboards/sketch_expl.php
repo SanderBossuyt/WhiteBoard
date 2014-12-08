@@ -1,5 +1,7 @@
 <div id="uitleg_pagina">
 
+	<div id="logo">Logo</div>
+
 	<div id="inleiding">
 		
 		<header>

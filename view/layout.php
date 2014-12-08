@@ -31,7 +31,7 @@
 
             <ul>
                 <li><a href="index.php?page=detail">Boards</a></li>
-                <li><a href="index.php?page=detail">How to use sketch</a></li>
+                <li><a href="index.php?page=expl">How to use sketch</a></li>
                 <li><a href="index.php?page=detail">Settings</a></li>
             </ul>
         

@@ -48,7 +48,7 @@
             
             <div class="input-text">
                 
-                <label for="addimage">Upload Video:</label>        
+                <label for="addvideo">Upload Video:</label>        
                     <input type="file" name="video" id="addvideo" value="<?php if(!empty($_POST['video'])) echo $_POST['video'];?>" />
                     <span class="error"<?php if(empty($error['video'])) echo 'style="display: none;"';?>><?php
                     if(empty($error['video'])) echo 'gelieve een video te selecteren';

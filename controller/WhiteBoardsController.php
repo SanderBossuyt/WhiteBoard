@@ -126,6 +126,10 @@ function __construct() {
 		//nothing to do in php with this page ;)
 	}
 
+	public function sketch_expl() {
+		//nothing to do in php with this page ;)
+	}
+
 	public function drawing() {
 
 	$board = $this->whiteboardDAO->selectBoard($_GET["id"]);

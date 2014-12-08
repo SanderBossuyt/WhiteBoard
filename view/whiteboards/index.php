@@ -21,7 +21,7 @@
     
 
     <div id="scrum" class="explanation">
-        <a href="index.php?page=expl">Scrum?</a>    
+        <a href="index.php?page=sketch_expl">Sketch?</a>    
     </div>
 
     <div id="tussen_lijn"></div>

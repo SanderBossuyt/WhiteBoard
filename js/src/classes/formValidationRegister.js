@@ -52,7 +52,7 @@ module.exports = (function(){
 		}
 		errorHolder.classList.remove("hidden");
 		return false;
-	};
+	}
 
 
 

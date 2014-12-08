@@ -32,6 +32,10 @@ $routes = array(
     'expl' => array(
         'controller' => 'WhiteBoards',
         'action' => 'expl'
+    ),
+    'sketch_expl' => array(
+        'controller' => 'WhiteBoards',
+        'action' => 'sketch_expl'
     ) 
 );
 

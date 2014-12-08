@@ -25,13 +25,13 @@ module.exports = (function(){
 			this.fileReader.onload = this.onFileReaderLoad.bind(this);
 			this.fileReader.readAsDataURL(this.fileInput.files[0]);
 		}
-	}
+	};
 	
 	ImageInput.prototype.onFileReaderLoad = function(event){
 		this.img = document.createElement("img");
 		this.img.onload = this.onloadHandler.bind(this);
 		this.img.setAttribute('src', this.fileReader.result);
-	}
+	};
 	
 	ImageInput.prototype.onloadHandler = function(event){
 		var errorElement = this.fileInput.parentNode.querySelector(".error");
@@ -41,7 +41,7 @@ module.exports = (function(){
 		}else{
 			errorElement.classList.add("hidden");
 		}
-	}
+	};
 
 
 

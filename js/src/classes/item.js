@@ -30,22 +30,22 @@ module.exports = (function(){
 		if ((event.y - this.offsetY) <= 100) {
 			console.log("bamanamm");
 			this.el.style.top = 100 + "px";
-		};
+		}
 
 		if ((event.x - this.offsetX) <= 280) {
 			console.log("bamanamm");
 			this.el.style.left = 300 + "px";
-		};
+		}
 
 		if ((event.x - this.offsetX) >= $(window).width()-240) {
 			console.log("bamanamm");
 			this.el.style.left = $(window).width()-220 + "px";
-		};
+		}
 
 		if ((event.y - this.offsetY) >= $(window).height()-240) {
 			console.log("bamanamm");
 			this.el.style.top = $(window).height()-220 + "px";
-		};
+		}
 
 	};
 	

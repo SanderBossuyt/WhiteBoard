@@ -11,7 +11,7 @@ var lis = document.querySelectorAll('li');
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
 		}
 
-	};
+	}
 
 	detailPage.prototype.clickHandler = function(event){
 

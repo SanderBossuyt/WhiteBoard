@@ -142,6 +142,7 @@ header{
 		width: 228px;
 		font-family: bebas_neueregular;
 		font-size:1.5em;
+		padding-top: 10px;
 		
 		a{
 
@@ -170,6 +171,7 @@ header{
 		width: 228px;
 		font-family: bebas_neueregular;
 		font-size:1.5em;
+		padding-top: 10px;
 
 		a{
 
@@ -299,7 +301,7 @@ nav{
 	ul{
 
 		list-style-type: none;
-		width: 430px;
+		width: 375px;
 		height: 60px;
 		margin: auto;
 		padding-top: 30px;
@@ -635,7 +637,9 @@ nav{
 		}
 	}
 
-	#back_button{	
+	#back_button{
+
+		padding-top: 15px;	
 
 		a{
 
@@ -660,7 +664,135 @@ nav{
 }
 
 //what is scrum
+#uitleg_pagina{
 
+	width: 960px;
+	margin: auto;
+	margin-bottom: 100px;
+
+	#logo{
+
+		background: url(../images/assets/Login/Logo.png) no-repeat;
+		width: 225px;
+		height: 171px;
+		text-indent: -9999px;
+		margin-top: 50px;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+
+
+	}
+
+	#inleiding{
+
+		margin-bottom: 40px;
+		border-bottom: 1px dashed #EA5244;
+		padding-bottom: 40px;
+
+		header{
+
+				margin-bottom: 30px;				
+
+			h1{
+
+				font-family: bebas_neueregular;
+				font-size: 3em;
+				color:#363D50;
+				text-align: center;			
+
+			}
+		}
+
+		p{
+
+			width: 750px;
+			margin: auto;
+			text-align: center;
+
+		}
+	}
+	#attributen{
+
+		margin-bottom: 50px;
+		border-bottom: 1px dashed #EA5244;
+		padding-bottom: 40px;
+
+
+		header{
+
+				margin-bottom: 30px;				
+
+			h2{
+
+				font-family: bebas_neueregular;
+				font-size: 2em;
+				color:#363D50;
+				text-align: center;			
+
+			}
+		}
+
+		.attribut{
+
+			float: left;
+			width: 400px;
+			margin: 0 40px 20px 40px;
+
+
+			img{
+
+				border: 2px solid #363D50;
+
+				&:hover{
+
+					border: 2px solid #EA5244;
+
+				}				
+
+			}
+			h3{
+
+				font-family: bebas_neueregular;
+				font-size: 2em;
+				color:#EA5244;	
+
+				margin-left: 10px;
+				margin-top: 10px;
+				margin-bottom: 5px;
+
+			}
+			p{
+			
+				margin-left: 10px;
+				width: 380px;	
+
+			}
+
+		}
+
+
+	}
+
+	#back_button{	
+
+		a{
+
+			text-decoration: none;
+			color:#EA5244;
+			font-family: bebas_neueregular;
+			font-size: 1.5em;
+			background-image: url("../images/assets/back_button.png");
+			background-repeat: no-repeat;
+			margin-top: 20px;
+			padding: 8px 15px 10px 45px;
+
+
+		}
+
+	}
+
+}
 
 
 
@@ -692,7 +824,7 @@ nav{
 	@include rotate(3deg);
 
 	img{
-		border:3px solid #232323;
+		border:3px solid #363D50;
 	}
 }
 

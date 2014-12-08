@@ -199,15 +199,16 @@ header h1 {
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
+  padding-top: 10px;
 }
-/* line 146, ../_scss/screen.scss */
+/* line 147, ../_scss/screen.scss */
 #Login_form #scrum a {
   text-decoration: none;
   color: #363d50;
   padding-left: 84px;
   margin-top: 10px;
 }
-/* line 158, ../_scss/screen.scss */
+/* line 159, ../_scss/screen.scss */
 #Login_form #tussen_lijn {
   float: left;
   background: url(../images/assets/Login/tussenlijn.png);
@@ -215,14 +216,15 @@ header h1 {
   height: 47px;
   margin: auto;
 }
-/* line 167, ../_scss/screen.scss */
+/* line 168, ../_scss/screen.scss */
 #Login_form #create {
   float: left;
   width: 228px;
   font-family: bebas_neueregular;
   font-size: 1.5em;
+  padding-top: 10px;
 }
-/* line 174, ../_scss/screen.scss */
+/* line 176, ../_scss/screen.scss */
 #Login_form #create a {
   text-decoration: none;
   color: #363d50;
@@ -230,12 +232,12 @@ header h1 {
   padding-top: 10px;
 }
 
-/* line 188, ../_scss/screen.scss */
+/* line 190, ../_scss/screen.scss */
 #Registratie_form {
   margin: auto;
   width: 460px;
 }
-/* line 193, ../_scss/screen.scss */
+/* line 195, ../_scss/screen.scss */
 #Registratie_form h1 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -244,24 +246,24 @@ header h1 {
   margin-top: 100px;
   text-indent: -9999px;
 }
-/* line 204, ../_scss/screen.scss */
+/* line 206, ../_scss/screen.scss */
 #Registratie_form form {
   float: left;
 }
-/* line 208, ../_scss/screen.scss */
+/* line 210, ../_scss/screen.scss */
 #Registratie_form form input {
   border: none;
 }
-/* line 213, ../_scss/screen.scss */
+/* line 215, ../_scss/screen.scss */
 #Registratie_form form #name_float {
   float: left;
 }
-/* line 218, ../_scss/screen.scss */
+/* line 220, ../_scss/screen.scss */
 #Registratie_form form #last_float {
   float: left;
   margin-left: 14px;
 }
-/* line 224, ../_scss/screen.scss */
+/* line 226, ../_scss/screen.scss */
 #Registratie_form form #name, #Registratie_form form #last_name {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -271,7 +273,7 @@ header h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_name.png);
 }
-/* line 235, ../_scss/screen.scss */
+/* line 237, ../_scss/screen.scss */
 #Registratie_form form #username, #Registratie_form form #email, #Registratie_form form #password, #Registratie_form form #confirm_password {
   margin-top: 10px;
   font-family: bebas_neueregular;
@@ -281,7 +283,7 @@ header h1 {
   background-color: transparent;
   background-image: url(../images/assets/Login/Input_background.png);
 }
-/* line 247, ../_scss/screen.scss */
+/* line 249, ../_scss/screen.scss */
 #Registratie_form form #registratie_button {
   font-family: bebas_neueregular;
   font-size: 1.5em;
@@ -293,7 +295,7 @@ header h1 {
   background-color: #363d50;
   color: #ea5244;
 }
-/* line 263, ../_scss/screen.scss */
+/* line 265, ../_scss/screen.scss */
 #Registratie_form #lijn_bottom {
   background: url(../images/assets/Login/Lijn.png);
   width: 460px;
@@ -304,16 +306,16 @@ header h1 {
   clear: both;
 }
 
-/* line 278, ../_scss/screen.scss */
+/* line 280, ../_scss/screen.scss */
 nav {
   background-color: #363d50;
   height: 80px;
 }
-/* line 283, ../_scss/screen.scss */
+/* line 285, ../_scss/screen.scss */
 nav header {
   float: left;
 }
-/* line 287, ../_scss/screen.scss */
+/* line 289, ../_scss/screen.scss */
 nav header h2 {
   background: url(../images/assets/Login/Logo.png);
   width: 225px;
@@ -322,19 +324,19 @@ nav header h2 {
   margin-top: -10px;
   text-indent: -9999px;
 }
-/* line 299, ../_scss/screen.scss */
+/* line 301, ../_scss/screen.scss */
 nav ul {
   list-style-type: none;
-  width: 430px;
+  width: 375px;
   height: 60px;
   margin: auto;
   padding-top: 30px;
 }
-/* line 307, ../_scss/screen.scss */
+/* line 309, ../_scss/screen.scss */
 nav ul li {
   float: left;
 }
-/* line 311, ../_scss/screen.scss */
+/* line 313, ../_scss/screen.scss */
 nav ul li a {
   text-decoration: none;
   margin-left: 25px;
@@ -342,7 +344,7 @@ nav ul li a {
   font-size: 1.5em;
   color: #ffffff;
 }
-/* line 320, ../_scss/screen.scss */
+/* line 322, ../_scss/screen.scss */
 nav ul li a:hover {
   -moz-transition: 0.1s;
   -o-transition: 0.1s;
@@ -351,14 +353,14 @@ nav ul li a:hover {
   color: #ea5244;
   text-decoration: underline;
 }
-/* line 332, ../_scss/screen.scss */
+/* line 334, ../_scss/screen.scss */
 nav #userinfo {
   width: 300px;
   position: absolute;
   top: 10px;
   right: 10px;
 }
-/* line 340, ../_scss/screen.scss */
+/* line 342, ../_scss/screen.scss */
 nav #userinfo p {
   float: left;
   color: #ffffff;
@@ -367,41 +369,41 @@ nav #userinfo p {
   margin-top: 17px;
   margin-right: 5px;
 }
-/* line 349, ../_scss/screen.scss */
+/* line 351, ../_scss/screen.scss */
 nav #userinfo p span {
   color: #ea5244;
   margin: 0 5px;
 }
-/* line 357, ../_scss/screen.scss */
+/* line 359, ../_scss/screen.scss */
 nav #userinfo img {
   float: left;
   border: 1px solid #ea5244;
 }
-/* line 363, ../_scss/screen.scss */
+/* line 365, ../_scss/screen.scss */
 nav #userinfo a {
   color: #ffffff;
   text-decoration: none;
   margin-left: 10px;
 }
 
-/* line 375, ../_scss/screen.scss */
+/* line 377, ../_scss/screen.scss */
 #home {
   margin: auto;
   width: 840px;
   margin-top: -25px;
 }
-/* line 381, ../_scss/screen.scss */
+/* line 383, ../_scss/screen.scss */
 #home h1 {
   color: #363d50;
   font-family: bebas_neueregular;
   font-size: 3em;
   margin-bottom: 10px;
 }
-/* line 390, ../_scss/screen.scss */
+/* line 392, ../_scss/screen.scss */
 #home #my_boards {
   float: left;
 }
-/* line 394, ../_scss/screen.scss */
+/* line 396, ../_scss/screen.scss */
 #home #my_boards .boards {
   height: 480px;
   width: 480px;
@@ -409,7 +411,7 @@ nav #userinfo a {
   border: 3px solid #363d50;
   background-color: #e3e3e3;
 }
-/* line 402, ../_scss/screen.scss */
+/* line 404, ../_scss/screen.scss */
 #home #my_boards .boards li {
   float: left;
   width: 158px;
@@ -418,23 +420,23 @@ nav #userinfo a {
   text-align: center;
   padding-top: 98px;
 }
-/* line 412, ../_scss/screen.scss */
+/* line 414, ../_scss/screen.scss */
 #home #my_boards .boards li a {
   text-decoration: none;
   color: #ea5144;
 }
-/* line 423, ../_scss/screen.scss */
+/* line 425, ../_scss/screen.scss */
 #home #my_boards form {
   margin-top: -20px;
 }
-/* line 427, ../_scss/screen.scss */
+/* line 429, ../_scss/screen.scss */
 #home #my_boards form span {
   float: left;
   color: #ffffff;
   font-family: bebas_neueregular;
   font-size: 1.3em;
 }
-/* line 435, ../_scss/screen.scss */
+/* line 437, ../_scss/screen.scss */
 #home #my_boards form input {
   float: left;
   margin-left: 5px;
@@ -445,7 +447,7 @@ nav #userinfo a {
   border: 1px dotted #ea5144;
   background-color: transparent;
 }
-/* line 447, ../_scss/screen.scss */
+/* line 449, ../_scss/screen.scss */
 #home #my_boards form #add_board {
   border: 1px solid #ea5144;
   background-color: #ea5144;
@@ -453,12 +455,12 @@ nav #userinfo a {
   margin-top: 2px;
   margin-left: 24px;
 }
-/* line 460, ../_scss/screen.scss */
+/* line 462, ../_scss/screen.scss */
 #home #board_users {
   float: left;
   margin-left: 20px;
 }
-/* line 465, ../_scss/screen.scss */
+/* line 467, ../_scss/screen.scss */
 #home #board_users #users {
   width: 320px;
   height: 480px;
@@ -467,7 +469,7 @@ nav #userinfo a {
   background-color: #e3e3e3;
 }
 
-/* line 480, ../_scss/screen.scss */
+/* line 482, ../_scss/screen.scss */
 .selected {
   -moz-transition: 0.1s;
   -o-transition: 0.1s;
@@ -475,7 +477,7 @@ nav #userinfo a {
   transition: 0.1s;
   background-color: #363d50;
 }
-/* line 484, ../_scss/screen.scss */
+/* line 486, ../_scss/screen.scss */
 .selected a {
   text-transform: uppercase;
   font-size: 1.2em;
@@ -488,7 +490,7 @@ nav #userinfo a {
   color: #ea5144;
 }
 
-/* line 500, ../_scss/screen.scss */
+/* line 502, ../_scss/screen.scss */
 .leftbalk {
   padding: 140px 5px 20px 5px;
   width: 280px;
@@ -502,43 +504,43 @@ nav #userinfo a {
   -webkit-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
-/* line 512, ../_scss/screen.scss */
+/* line 514, ../_scss/screen.scss */
 .leftbalk p {
   color: #363D50;
 }
-/* line 516, ../_scss/screen.scss */
+/* line 518, ../_scss/screen.scss */
 .leftbalk p span {
   color: #EA5244;
   font-family: bebas_neueregular;
   font-size: 1.2em;
 }
-/* line 525, ../_scss/screen.scss */
+/* line 527, ../_scss/screen.scss */
 .leftbalk form {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 275px;
   height: 60px;
 }
-/* line 533, ../_scss/screen.scss */
+/* line 535, ../_scss/screen.scss */
 .leftbalk form label {
   float: left;
   color: #363D50;
   font-family: bebas_neueregular;
   font-size: 1.6em;
 }
-/* line 552, ../_scss/screen.scss */
+/* line 554, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .input input {
   width: 260px;
   height: 20px;
   font-size: 15px;
 }
-/* line 560, ../_scss/screen.scss */
+/* line 562, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group {
   float: right;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 566, ../_scss/screen.scss */
+/* line 568, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group input {
   background-color: transparent;
   color: #363D50;
@@ -549,11 +551,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 586, ../_scss/screen.scss */
+/* line 588, ../_scss/screen.scss */
 .leftbalk #formuploadimage #addImageImage {
   width: 262px;
 }
-/* line 592, ../_scss/screen.scss */
+/* line 594, ../_scss/screen.scss */
 .leftbalk #formuploadimage .uploadimage {
   float: right;
   margin-right: 15px;
@@ -567,11 +569,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 613, ../_scss/screen.scss */
+/* line 615, ../_scss/screen.scss */
 .leftbalk #formuploadvideo #addvideo {
   width: 262px;
 }
-/* line 619, ../_scss/screen.scss */
+/* line 621, ../_scss/screen.scss */
 .leftbalk #formuploadvideo .uploadvideo {
   float: right;
   margin-right: 15px;
@@ -586,6 +588,10 @@ nav #userinfo a {
   padding-top: 5px;
 }
 /* line 640, ../_scss/screen.scss */
+.leftbalk #back_button {
+  padding-top: 15px;
+}
+/* line 644, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -596,12 +602,109 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 658, ../_scss/screen.scss */
+/* line 662, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 669, ../_scss/screen.scss */
+/* line 667, ../_scss/screen.scss */
+#uitleg_pagina {
+  width: 960px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+/* line 673, ../_scss/screen.scss */
+#uitleg_pagina #logo {
+  background: url(../images/assets/Login/Logo.png) no-repeat;
+  width: 225px;
+  height: 171px;
+  text-indent: -9999px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 687, ../_scss/screen.scss */
+#uitleg_pagina #inleiding {
+  margin-bottom: 40px;
+  border-bottom: 1px dashed #EA5244;
+  padding-bottom: 40px;
+}
+/* line 693, ../_scss/screen.scss */
+#uitleg_pagina #inleiding header {
+  margin-bottom: 30px;
+}
+/* line 697, ../_scss/screen.scss */
+#uitleg_pagina #inleiding header h1 {
+  font-family: bebas_neueregular;
+  font-size: 3em;
+  color: #363D50;
+  text-align: center;
+}
+/* line 707, ../_scss/screen.scss */
+#uitleg_pagina #inleiding p {
+  width: 750px;
+  margin: auto;
+  text-align: center;
+}
+/* line 715, ../_scss/screen.scss */
+#uitleg_pagina #attributen {
+  margin-bottom: 50px;
+  border-bottom: 1px dashed #EA5244;
+  padding-bottom: 40px;
+}
+/* line 722, ../_scss/screen.scss */
+#uitleg_pagina #attributen header {
+  margin-bottom: 30px;
+}
+/* line 726, ../_scss/screen.scss */
+#uitleg_pagina #attributen header h2 {
+  font-family: bebas_neueregular;
+  font-size: 2em;
+  color: #363D50;
+  text-align: center;
+}
+/* line 736, ../_scss/screen.scss */
+#uitleg_pagina #attributen .attribut {
+  float: left;
+  width: 400px;
+  margin: 0 40px 20px 40px;
+}
+/* line 743, ../_scss/screen.scss */
+#uitleg_pagina #attributen .attribut img {
+  border: 2px solid #363D50;
+}
+/* line 747, ../_scss/screen.scss */
+#uitleg_pagina #attributen .attribut img:hover {
+  border: 2px solid #EA5244;
+}
+/* line 754, ../_scss/screen.scss */
+#uitleg_pagina #attributen .attribut h3 {
+  font-family: bebas_neueregular;
+  font-size: 2em;
+  color: #EA5244;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+/* line 765, ../_scss/screen.scss */
+#uitleg_pagina #attributen .attribut p {
+  margin-left: 10px;
+  width: 380px;
+}
+/* line 779, ../_scss/screen.scss */
+#uitleg_pagina #back_button a {
+  text-decoration: none;
+  color: #EA5244;
+  font-family: bebas_neueregular;
+  font-size: 1.5em;
+  background-image: url("../images/assets/back_button.png");
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  padding: 8px 15px 10px 45px;
+}
+
+/* line 801, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -614,12 +717,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 678, ../_scss/screen.scss */
+/* line 810, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 683, ../_scss/screen.scss */
+/* line 815, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -636,12 +739,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 694, ../_scss/screen.scss */
+/* line 826, ../_scss/screen.scss */
 .picture img {
-  border: 3px solid #232323;
+  border: 3px solid #363D50;
 }
 
-/* line 699, ../_scss/screen.scss */
+/* line 831, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

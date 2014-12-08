@@ -9,12 +9,12 @@ module.exports = (function(){
 		for(var i = 0; i< items.length; i++){
 			this.createPostit(items[i]);
 		}	
-	};
+	}
 	
 	application.prototype.createPostit = function(data) {
 		var itemke = new Item(data);
 		bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
-	}
+	};
 
 	application.prototype.itemkeChangeHandler = function(item) {
 		console.log(item.el.classList[2]);
