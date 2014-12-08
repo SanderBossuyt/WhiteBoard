@@ -66,7 +66,8 @@
     <div class="dummy"></div>
 
     <div id="back_button"><a href="index.php?page=detail">Go back</a></div>
-
+    
+    
 </div>
 
 

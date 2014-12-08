@@ -51,10 +51,22 @@
 		
 		<div id="users">
 			<h3></h3>
-			
+			<form method="post" id="newInvite" action="index.php?page=detail&amp;id=<?php echo $_GET['id'];?>"   class="form-inline">
+			    <div class="form-group">
+					<div class="input text">
+			            <label>
+			                <span>name your awesome invite:</span>
+			                <input type="text" class="invite" name="invite" value="<?php if(!empty($_POST['invite'])) echo $_POST['invite'];?>" />
+			                
+			            </label>
+			        </div>
+			    </div>
+			    <input id="add_invite" type="submit" name="action" value="Invite" class="btn btn-default" />
+			    <div class="dummy"></div>
+			    <p id="errorInvite" class="error<?php if(empty($errors['invite'])) echo ' hidden';?>" data-for="invite">Please enter your awesome invites name</p>
+			</form>
 			
 		</div>
-
 	</div>
 </div>
 <div id="achtergrond_home"></div>

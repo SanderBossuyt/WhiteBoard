@@ -49,11 +49,9 @@
 		});
 
 
-<<<<<<< HEAD
-=======
 		//postit op schermkrijgen met ajax
 		$('#formuploadpostit').submit(function(event) {
->>>>>>> css whiteboard
+
 
 			event.preventDefault();
 				$.ajax({
