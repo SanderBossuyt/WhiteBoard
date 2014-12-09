@@ -131,17 +131,17 @@ class WhiteBoardDAO extends DAO {
 
 	//delete board
 
-	// public function deleteEvent($id){
+	public function deleteEvent($id){
 
- //        $sql = "DELETE FROM `rsvp_events`
- //                WHERE id = :id";
- //        $stmt = $this->pdo->prepare($sql);
- //        $stmt->bindValue(':id', $id);
- //        if($stmt->execute()){
- //            return true;
- //        }
- //        return false;
+        $sql = "DELETE FROM `boards`
+                WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
 
- //    }
+    }
 
 }

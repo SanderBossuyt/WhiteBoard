@@ -66,7 +66,11 @@
 
     <div id="back_button"><a href="index.php?page=detail">Go back</a></div>
 
-    <div id="delete_button"><a href="index.php?page=detail">Delete</a></div>
+    <form action="index.php?page=drawing&amp;id=<?php echo $_GET['id']; ?>" method="post" class="form-horizontal" id="formdeleteboard" enctype="multipart/form-data">
+            
+            <div><input type="submit" name="action" value="delete board" class="deleteboard"></div>
+
+    </form>
 
     <div class="dummy"></div>
        

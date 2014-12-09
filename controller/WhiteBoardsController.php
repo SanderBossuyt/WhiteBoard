@@ -333,6 +333,11 @@ private $userDAO;
 	
 					$this->set('errors', $errors);
 	
+				}else if($_POST["action"] == 'delete board'){
+
+					$this->whiteboardDAO->deleteEvent($_GET["id"]);
+            		$this->redirect("index.php?page=index");
+
 				}
 			}
 		}
