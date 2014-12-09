@@ -28,6 +28,9 @@ function __construct() {
 	
 	public function detail() {
 		
+		//var_dump( $this->whiteboardDAO->selectByInvite($_SESSION['user']['id']));
+
+
 		$errors = array();
 
 
@@ -36,7 +39,13 @@ function __construct() {
 		}
 
 		$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
-			
+		
+		//================HIER===========
+
+		//$invite_users = $this->inviteDAO->selectAllInvitesByBoardId($_GET['id']);
+
+		//$this->set('invite_users', $invite_users);
+
 
 		if (!empty($_POST)) {
 			if ($_POST["action"] == 'Add New Board') {
@@ -64,6 +73,7 @@ function __construct() {
 			} 
 
 				$this->set('errors', $errors);
+
 			}else if($_POST["action"] == 'Invite'){
 
 				if(empty($_POST['invite'])) {
@@ -79,7 +89,7 @@ function __construct() {
 						$errors['invite'] = 'Please enter an valid name';
 
 					}else{
-						$nameControle = $this->inviteDAO->selectByName($idByName["id"]);
+						$nameControle = $this->inviteDAO->selectByName($idByName["id"],$_GET["id"]);
 						if (count($nameControle) >= 1) {
 						$errors['invite'] = 'Please enter an valid name';
 

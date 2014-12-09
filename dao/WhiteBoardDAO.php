@@ -12,6 +12,19 @@ class WhiteBoardDAO extends DAO {
 		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	public function selectByInvite($user_id) {
+		$sql = "SELECT invites.*, boards.*
+				FROM invites
+				INNER JOIN boards
+				ON boards.id = board_id
+				WHERE user_idreceiver = :user_id
+				ORDER BY boards.creation_date DESC";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':user_id', $user_id);
+		$stmt->execute();
+		return  $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function selectBoard($board_id) {
 		$sql = "SELECT * FROM `boards`
 				WHERE `id` = :board_id";

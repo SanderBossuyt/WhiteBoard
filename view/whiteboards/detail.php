@@ -51,7 +51,28 @@
 		
 		<div id="users">
 			<h3></h3>
+
 			<?php if(!empty($_GET ["id"])){ ?>
+
+				<?php
+
+		    		if (!empty($invite_users)) {
+						foreach($invite_users as $invite_user) {
+							
+								echo "<li>";
+									echo "<p>";
+										echo "{$invite_user['names']}";
+									echo "</p>";
+								echo "</li>";
+						}
+					}else{
+						?>
+						<p>awwwww, seems like you have no invites yet...</p>
+						<?php
+					}
+
+				?>	
+
 				<form method="post" id="newInvite" action="index.php?page=detail&amp;id=<?php echo $_GET['id'];?>"   class="form-inline">
 				    <div class="form-group">
 						<div class="input text">
