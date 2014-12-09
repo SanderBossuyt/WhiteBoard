@@ -2,15 +2,21 @@
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 require_once WWW_ROOT . 'dao' . DS . 'WhiteBoardDAO.php';
 require_once WWW_ROOT . 'dao' . DS . 'ItemDAO.php';
+require_once WWW_ROOT . 'dao' . DS . 'InviteDAO.php';
+require_once WWW_ROOT . 'dao' . DS . 'UserDAO.php';
 require_once WWW_ROOT . 'php-image-resize' . DS . 'ImageResize.php';
 
 class WhiteBoardsController extends Controller {
 private $whiteboardDAO;
 private $itemDAO;
+private $inviteDAO;
+private $userDAO;
 
 function __construct() {
 	$this->whiteboardDAO = new WhiteBoardDAO();
 	$this->itemDAO = new ItemDAO();
+	$this->inviteDAO = new InviteDAO();
+	$this->userDAO = new UserDAO();
 }
 
 	public function index() {
@@ -21,7 +27,7 @@ function __construct() {
 	
 	
 	public function detail() {
-
+		
 		$errors = array();
 
 
@@ -58,13 +64,61 @@ function __construct() {
 			} 
 
 				$this->set('errors', $errors);
+			}else if($_POST["action"] == 'Invite'){
+
+				if(empty($_POST['invite'])) {
+					$errors['invite'] = 'Please enter an invite';
+				}else{
+
+					$idByName = $this->userDAO->selectByName($_POST["invite"]);
+
+					
+
+					if($idByName == false){
+
+						$errors['invite'] = 'Please enter an valid name';
+
+					}else{
+						$nameControle = $this->inviteDAO->selectByName($idByName["id"]);
+						if (count($nameControle) >= 1) {
+						$errors['invite'] = 'Please enter an valid name';
+
+						}
+					}
+				}
+
+				
+				
+
+				if(empty($errors)) {
+					
+					$invite = array(
+							"user_idsender"=>$_SESSION["user"]["id"],
+							"board_id"=>$_GET["id"],
+							"user_idreceiver"=>$idByName["id"]
+						);
+
+					$insertedinvite = $this->inviteDAO->insert($invite);
+					
+					if(!empty($insertedinvite)) {
+						$_SESSION['info'] = 'your invite is added';
+						header('Location: index.php?page=detail');
+						exit();
+					
+					} else {
+						$_SESSION['error'] = 'invite add failed';
+					}
+				} 
+
+				$this->set('errors', $errors);
+
 			}
 		}
 
 		$this->set('boards', $boards);
 
 	}
-	
+
 	public function expl() {
 		//nothing to do in php with this page ;)
 	}
