@@ -1,11 +1,11 @@
 module.exports = (function(){
 
-	
-	function formValidationRegister() {
+	function FormValidationRegister() {
 		
 		var regnameInput = document.querySelector("input[name=regname]");
 		var reglastnameInput = document.querySelector("input[name=reglastname]");
 		var regusernameInput = document.querySelector("input[name=regusername]");
+
 		var regemailInput = document.querySelector("input[name=regemail]");
 		var regpasswordInput = document.querySelector("input[name=regpassword]");
 		var regconfirmInput = document.querySelector("input[name=confirm_password]");
@@ -15,6 +15,7 @@ module.exports = (function(){
 		regnameInput.addEventListener("blur", this.validateThis);
 		reglastnameInput.addEventListener("blur", this.validateThis);
 		regusernameInput.addEventListener("blur", this.validateThis);
+
 		regemailInput.addEventListener("blur", this.validateThis);
 		regpasswordInput.addEventListener("blur", this.validateThis);
 		regconfirmInput.addEventListener("blur", this.validateThis);
@@ -40,11 +41,14 @@ module.exports = (function(){
 	}
 
 
-	formValidationRegister.prototype.validateThis = function(e) {
+	FormValidationRegister.prototype.validateThis = function(e) {
+
 		validateNotEmpty(this);
+		
 	};
 
 	function validateNotEmpty(input) {
+
 		var errorHolder = input.parentNode.querySelector(".error[data-for='"+ input.getAttribute("name") +"']");
 		if(input.value.length > 0){
 			errorHolder.classList.add("hidden");
@@ -52,9 +56,10 @@ module.exports = (function(){
 		}
 		errorHolder.classList.remove("hidden");
 		return false;
+
 	}
 
 
 
-	return formValidationRegister;
+	return FormValidationRegister;
 })();

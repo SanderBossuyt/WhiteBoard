@@ -1,76 +1,95 @@
 (function(){
 	
-	var application = require('./classes/application');
-	var formReg = require('./classes/formValidationRegister');
-	var formImage = require('./classes/formImageValidation');
-	var detail = require('./classes/detailPage');
+	var Application = require('./classes/Application');
+	var FormReg = require('./classes/FormValidationRegister');
+	var FormImage = require('./classes/FormImageValidation');
+	var Detail = require('./classes/DetailPage');
 
 	function init() {
 
-		var splitting = document.URL.split("?page=")[1];
-		var splitting2 = splitting.split("&")[0];
+		var getPagePartOne = document.URL.split("?page=")[1];
+		var getPagePartTwo = getPagePartOne.split("&")[0];
 
-		new detail();
+		new Detail();
 
-		if (splitting2 === "register") {
-			
-			new formReg();
-			new formImage();
-
+		if (getPagePartTwo === "register") {	
+			new FormReg();
+			new FormImage();
 		}
 		
-		if (splitting2 === "drawing") {
-
-			new application(document.querySelector('.whiteboard'));
+		if (getPagePartTwo === "drawing") {
+			new Application(document.querySelector('.whiteboard'));
 		}
 
-
+		//--------------------------------------------------input board name maximum 19 characters
 		$('.name').on("blur keyup", checkTwoCharacters);
 
-
+		//--------------------------------------------------ajax new board toevoegen
 		$('#newBoard').submit(function(event) {
 
 			event.preventDefault();
 
-				$.ajax({
-					type:"POST",
-					url:"index.php?page=detail", 
-					data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
-					success:function(response){ 
+			var data = {
 
-						var tata = response.split("</h1>")[1];
-						var tatata = tata.split("</form")[0];
-		    			$(".alles").html(tatata);
+    			boardname : $(' .name ').val(),
+    			action : "Add New Board"
 
-		    			new detail();
+			};
 
-		    		}
-				}); 
+
+			$.ajax({
+				type:"POST",
+				url:"index.php?page=detail", 
+				//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
+				data: {newBoardAdd: data},
+				success:function(response){ 
+
+					var splittingPartOne = response.split("</h1>")[1];
+					var splittingPartTwo = splittingPartOne.split("</form")[0];
+		    		$(".alles").html(splittingPartTwo);
+
+		    		
+
+		    	},
+		    	complete: function() {
+        			new Detail();
+    			}
+			});
+
+			
 		});
 
 
-		//postit op schermkrijgen met ajax
+		//--------------------------------------------------postit op scherm krijgen met ajax
 		$('#formuploadpostit').submit(function(event) {
 
 			event.preventDefault();
-				$.ajax({
-					type:"POST",
-					url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
-					data: "postit=" + $('.postitje').val() + "&action=" + "upload postit",
-					success:function(response){ 
-						
-						var tata = response.split("<br />")[1];
-						var tatata = tata.split("<script")[0];
-						
-		    			$(".whiteboard").html(tatata);
-		    			new application(document.querySelector('.whiteboard'));
 
-		    		}
-				}); 
+			var data = {
+
+    			postit : $(' .postitje ').val(),
+    			action : "upload postit"
+
+			};
+
+			$.ajax({
+				type:"POST",
+				url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
+				//data: "postit=" + $('.postitje').val() + "&action=" + "upload postit",
+				data: {newPostit: data},
+				success:function(response){ 
+					
+					var splittingPartOne = response.split("<br />")[1];
+					var splittingPartTwo = splittingPartOne.split("<script")[0];
+					
+		    		$(".whiteboard").html(splittingPartTwo);
+
+		    		new Application(document.querySelector('.whiteboard'));
+
+		    	}
+			});
+
 		});
-
-		//image op scherm krijgen met ajax
-		
 
 	}
 
@@ -84,15 +103,20 @@
 		}else{
 			showValid($el, $('#errorboard'));
 		}
+
 	}
 	
 	function showValid($el, $error){
+
 		$error.addClass("hidden");
+
 	}
 	
 	function showInvalid($el, $error, message){
+
 		$error.removeClass("hidden");
 		$error.text(message);
+		
 	}
 
 

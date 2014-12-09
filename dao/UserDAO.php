@@ -33,7 +33,7 @@ class UserDAO extends DAO {
 		$errors = $this->getValidationErrors($data);
 		if (empty($errors)) {
 			$sql = "INSERT INTO `users` (`email`, `password`, `name`, `lastname`, `picture`, `extension`, `username`)
-				VALUES (:email, :password, :name, :lastname, :picture, :extension, :username)";
+					VALUES (:email, :password, :name, :lastname, :picture, :extension, :username)";
 			$stmt = $this->pdo->prepare($sql);
 			$stmt->bindValue(':email', $data['email']);
 			$stmt->bindValue(':password', $data['password']);

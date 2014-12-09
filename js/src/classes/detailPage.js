@@ -1,49 +1,63 @@
 module.exports = (function(){
+
 var lis = document.querySelectorAll('li');
 	
-	
-	function detailPage() {
-		console.log("detailPage");
+	function DetailPage() {
+
+		lis = document.querySelectorAll('li');
+		
 		for(var i = 3; i< lis.length; i++){
 			
 			lis[i].classList.remove("selected");
-			
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
+
 		}
 
 	}
 
-	detailPage.prototype.clickHandler = function(event){
+	DetailPage.prototype.clickHandler = function(event){
 
-			if (!$( this ).hasClass( "selected" )) {
-				event.preventDefault();
-			}
+		if (!$( this ).hasClass( "selected" )) {
+
+			event.preventDefault();
+
+		}
+		
+		for(var i = 3; i< lis.length; i++){
+		
+			lis[i].classList.remove("selected");
 			
+		}
 
-			for(var i = 3; i< lis.length; i++){
-			
-				lis[i].classList.remove("selected");
-			}
+		var splitOne = (this.innerHTML.split("id=")[1]).split('">')[0];
 
-			var splitOne = (this.innerHTML.split("id=")[1]).split('">')[0];
+		this.classList.add("selected");
 
-			this.classList.add("selected");
+		$('#users h3').text($(this).text());
 
-			$('#users h3').text($(this).text());
+		//get voor board_id door te geven naar de invite button
+		/*$.get( "index.php?page=detail&id=" + splitOne, function( data ) {
+  		
+  			$("#users").empty();
 
-			$.get( "index.php?page=detail&id=" + splitOne, function( data ) {
-  			console.log( $( data ).find('#users') );
+		 	$("#users").html($( data ).find('#users').contents());
 
-  						$("#users").empty();
+		});*/
 
-		    			$("#users").html($( data ).find('#users').contents());
 
-			});
-			
-				window.history.pushState("","","index.php?page=detail&id=" + splitOne);
-			
+		$.get( "index.php?page=detail", { action: "loadInvites", id: splitOne } )
+  			.done(function( data ) {
+
+  				$("#users").empty();
+
+		 		$("#users").html($( data ).find('#users').contents());
+    		
+  		});
+
+		
+		window.history.pushState("","","index.php?page=detail&id=" + splitOne);
 			
 	};	
 
-	return detailPage;
+	return DetailPage;
 })();
