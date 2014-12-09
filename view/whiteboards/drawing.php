@@ -66,6 +66,10 @@
     <div class="dummy"></div>
 
     <div id="back_button"><a href="index.php?page=detail">Go back</a></div>
+
+    <div id="delete_button"><a href="index.php?page=detail">Delete</a></div>
+
+    <div class="dummy"></div>
     
     
 </div>

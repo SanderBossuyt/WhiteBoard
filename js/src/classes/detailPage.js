@@ -34,9 +34,10 @@ var lis = document.querySelectorAll('li');
 			$.get( "index.php?page=detail&id=" + splitOne, function( data ) {
   			console.log( $( data ).find('#users') );
 
-  					
-						
-		    			$("#users").parent().html($( data ).find('#users'));
+  						$("#users").empty();
+
+		    			$("#users").html($( data ).find('#users').contents());
+
 			});
 			
 				window.history.pushState("","","index.php?page=detail&id=" + splitOne);

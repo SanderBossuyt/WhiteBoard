@@ -640,6 +640,8 @@ nav{
 	#back_button{
 
 		padding-top: 15px;	
+		float: left;
+		width: 130px;
 
 		a{
 
@@ -650,6 +652,28 @@ nav{
 			background-image: url("../images/assets/back_button.png");
 			background-repeat: no-repeat;
 			padding: 8px 15px 10px 45px;
+
+
+		}
+
+	}
+
+	#delete_button{
+
+		float: left;
+		padding-top: 15px;	
+		margin-left: 10px;
+
+		a{
+
+			text-decoration: none;
+			color:#EA5244;
+			font-family: bebas_neueregular;
+			font-size: 1.5em;
+			background-image: url("../images/assets/delete_button.png");
+			background-position: 80px;
+			background-repeat: no-repeat;
+			padding: 14px 55px 10px 15px;
 
 
 		}

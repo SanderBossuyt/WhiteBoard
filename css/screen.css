@@ -590,8 +590,10 @@ nav #userinfo a {
 /* line 640, ../_scss/screen.scss */
 .leftbalk #back_button {
   padding-top: 15px;
+  float: left;
+  width: 130px;
 }
-/* line 644, ../_scss/screen.scss */
+/* line 646, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -601,19 +603,36 @@ nav #userinfo a {
   background-repeat: no-repeat;
   padding: 8px 15px 10px 45px;
 }
+/* line 661, ../_scss/screen.scss */
+.leftbalk #delete_button {
+  float: left;
+  padding-top: 15px;
+  margin-left: 10px;
+}
+/* line 667, ../_scss/screen.scss */
+.leftbalk #delete_button a {
+  text-decoration: none;
+  color: #EA5244;
+  font-family: bebas_neueregular;
+  font-size: 1.5em;
+  background-image: url("../images/assets/delete_button.png");
+  background-position: 80px;
+  background-repeat: no-repeat;
+  padding: 14px 55px 10px 15px;
+}
 
-/* line 662, ../_scss/screen.scss */
+/* line 686, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 667, ../_scss/screen.scss */
+/* line 691, ../_scss/screen.scss */
 #uitleg_pagina {
   width: 960px;
   margin: auto;
   margin-bottom: 100px;
 }
-/* line 673, ../_scss/screen.scss */
+/* line 697, ../_scss/screen.scss */
 #uitleg_pagina #logo {
   background: url(../images/assets/Login/Logo.png) no-repeat;
   width: 225px;
@@ -624,61 +643,61 @@ nav #userinfo a {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 687, ../_scss/screen.scss */
+/* line 711, ../_scss/screen.scss */
 #uitleg_pagina #inleiding {
   margin-bottom: 40px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 693, ../_scss/screen.scss */
+/* line 717, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header {
   margin-bottom: 30px;
 }
-/* line 697, ../_scss/screen.scss */
+/* line 721, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header h1 {
   font-family: bebas_neueregular;
   font-size: 3em;
   color: #363D50;
   text-align: center;
 }
-/* line 707, ../_scss/screen.scss */
+/* line 731, ../_scss/screen.scss */
 #uitleg_pagina #inleiding p {
   width: 750px;
   margin: auto;
   text-align: center;
 }
-/* line 715, ../_scss/screen.scss */
+/* line 739, ../_scss/screen.scss */
 #uitleg_pagina #attributen {
   margin-bottom: 50px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 722, ../_scss/screen.scss */
+/* line 746, ../_scss/screen.scss */
 #uitleg_pagina #attributen header {
   margin-bottom: 30px;
 }
-/* line 726, ../_scss/screen.scss */
+/* line 750, ../_scss/screen.scss */
 #uitleg_pagina #attributen header h2 {
   font-family: bebas_neueregular;
   font-size: 2em;
   color: #363D50;
   text-align: center;
 }
-/* line 736, ../_scss/screen.scss */
+/* line 760, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut {
   float: left;
   width: 400px;
   margin: 0 40px 20px 40px;
 }
-/* line 743, ../_scss/screen.scss */
+/* line 767, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img {
   border: 2px solid #363D50;
 }
-/* line 747, ../_scss/screen.scss */
+/* line 771, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img:hover {
   border: 2px solid #EA5244;
 }
-/* line 754, ../_scss/screen.scss */
+/* line 778, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut h3 {
   font-family: bebas_neueregular;
   font-size: 2em;
@@ -687,12 +706,12 @@ nav #userinfo a {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-/* line 765, ../_scss/screen.scss */
+/* line 789, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut p {
   margin-left: 10px;
   width: 380px;
 }
-/* line 779, ../_scss/screen.scss */
+/* line 803, ../_scss/screen.scss */
 #uitleg_pagina #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -704,7 +723,7 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 801, ../_scss/screen.scss */
+/* line 825, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -717,12 +736,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 810, ../_scss/screen.scss */
+/* line 834, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 815, ../_scss/screen.scss */
+/* line 839, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -739,12 +758,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 826, ../_scss/screen.scss */
+/* line 850, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #363D50;
 }
 
-/* line 831, ../_scss/screen.scss */
+/* line 855, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;

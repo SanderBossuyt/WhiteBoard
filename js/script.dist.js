@@ -53,7 +53,6 @@
 		//postit op schermkrijgen met ajax
 		$('#formuploadpostit').submit(function(event) {
 
-
 			event.preventDefault();
 				$.ajax({
 					type:"POST",
@@ -71,47 +70,8 @@
 				}); 
 		});
 
-		//image op schermkrijgen met ajax
-		$('#formuploadimage').submit(function(event) {
-
-			event.preventDefault();
-				$.ajax({
-					type:"POST",
-					url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
-					data: "image=" + $('#addImageImage').val() + "&action=" + "upload image",
-					success:function(response){ 
-
-						var imagesplit = response.split("<br />")[1];
-						var imagespliter = imagesplit.split("<script")[0];
-						
-		    			$(".whiteboard").html(imagespliter);
-		    			new application(document.querySelector('.whiteboard'));
-
-		    		}
-				}); 
-		});
-
-		//video op schermkrijgen met ajax
+		//image op scherm krijgen met ajax
 		
-		// $('#formuploadvideo').submit(function(event) {
-
-
-		// 	event.preventDefault();
-		// 		$.ajax({
-		// 			type:"POST",
-		// 			url:"index.php?page=drawing&id=" + document.URL.split("id=")[1], 
-		// 			data: "video=" + $('#addvideo').val() + "&action=" + "upload video",
-		// 			success:function(response){ 
-						
-		// 				var tata = response.split("<br />")[1];
-		// 				var tatata = tata.split("<script")[0];
-						
-		//     			$(".whiteboard").html(tatata);
-		//     			new application(document.querySelector('.whiteboard'));
-
-		//     		}
-		// 		}); 
-		// });
 
 	}
 
@@ -224,9 +184,10 @@ var lis = document.querySelectorAll('li');
 			$.get( "index.php?page=detail&id=" + splitOne, function( data ) {
   			console.log( $( data ).find('#users') );
 
-  					
-						
-		    			$("#users").parent().html($( data ).find('#users'));
+  						$("#users").empty();
+
+		    			$("#users").html($( data ).find('#users').contents());
+
 			});
 			
 				window.history.pushState("","","index.php?page=detail&id=" + splitOne);
