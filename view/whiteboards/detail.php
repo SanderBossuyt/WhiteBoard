@@ -4,6 +4,7 @@
 		<h1>My boards</h1>
 		<div class="alles">
 			<div class="boards">
+			<div class="javascriptmessage"></div>
 				<ul>
 					<?php
 			    		if (!empty($boards)) {

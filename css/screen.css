@@ -776,3 +776,12 @@ nav #userinfo a {
   color: #f9f9f9;
   border: 3px solid #7de8ec;
 }
+
+/* line 868, ../_scss/screen.scss */
+.javascriptmessage p {
+  color: #fff;
+  width: 490px;
+  height: 40px;
+  background-color: #7de8ec;
+  text-align: center;
+}

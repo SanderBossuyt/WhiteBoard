@@ -53,6 +53,16 @@
 
 		    	},
 		    	complete: function() {
+		    		
+		    		$('<p>', {
+                	class: 'infomessageJS',
+                	text: "your board is added"
+            		}).appendTo($('.javascriptmessage'));
+		    		
+		    		
+		    		setTimeout(function () {
+      					$('.infomessageJS').remove();
+    				}, 3000);
         			new Detail();
     			}
 			});
