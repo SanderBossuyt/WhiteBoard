@@ -337,7 +337,7 @@ private $userDAO;
 
 					$this->whiteboardDAO->deleteEvent($_GET["id"]);
             		$this->redirect("index.php?page=index");
-
+            		
 				}
 			}
 		}
