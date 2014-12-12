@@ -131,7 +131,7 @@ class WhiteBoardDAO extends DAO {
 
 	//delete board
 
-	public function deleteEvent($id){
+	public function delete_boardEvent($id){
 
         $sql = "DELETE FROM `boards`
                 WHERE id = :id";

@@ -49,6 +49,18 @@ class ItemDAO extends DAO {
 		}
 		
 		return $errors;
-		}
+	}
+	public function delete_itemsEvent($id){
+
+        $sql = "DELETE FROM items
+				WHERE board_id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
+
+    }
 
 }

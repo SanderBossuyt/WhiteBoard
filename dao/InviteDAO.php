@@ -67,6 +67,19 @@ class InviteDao extends DAO {
 		}
 		
 		return $errors;
-		}
+	}
+
+	public function delete_invitesEvent($id){
+
+        $sql = "DELETE FROM invites
+				WHERE board_id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
+
+    }
 
 }

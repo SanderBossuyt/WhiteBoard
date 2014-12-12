@@ -29,6 +29,17 @@ private $userDAO;
 	
 	
 	public function detail() {
+
+		if(!empty($_GET['id'])) {
+
+			$board = $this->whiteboardDAO->selectBoard($_GET['id']);
+        		
+    		if(empty($board)) {
+        		$this->redirect("index.php");
+    		}
+
+        }
+        
 		
 		$this->set('inviteBoards', $this->whiteboardDAO->selectByInvite($_SESSION['user']['id']));
 
@@ -143,8 +154,17 @@ private $userDAO;
 
 	public function drawing() {
 
-		$board = $this->whiteboardDAO->selectBoard($_GET["id"]);
+		if(empty($_GET['id'])) {
+            $this->redirect("index.php");
+        }
+        $board = $this->whiteboardDAO->selectBoard($_GET['id']);
+        if(empty($board)) {
+            $this->redirect("index.php");
+        }
+
 		$this->set('board', $board);
+
+
 
 		if (!empty($_POST)) {
 		
@@ -335,7 +355,9 @@ private $userDAO;
 	
 				}else if($_POST["action"] == 'delete board'){
 
-					$this->whiteboardDAO->deleteEvent($_GET["id"]);
+					$this->whiteboardDAO->delete_boardEvent($_GET["id"]);
+					$this->inviteDAO->delete_invitesEvent($_GET["id"]);
+					$this->itemDAO->delete_itemsEvent($_GET["id"]);
             		$this->redirect("index.php?page=index");
             		
 				}
