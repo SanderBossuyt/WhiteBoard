@@ -11,11 +11,11 @@ class UserDAO extends DAO {
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
-	public function selectByName($name) {
+	public function selectByName($username) {
 		$sql = "SELECT id FROM `users`
-				WHERE `name` = :name";
+				WHERE `username` = :username";
 		$stmt = $this->pdo->prepare($sql);
-		$stmt->bindValue(':name', $name);
+		$stmt->bindValue(':username', $username);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -24,6 +24,14 @@ class UserDAO extends DAO {
 		$sql = "SELECT * FROM `users` WHERE `email` = :email";
 		$stmt = $this->pdo->prepare($sql);
 		$stmt->bindValue(':email', $email);
+		$stmt->execute();
+		return  $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	public function selectByUsername($username) {
+		$sql = "SELECT * FROM `users` WHERE `username` = :username";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':username', $username);
 		$stmt->execute();
 		return  $stmt->fetch(PDO::FETCH_ASSOC);
 	}

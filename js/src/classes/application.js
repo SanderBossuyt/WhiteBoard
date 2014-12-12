@@ -20,6 +20,9 @@ module.exports = (function(){
 		var itemke = new Item(data);
 		bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
 
+		//delete
+		 //bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
+
 	};
 
 	Application.prototype.itemkeChangeHandler = function(item) {

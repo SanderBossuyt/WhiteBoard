@@ -78,6 +78,12 @@ private $userDAO;
 
 			if(empty($_POST['regusername'])) {
 				$errors['regusername'] = 'Please enter a username';
+			}else {
+				$existing = $this->userDAO->selectByUsername($_POST['regusername']);
+				$this->set('existing',$existing);
+				if(!empty($existing)) {
+					$errors['regusername'] = 'username is already in use';
+				}
 			}
 
 			if($_POST['confirm_password'] != $_POST['regpassword']) {
@@ -102,6 +108,7 @@ private $userDAO;
 				$this->set('insertedUser', $insertedUser);
 				if(!empty($insertedUser)) {
 					$_SESSION['info'] = 'Registration successful';
+					$_SESSION["user"] = $insertedUser;
 					header('Location: index.php');
 					exit();
 				} else {

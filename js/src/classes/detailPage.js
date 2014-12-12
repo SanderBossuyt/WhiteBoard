@@ -6,7 +6,7 @@ var lis = document.querySelectorAll('li');
 
 		lis = document.querySelectorAll('li');
 		
-		for(var i = 3; i< lis.length; i++){
+		for(var i = 2; i< lis.length; i++){
 			
 			lis[i].classList.remove("selected");
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
@@ -23,7 +23,7 @@ var lis = document.querySelectorAll('li');
 
 		}
 		
-		for(var i = 3; i< lis.length; i++){
+		for(var i = 2; i< lis.length; i++){
 		
 			lis[i].classList.remove("selected");
 			

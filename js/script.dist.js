@@ -38,34 +38,38 @@
 			};
 
 
-			$.ajax({
-				type:"POST",
-				url:"index.php?page=detail", 
-				//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
-				data: {newBoardAdd: data},
-				success:function(response){ 
+			if($(' .name ').val() !== "" ){
 
-					var splittingPartOne = response.split("</h1>")[1];
-					var splittingPartTwo = splittingPartOne.split("</form")[0];
-		    		$(".alles").html(splittingPartTwo);
+				$.ajax({
+					type:"POST",
+					url:"index.php?page=detail", 
+					//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
+					data: {newBoardAdd: data},
+					success:function(response){ 
 
-		    		
+						var splittingPartOne = response.split("</h1>")[1];
+						var splittingPartTwo = splittingPartOne.split("</form")[0];
+			    		$(".alles").html(splittingPartTwo);
 
-		    	},
-		    	complete: function() {
-		    		
-		    		$('<p>', {
-                	class: 'infomessageJS',
-                	text: "your board is added"
-            		}).appendTo($('.javascriptmessage'));
-		    		
-		    		
-		    		setTimeout(function () {
-      					$('.infomessageJS').remove();
-    				}, 3000);
-        			new Detail();
-    			}
-			});
+			    		
+
+			    	},
+			    	complete: function() {
+			    		
+			    		$('<p>', {
+	                	class: 'infomessageJS',
+	                	text: "your board is added"
+	            		}).appendTo($('.javascriptmessage'));
+			    		
+			    		
+			    		setTimeout(function () {
+	      					$('.infomessageJS').remove();
+	    				}, 3000);
+	        			new Detail();
+	    			}
+				});
+			}
+
 
 			
 		});
@@ -212,6 +216,9 @@ module.exports = (function(){
 		var itemke = new Item(data);
 		bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
 
+		//delete
+		 //bean.on(itemke, "change", this.itemkeChangeHandler.bind(this));
+
 	};
 
 	Application.prototype.itemkeChangeHandler = function(item) {
@@ -252,7 +259,7 @@ var lis = document.querySelectorAll('li');
 
 		lis = document.querySelectorAll('li');
 		
-		for(var i = 3; i< lis.length; i++){
+		for(var i = 2; i< lis.length; i++){
 			
 			lis[i].classList.remove("selected");
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
@@ -269,7 +276,7 @@ var lis = document.querySelectorAll('li');
 
 		}
 		
-		for(var i = 3; i< lis.length; i++){
+		for(var i = 2; i< lis.length; i++){
 		
 			lis[i].classList.remove("selected");
 			
@@ -454,7 +461,16 @@ module.exports = (function(){
 
 		event.preventDefault();
 
-		this.el.style.zIndex = ++this.teller;
+		var allItems = document.find(".item");
+		for(var i = 0 ; i< $allItems.length ; i++){
+		console.log($(allItems[i]));
+			var z = parseInt($allItems[i].getAttribute("style").value(),10);
+
+			max = Math.max(max, z);
+
+		}
+
+		this.el.style.zIndex = max+1;
 		this.offsetX = event.offsetX;
 		this.offsetY = event.offsetY;
 

@@ -64,7 +64,7 @@
 			    </div>
 			    <input id="add_board" type="submit" name="action" value="Add New Board" class="btn btn-default" />
 			    <div class="dummy"></div>
-			    <p id="errorboard" class="error<?php if(empty($errors['boardname'])) echo ' hidden';?>" data-for="boardname">Please enter your awesome boards name</p>
+			    <p id="errorboard" class="error<?php if(empty($errors['boardname'])) echo ' hidden';?>" data-for="boardname"><?php echo $errors['boardname'] ?></p>
 
 			</form>
 		</div>
@@ -83,6 +83,8 @@
 						
 						echo "<li>";
 							echo "<p>";
+								echo "{$invite_user['usernames']}";
+								echo " / ";
 								echo "{$invite_user['names']}";
 							echo "</p>";
 						echo "</li>";
@@ -109,7 +111,7 @@
 				    </div>
 				    <input id="add_invite" type="submit" name="action" value="Invite" class="btn btn-default" />
 				    <div class="dummy"></div>
-				    <p id="errorInvite" class="error<?php if(empty($errors['invite'])) echo ' hidden';?>" data-for="invite">Please enter your awesome invites name</p>
+				    <p id="errorInvite" class="error<?php if(empty($errors['invite'])) echo ' hidden';?>" data-for="invite"><?php echo $errors['invite'] ?></p>
 
 				</form>
 			<?php

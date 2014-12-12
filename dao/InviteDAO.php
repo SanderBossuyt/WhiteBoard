@@ -12,7 +12,7 @@ class InviteDao extends DAO {
 	}
 
 	public function selectAllInvitesByBoardId($board_id) {
-		$sql = "SELECT invites.*, users.name as names
+		$sql = "SELECT invites.*, users.name as names , users.username as usernames
 				FROM invites
 				INNER JOIN users
 				ON users.id = user_idreceiver

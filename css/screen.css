@@ -413,6 +413,7 @@ nav #userinfo a {
 }
 /* line 404, ../_scss/screen.scss */
 #home #my_boards .boards li {
+  float: left;
   width: 158px;
   height: 60px;
   border: 1px solid #363d50;

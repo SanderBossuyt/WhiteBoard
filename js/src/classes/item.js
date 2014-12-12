@@ -12,7 +12,16 @@ module.exports = (function(){
 
 		event.preventDefault();
 
-		this.el.style.zIndex = ++this.teller;
+		var allItems = document.find(".item");
+		for(var i = 0 ; i< $allItems.length ; i++){
+		console.log($(allItems[i]));
+			var z = parseInt($allItems[i].getAttribute("style").value(),10);
+
+			max = Math.max(max, z);
+
+		}
+
+		this.el.style.zIndex = max+1;
 		this.offsetX = event.offsetX;
 		this.offsetY = event.offsetY;
 

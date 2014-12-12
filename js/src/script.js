@@ -37,34 +37,38 @@
 			};
 
 
-			$.ajax({
-				type:"POST",
-				url:"index.php?page=detail", 
-				//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
-				data: {newBoardAdd: data},
-				success:function(response){ 
+			if($(' .name ').val() !== "" ){
 
-					var splittingPartOne = response.split("</h1>")[1];
-					var splittingPartTwo = splittingPartOne.split("</form")[0];
-		    		$(".alles").html(splittingPartTwo);
+				$.ajax({
+					type:"POST",
+					url:"index.php?page=detail", 
+					//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
+					data: {newBoardAdd: data},
+					success:function(response){ 
 
-		    		
+						var splittingPartOne = response.split("</h1>")[1];
+						var splittingPartTwo = splittingPartOne.split("</form")[0];
+			    		$(".alles").html(splittingPartTwo);
 
-		    	},
-		    	complete: function() {
-		    		
-		    		$('<p>', {
-                	class: 'infomessageJS',
-                	text: "your board is added"
-            		}).appendTo($('.javascriptmessage'));
-		    		
-		    		
-		    		setTimeout(function () {
-      					$('.infomessageJS').remove();
-    				}, 3000);
-        			new Detail();
-    			}
-			});
+			    		
+
+			    	},
+			    	complete: function() {
+			    		
+			    		$('<p>', {
+	                	class: 'infomessageJS',
+	                	text: "your board is added"
+	            		}).appendTo($('.javascriptmessage'));
+			    		
+			    		
+			    		setTimeout(function () {
+	      					$('.infomessageJS').remove();
+	    				}, 3000);
+	        			new Detail();
+	    			}
+				});
+			}
+
 
 			
 		});

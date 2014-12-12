@@ -30,6 +30,7 @@ private $userDAO;
 	
 	public function detail() {
 
+
 		if(!empty($_GET['id'])) {
 
 			$board = $this->whiteboardDAO->selectBoard($_GET['id']);
@@ -103,6 +104,13 @@ private $userDAO;
 				if(empty($_POST['invite'])) {
 					$errors['invite'] = 'Please enter an invite';
 				}else{
+
+					if(strtolower($_SESSION["user"]["username"]) == strtolower($_POST["invite"])){
+
+						$errors['invite'] = 'You can not invite yourself!';
+
+					}
+
 					$idByName = $this->userDAO->selectByName($_POST["invite"]);
 
 					if($idByName == false){

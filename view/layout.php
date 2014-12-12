@@ -24,7 +24,6 @@
             <ul>
                 <li><a href="index.php?page=detail">Boards</a></li>
                 <li><a href="index.php?page=expl">How to use sketch</a></li>
-                <li><a href="index.php?page=detail">Settings</a></li>
             </ul>
             <div id="userinfo">
                 <p class="signed">Signed in as <span><?php echo $_SESSION['user']['username'];?></span></p>
