@@ -392,6 +392,11 @@ private $userDAO;
 					$this->itemDAO->delete_itemsEvent($_GET["id"]);
             		$this->redirect("index.php?page=index");
             		
+				}else if($_POST["action"] == 'delete item'){
+
+					//var_dump("delete");
+					$this->itemDAO->delete_item($_GET["item"]);
+
 				}
 			}
 		}

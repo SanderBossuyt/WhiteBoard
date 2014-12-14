@@ -86,22 +86,35 @@
 					if ($item['origin'] == "postit") {
 
 						echo "<div class=\"item postit {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
-							echo "<p>";
+							
+                            echo "<form action=\"index.php?page=drawing&id={$_GET['id']}&item={$item['id']}\" method=\"post\" class=\"form-horizontal\" id=\"formdeleteitem\" enctype=\"multipart/form-data\">";
+                                echo "<input type=\"submit\" name=\"action\" value=\"delete item\" class=\"deleteitem\">";
+                            echo "</form>";
+
+                            echo "<p>";
                                 echo "{$item['content']}";
-							echo "</p>";
+							
+                            echo "</p>";
 						echo "</div>";
 
 					}else if ($item['origin'] == "image"){
 
 						echo "<div class=\"item picture {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
-                                echo "<img draggable=\"true\" width=\"200\" height=\"200\" src=\"uploads/board/images/";
-                                    echo $item['content'];
-                                echo "\"/>";
+
+                            echo "<form action=\"index.php?page=drawing&id={$_GET['id']}&item={$item['id']}\" method=\"post\" class=\"form-horizontal\" id=\"formdeleteitem\" enctype=\"multipart/form-data\">";
+                                echo "<input type=\"submit\" name=\"action\" value=\"delete item\" class=\"deleteitem\">";
+                            echo "</form>";
+                            echo "<img draggable=\"true\" width=\"200\" height=\"200\" src=\"uploads/board/images/";
+                                echo $item['content'];
+                            echo "\"/>";
 						echo "</div>";
 
 					}else if($item['origin'] == "video"){
 
 						echo "<div class=\"item video {$item['id']}\" style=\"left:{$item['x']}px; top:{$item['y']}px\">";
+                            echo "<form action=\"index.php?page=drawing&id={$_GET['id']}&item={$item['id']}\" method=\"post\" class=\"form-horizontal\" id=\"formdeleteitem\" enctype=\"multipart/form-data\">";
+                                echo "<input type=\"submit\" name=\"action\" value=\"delete item\" class=\"deleteitem\">";
+                            echo "</form>";
                             echo "<video width=\"320\" height=\"240\" controls>";
                                 echo "<source src=\"uploads/board/videos/{$item['content']}\" type=\"video/mp4\">";
                             echo "</video>";

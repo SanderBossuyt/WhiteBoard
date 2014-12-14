@@ -466,8 +466,20 @@ module.exports = (function(){
 		this.teller  = 0;
 		this.el = el;
 		this.el.addEventListener('mousedown', this.mousedownHandler.bind(this));
+		
+
+		//var deleteItem = document.querySelector(".deleteitem");
+
+		//deleteItem.addEventListener('click', this.changeHandler.bind(this));
 
 	}
+	Item.prototype.changeHandler = function(event) {
+		
+		event.preventDefault();
+
+		console.log("deleteItem");
+
+	};
 	
 	Item.prototype.mousedownHandler = function(event){
 
