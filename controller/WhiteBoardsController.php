@@ -30,6 +30,9 @@ private $userDAO;
 	
 	public function detail() {
 
+		if (empty($_SESSION["user"])) {
+			header('Location: index.php?page=index');
+		}
 
 		if(!empty($_GET['id'])) {
 
@@ -46,9 +49,7 @@ private $userDAO;
 
 		$errors = array();
 
-		if (empty($_SESSION["user"])) {
-			header('Location: index.php?page=index');
-		}
+
 
 		$boards = $this->whiteboardDAO->selectByUser($_SESSION["user"]['id']);
 		
@@ -99,26 +100,43 @@ private $userDAO;
 
 			
 
-			if($_POST["action"] == 'Invite'){
+			if (!empty($_POST["newInviteAdd"]["action"])) {
 
-				if(empty($_POST['invite'])) {
-					$errors['invite'] = 'Please enter an invite';
+				
+				if ($_POST["newInviteAdd"]["action"] == 'Invite') {
+
+
+				if(empty($_POST["newInviteAdd"]['invite'])) {
+					$errors["newInviteAdd"]['invite'] = 'Please enter an invite';
 				}else{
 
-					if(strtolower($_SESSION["user"]["username"]) == strtolower($_POST["invite"])){
+					if(strtolower($_SESSION["user"]["username"]) == strtolower($_POST["newInviteAdd"]["invite"])){
 
-						$errors['invite'] = 'You can not invite yourself!';
+						$errors["newInviteAdd"]['invite'] = 'You can not invite yourself!';
+						
+						header('Content-Type: application/json');
+						echo json_encode(array('status' => 'errormessageJS','message'=> 'you cannot invite yourself'));
+						exit();
 
 					}
 
-					$idByName = $this->userDAO->selectByName($_POST["invite"]);
+					$idByName = $this->userDAO->selectByName($_POST["newInviteAdd"]["invite"]);
 
 					if($idByName == false){
-						$errors['invite'] = 'Please enter an valid name';
+						
+						$errors["newInviteAdd"]['invite'] = 'Please enter an valid name';
+						header('Content-Type: application/json');
+						echo json_encode(array('status' => 'errormessageJS','message'=> 'Please enter an valid name'));
+						exit();
 					}else{
-						$nameControle = $this->inviteDAO->selectByName($idByName["id"],$_GET["id"]);
+						$nameControle = $this->inviteDAO->selectByName($idByName["id"], $_GET["id"]);
 						if (count($nameControle) >= 1) {
-						$errors['invite'] = 'Please enter an valid name';
+						$errors["newInviteAdd"]['invite'] = 'Please enter an valid name';
+						header('Content-Type: application/json');
+						echo json_encode(array('status' => 'errormessageJS','message'=> 'Please enter an valid name'));
+						exit();
+
+
 						}
 					}
 				}
@@ -134,7 +152,10 @@ private $userDAO;
 					$insertedinvite = $this->inviteDAO->insert($invite);
 					
 					if(!empty($insertedinvite)) {
+
 						$_SESSION['info'] = 'your invite is added';
+						
+
 						header('Location: index.php?page=detail');
 						exit();
 					
@@ -143,10 +164,9 @@ private $userDAO;
 					}
 				} 
 
-				$this->set('errors', $errors);
-
 			}
 		}
+	}
 
 		$this->set('boards', $boards);
 
@@ -162,6 +182,10 @@ private $userDAO;
 
 	public function drawing() {
 
+		if (empty($_SESSION["user"])) {
+			header('Location: index.php?page=index');
+		}
+		
 		if(empty($_GET['id'])) {
             $this->redirect("index.php");
         }

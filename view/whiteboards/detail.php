@@ -64,7 +64,7 @@
 			    </div>
 			    <input id="add_board" type="submit" name="action" value="Add New Board" class="btn btn-default" />
 			    <div class="dummy"></div>
-			    <p id="errorboard" class="error<?php if(empty($errors['boardname'])) echo ' hidden';?>" data-for="boardname"><?php echo $errors['boardname'] ?></p>
+			    <p id="errorboard" class="error hidden" data-for="boardname">please give the board a valid name</p>
 
 			</form>
 		</div>

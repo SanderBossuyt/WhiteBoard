@@ -34,7 +34,11 @@ class Controller {
 
 	private function renderInLayout() {
 		extract($this->viewVars, EXTR_OVERWRITE);
-		include WWW_ROOT . 'view' . DS . 'layout.php';
+		if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+			echo $content;
+		} else {
+			include WWW_ROOT . 'view' . DS . 'layout.php';	
+		}
 	}
 
 	private function cleanupSessionMessages() {

@@ -1,10 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function(){
 	
-	var Application = require('./classes/Application');
-	var FormReg = require('./classes/FormValidationRegister');
-	var FormImage = require('./classes/FormImageValidation');
-	var Detail = require('./classes/DetailPage');
+	var Application = require('./classes/Application.js');
+	var FormReg = require('./classes/FormValidationRegister.js');
+	var FormImage = require('./classes/FormImageValidation.js');
+	var Detail = require('./classes/DetailPage.js');
+	var NewBoard = require('./classes/NewBoard.js');
 
 	function init() {
 
@@ -12,6 +13,7 @@
 		var getPagePartTwo = getPagePartOne.split("&")[0];
 
 		new Detail();
+		new NewBoard();
 
 		if (getPagePartTwo === "register") {	
 			new FormReg();
@@ -21,58 +23,6 @@
 		if (getPagePartTwo === "drawing") {
 			new Application(document.querySelector('.whiteboard'));
 		}
-
-		//--------------------------------------------------input board name maximum 19 characters
-		$('.name').on("blur keyup", checkTwoCharacters);
-
-		//--------------------------------------------------ajax new board toevoegen
-		$('#newBoard').submit(function(event) {
-
-			event.preventDefault();
-
-			var data = {
-
-    			boardname : $(' .name ').val(),
-    			action : "Add New Board"
-
-			};
-
-
-			if($(' .name ').val() !== "" ){
-
-				$.ajax({
-					type:"POST",
-					url:"index.php?page=detail", 
-					//data: "boardname=" + $('.name').val() + "&action=" + "Add New Board",
-					data: {newBoardAdd: data},
-					success:function(response){ 
-
-						var splittingPartOne = response.split("</h1>")[1];
-						var splittingPartTwo = splittingPartOne.split("</form")[0];
-			    		$(".alles").html(splittingPartTwo);
-
-			    		
-
-			    	},
-			    	complete: function() {
-			    		
-			    		$('<p>', {
-	                	class: 'infomessageJS',
-	                	text: "your board is added"
-	            		}).appendTo($('.javascriptmessage'));
-			    		
-			    		
-			    		setTimeout(function () {
-	      					$('.infomessageJS').remove();
-	    				}, 3000);
-	        			new Detail();
-	    			}
-				});
-			}
-
-
-			
-		});
 
 
 		//--------------------------------------------------postit op scherm krijgen met ajax
@@ -96,8 +46,9 @@
 					
 					var splittingPartOne = response.split("<br />")[1];
 					var splittingPartTwo = splittingPartOne.split("<script")[0];
-					
+					console.log(splittingPartTwo);
 		    		$(".whiteboard").html(splittingPartTwo);
+
 
 		    		new Application(document.querySelector('.whiteboard'));
 
@@ -165,35 +116,12 @@
 
 
 
-	function checkTwoCharacters(e) {
-
-		var $el = $(this);
-
-		if ($el.val().length > 19) {
-			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
-		}else{
-			showValid($el, $('#errorboard'));
-		}
-
-	}
 	
-	function showValid($el, $error){
-
-		$error.addClass("hidden");
-
-	}
-	
-	function showInvalid($el, $error, message){
-
-		$error.removeClass("hidden");
-		$error.text(message);
-		
-	}
 
 
 	init();
 })();
-},{"./classes/Application":2,"./classes/DetailPage":3,"./classes/FormImageValidation":4,"./classes/FormValidationRegister":5}],2:[function(require,module,exports){
+},{"./classes/Application.js":2,"./classes/DetailPage.js":3,"./classes/FormImageValidation.js":4,"./classes/FormValidationRegister.js":5,"./classes/NewBoard.js":8}],2:[function(require,module,exports){
 module.exports = (function(){
 
 	var Item = require('./Item');
@@ -250,10 +178,10 @@ module.exports = (function(){
 })();
 
 
-},{"./Item":6}],3:[function(require,module,exports){
+},{"./Item":7}],3:[function(require,module,exports){
 module.exports = (function(){
-
-var lis = document.querySelectorAll('li');
+var Invite = require('./Invite');
+	var lis = document.querySelectorAll('li');
 	
 	function DetailPage() {
 
@@ -265,7 +193,7 @@ var lis = document.querySelectorAll('li');
 			lis[i].addEventListener('click', this.clickHandler.bind(lis[i]));
 
 		}
-
+		
 	}
 
 	DetailPage.prototype.clickHandler = function(event){
@@ -288,33 +216,26 @@ var lis = document.querySelectorAll('li');
 
 		$('#users h3').text($(this).text());
 
-		//get voor board_id door te geven naar de invite button
-		/*$.get( "index.php?page=detail&id=" + splitOne, function( data ) {
-  		
-  			$("#users").empty();
-
-		 	$("#users").html($( data ).find('#users').contents());
-
-		});*/
-
-
 		$.get( "index.php?page=detail", { action: "loadInvites", id: splitOne } )
   			.done(function( data ) {
 
   				$("#users").empty();
 
 		 		$("#users").html($( data ).find('#users').contents());
+
+    		new Invite();
     		
   		});
 
 		
 		window.history.pushState("","","index.php?page=detail&id=" + splitOne);
-			
+		
+		
 	};	
 
 	return DetailPage;
 })();
-},{}],4:[function(require,module,exports){
+},{"./Invite":6}],4:[function(require,module,exports){
 module.exports = (function(){
 
 	function FormImageValidation() {
@@ -447,6 +368,97 @@ module.exports = (function(){
 	return FormValidationRegister;
 })();
 },{}],6:[function(require,module,exports){
+
+module.exports = (function(){
+
+	var NewBoard = require('./NewBoard.js');
+	var Detail = require('./DetailPage.js');
+	
+	function Invite() {
+
+		
+
+		$('#newInvite').submit(function(event) {
+
+			event.preventDefault();
+
+			var data = {
+
+    			invite : $(' .invite ').val(),
+    			action : "Invite"
+
+			};
+
+
+			if($(' .invite ').val() !== "" ){
+
+				$.ajax({
+					type:"POST",
+					url:"index.php?page=detail&id=" + document.URL.split("id=")[1],
+					data: {newInviteAdd: data},
+					success:function(response){ 
+
+							
+							if (response.message) {
+								$('<p>', {
+									class: response.status,
+	                			text: response.message
+	            				}).appendTo($('.javascriptmessage'));
+			    				
+			    				
+			    				setTimeout(function () {
+	      							$('.infomessageJS').remove();
+	      							$('.errormessageJS').remove();
+	    						}, 2000);
+
+							}else{
+								var splitOne = (document.URL.split("id=")[1]);
+
+		
+
+								$.get( "index.php?page=detail", { action: "loadInvites", id: splitOne } )
+									.done(function( data ) {
+
+										$("#users").empty();
+
+								 		$("#users").html($( data ).find('#users').contents());
+									
+
+								});
+
+								$('<p>', {
+									class: 'infomessageJS',
+	                				text: "invite succesfully"
+	            					}).appendTo($('.javascriptmessage'));
+			    					
+			    					
+			    					setTimeout(function () {
+	      								$('.infomessageJS').remove();
+	      								
+	    							}, 2000);
+		
+								window.history.pushState("","","index.php?page=detail&id=" + splitOne);
+
+							}
+
+			    	},
+			    	complete: function() {
+			    		new Detail();
+			    		new NewBoard();
+	        		
+	    			}
+				});
+			}
+
+
+			
+		});
+	}
+
+
+	return Invite;
+})();
+},{"./DetailPage.js":3,"./NewBoard.js":8}],7:[function(require,module,exports){
 module.exports = (function(){
 	
 	function Item(el) {
@@ -461,18 +473,16 @@ module.exports = (function(){
 
 		event.preventDefault();
 
-		// var allItems = document.find(".item");
-		// for(var i = 0 ; i< $allItems.length ; i++){
-		// console.log($(allItems[i]));
-		// 	var z = parseInt($allItems[i].getAttribute("style").value(),10);
+		max = 0;
+		$('.item').each(function(){
 
-		// 	max = Math.max(max, z);
+			var el = $(this);
+			var z = parseInt( el.css( "z-index" ), 10 );
+			max = Math.max( max, z );
+			
+		});
 
-		// }
-
-		//this.el.style.zIndex = max+1;
-
-		this.el.style.zIndex = ++this.teller;
+		this.el.style.zIndex = max + 1;
 		this.offsetX = event.offsetX;
 		this.offsetY = event.offsetY;
 
@@ -492,22 +502,22 @@ module.exports = (function(){
 		
 
 		if ((event.y - this.offsetY) <= 100) {
-			console.log("bamanamm");
+			
 			this.el.style.top = 100 + "px";
 		}
 
 		if ((event.x - this.offsetX) <= 280) {
-			console.log("bamanamm");
+			
 			this.el.style.left = 300 + "px";
 		}
 
 		if ((event.x - this.offsetX) >= $(window).width()-240) {
-			console.log("bamanamm");
+			
 			this.el.style.left = $(window).width()-220 + "px";
 		}
 
 		if ((event.y - this.offsetY) >= $(window).height()-240) {
-			console.log("bamanamm");
+			
 			this.el.style.top = $(window).height()-220 + "px";
 		}
 
@@ -527,4 +537,91 @@ module.exports = (function(){
 
 	return Item;
 })();
-},{}]},{},[1]);
+},{}],8:[function(require,module,exports){
+module.exports = (function(){
+
+	var Detail = require('./DetailPage');
+	
+	function NewBoard() {
+
+		var Detail = require('./DetailPage');
+
+		//--------------------------------------------------input board name maximum 19 characters
+		$('.name').on("blur keyup", checkTwoCharacters);
+
+		//--------------------------------------------------ajax new board toevoegen
+		$('#newBoard').submit(function(event) {
+
+			event.preventDefault();
+
+			var data = {
+
+    			boardname : $(' .name ').val(),
+    			action : "Add New Board"
+
+			};
+
+			if($(' .name ').val() !== "" ){
+
+				$.ajax({
+					type:"POST",
+					url:"index.php?page=detail", 
+					data: {newBoardAdd: data},
+					success:function(response){ 
+
+						var splittingPartOne = response.split("</h1>")[1];
+						var splittingPartTwo = splittingPartOne.split("</form")[0];
+			    		$(".alles").html(splittingPartTwo);
+
+			    		
+
+			    	},
+			    	complete: function() {
+			    		
+			    		$('<p>', {
+	                	class: 'infomessageJS',
+	                	text: "your board is added"
+	            		}).appendTo($('.javascriptmessage'));
+			    		
+			    		
+			    		setTimeout(function () {
+	      					$('.infomessageJS').remove();
+	    				}, 2000);
+	    				console.log("new detail");
+	        			new Detail();
+	        			new NewBoard();
+	    			}
+				});
+			}
+		});	
+	}
+
+	function checkTwoCharacters(e) {
+		
+		var $el = $(this);
+
+		if ($el.val().length > 19) {
+			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+		}else{
+			showValid($el, $('#errorboard'));
+		}
+
+	}
+	
+	function showValid($el, $error){
+
+		$error.addClass("hidden");
+
+	}
+	
+	function showInvalid($el, $error, message){
+
+		$error.removeClass("hidden");
+		$error.text(message);
+		
+	}
+
+
+	return NewBoard;
+})();
+},{"./DetailPage":3}]},{},[1]);

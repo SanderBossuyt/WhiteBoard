@@ -12,16 +12,16 @@ module.exports = (function(){
 
 		event.preventDefault();
 
-		var allItems = document.find(".item");
-		for(var i = 0 ; i< $allItems.length ; i++){
-		console.log($(allItems[i]));
-			var z = parseInt($allItems[i].getAttribute("style").value(),10);
+		max = 0;
+		$('.item').each(function(){
 
-			max = Math.max(max, z);
+			var el = $(this);
+			var z = parseInt( el.css( "z-index" ), 10 );
+			max = Math.max( max, z );
+			
+		});
 
-		}
-
-		this.el.style.zIndex = max+1;
+		this.el.style.zIndex = max + 1;
 		this.offsetX = event.offsetX;
 		this.offsetY = event.offsetY;
 
@@ -41,22 +41,22 @@ module.exports = (function(){
 		
 
 		if ((event.y - this.offsetY) <= 100) {
-			console.log("bamanamm");
+			
 			this.el.style.top = 100 + "px";
 		}
 
 		if ((event.x - this.offsetX) <= 280) {
-			console.log("bamanamm");
+			
 			this.el.style.left = 300 + "px";
 		}
 
 		if ((event.x - this.offsetX) >= $(window).width()-240) {
-			console.log("bamanamm");
+			
 			this.el.style.left = $(window).width()-220 + "px";
 		}
 
 		if ((event.y - this.offsetY) >= $(window).height()-240) {
-			console.log("bamanamm");
+			
 			this.el.style.top = $(window).height()-220 + "px";
 		}
 

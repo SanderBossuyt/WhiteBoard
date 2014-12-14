@@ -133,7 +133,22 @@ header{
 			background-color: #363d50;
 			color: #ea5244;
 
+			@include transition(0.2s);
+
 		}
+
+		#login_button:hover {
+			
+			
+			background-color: #f9f9f9;
+			color: #ea5244;
+			
+			@include box-shadow(inset 0px 0px 2px #505050);
+			@include transition(0.2s);
+			@include translate(2px, 2px);
+
+		}
+
 
 	}
 	#scrum{
@@ -258,6 +273,20 @@ header{
 			background-color: #363d50;
 			color: #ea5244;
 
+			@include transition(0.2s);
+
+		}
+
+		#registratie_button:hover {
+			
+			
+			background-color: #f9f9f9;
+			color: #ea5244;
+			
+			@include box-shadow(inset 0px 0px 2px #505050);
+			@include transition(0.2s);
+			@include translate(2px, 2px);
+
 		}
 
 
@@ -321,6 +350,7 @@ nav{
 
 			    &:hover{
 					@include transition(0.1s);
+					@include translate(2px, 2px);
 					color: #ea5244;
 					text-decoration: underline;
 
@@ -453,8 +483,23 @@ nav{
 				width: 100px;
 				margin-top: 2px;
 				margin-left: 24px;
+				padding: 1px;
 
 			}
+
+			#add_board:hover {
+			
+			border: 2px solid #ea5144;
+			background-color: #363E4F;
+			width: 100px;
+			margin-top: 2px;
+			margin-left: 24px;
+			
+			@include box-shadow(inset 0px 0px 2px #505050);
+			@include transition(0.2s);
+			@include translate(2px, 2px);
+
+		}
 
 		}
 	}
@@ -865,12 +910,27 @@ nav{
 
 }
 
-.javascriptmessage p{
-	color: #fff;
-	width: 490px;
-	height: 40px;
-	background-color: #7de8ec;
-	text-align: center;	
+.javascriptmessage {
+	.infomessageJS{
+	  color: #fff;
+	  width: 480px;
+	  height: 40px;
+	  background-color: #7de8ec;
+	  text-align: center;
+	}
+
+	.errormessageJS{
+		color: #fff;
+	  width: 480px;
+	  height: 40px;
+	  background-color: #E95144;
+	  text-align: center;
+	}
+
+}
+
+.item{
+	z-index: 1;
 }
 
 

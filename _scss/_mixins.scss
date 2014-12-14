@@ -18,6 +18,10 @@
 	transform: translate($one, $two);
 }
 
+@mixin translate-Y($one) {
+	transform: translate-Y($one);
+}
+
 
 @mixin skew($one, $two) {
 	-webkit-transform: skew($one, $two);
