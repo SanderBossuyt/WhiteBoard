@@ -419,7 +419,7 @@ nav{
 
 	}
 
-	#my_boards{
+	#my_boards_container{
 
 		float: left;
 
@@ -446,6 +446,39 @@ nav{
 					text-decoration: none;
 					color:#ea5144;
 
+
+				}
+
+			}
+			#my_boards{
+
+				float: left;
+				width: 480px;
+
+				p{
+
+					margin-left: 20px;
+					margin-top: 10px;
+					margin-bottom: 20px;
+
+				}
+
+			}
+			#invite_boards{
+
+					
+
+				h4{
+
+					margin-left: 20px;
+					color: #363d50;
+					font-family: bebas_neueregular;
+					font-size: 2em;
+
+				}
+				p{
+
+					margin-left: 20px;
 
 				}
 
@@ -517,7 +550,83 @@ nav{
 			border: 3px solid #363d50;			
 			background-color: #e3e3e3;
 
+
+			li{
+
+				width: 320px;
+				height: 50px;
+				border-bottom: 1px solid #363d50;
+
+				p{
+
+					color: #363d50;
+					font-family: bebas_neueregular;
+					font-size: 2em;
+					text-align: center;
+					padding-top: 10px;
+
+					span{
+
+						font-size: 0.7em;
+						color:#ea5144;
+
+					}	
+
+
+				}
+
+			}
+			form{
+
+				margin-top: 20px;
+
+				label{
+
+					span{
+
+						color: #363d50;
+						font-family: bebas_neueregular;
+						font-size: 1.5em;
+
+					}
+					input{
+
+						float: left;
+						width: 220px;
+						height: 25px;
+
+
+					}
+
+				}
+				#add_invite{
+
+					width: 90px;
+					height: 30px;
+					border: 1px solid #ea5144;
+					background-color: #ea5144;
+					color: #ffffff;
+
+					&:hover {
+			
+						border: 2px solid #ea5144;
+						background-color: #363E4F;
+						width: 90px;
+						
+						
+						@include box-shadow(inset 0px 0px 2px #505050);
+						@include transition(0.2s);
+						@include translate(2px, 2px);
+
+
+					}
+				}
+
+			}
+
 		}
+
+		
 
 	}
 
@@ -909,7 +1018,23 @@ nav{
 
 
 }
+#formdeleteitem{
 
+	input{
+
+		border: none;
+		background-color: transparent;
+		background-image: url("../images/assets/delete_button.png");
+		background-repeat: no-repeat;
+		padding: 20px;
+		position: absolute;
+		right: -15px;
+		top:-20px;
+		text-indent: -999px;
+
+	}
+
+}
 .javascriptmessage {
 	.infomessageJS{
 	  color: #fff;

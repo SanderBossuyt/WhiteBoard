@@ -1,11 +1,11 @@
 <div id="home">
 
-	<div id="my_boards">
+	<div id="my_boards_container">
 		<h1>My boards</h1>
 		<div class="alles">
 			<div class="boards">
-			<div class="javascriptmessage"></div>
-				<ul>
+				<div class="javascriptmessage"></div>
+				<ul id="my_boards">
 					<?php
 			    		if (!empty($boards)) {
 							foreach($boards as $board) {
@@ -16,6 +16,7 @@
 										echo "</a>";
 									echo "</li>";
 							}
+
 						}else{
 							?>
 							<p>
@@ -25,7 +26,7 @@
 						}
 						?>
 				</ul>
-				<ul>
+				<ul id="invite_boards">
 					<hr />
 						<h4>invite boards</h4>
 						
@@ -72,24 +73,27 @@
 
 	<div id="board_users">
 		<h1>Board users</h1>
+		
 		<div id="users">
 			<h3></h3>
 
 			<?php
 			if(!empty($_GET ["id"])){ 
 
+				
 		    	if (!empty($invite_users)) {
-					foreach($invite_users as $invite_user) {
-						
-						echo "<li>";
-							echo "<p>";
-								echo "{$invite_user['usernames']}";
-								echo " / ";
-								echo "{$invite_user['names']}";
-							echo "</p>";
-						echo "</li>";
-
-					}
+		    		echo "<ul>";
+						foreach($invite_users as $invite_user) {
+							
+							echo "<li>";
+								echo "<p>";
+									echo "{$invite_user['usernames']}";
+									echo "<span> (name: {$invite_user['names']})</span>";
+								echo "</p>";
+							echo "</li>";
+							
+						}
+					echo "</ul>";
 				}else{
 				?>
 					<p>
@@ -97,8 +101,7 @@
 					</p>
 				<?php
 				}
-				?>	
-
+				?>
 				<form method="post" id="newInvite" action="index.php?page=detail&amp;id=<?php echo $_GET['id'];?>" class="form-inline">
 
 				    <div class="form-group">
@@ -119,6 +122,7 @@
 			?>
 			
 		</div>
+
 	</div>
 </div>
 

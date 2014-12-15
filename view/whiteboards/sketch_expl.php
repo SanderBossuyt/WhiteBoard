@@ -26,29 +26,29 @@
 			<h2>De attributen</h2>
 		</header>
 		<div class="attribut">
-			<img src="images/assets/uitleg.png" alt="Smiley face" height="400" wclassth="400">
-			<h3>attribut 1</h3>
+			<img src="images/assets/foto_1.jpg" alt="new board" height="400" wclassth="400">
+			<h3>Add new board</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra facilisis ornare.
 			</p>
 		</div>
 		<div class="attribut">
-			<img src="images/assets/uitleg.png" alt="Smiley face" height="400" wclassth="400">
-			<h3>attribut 2</h3>
+			<img src="images/assets/foto_2.jpg" alt="new invite" height="400" wclassth="400">
+			<h3>Add new invite</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra facilisis ornare.
 			</p>
 		</div>
 		<div class="attribut">
-			<img src="images/assets/uitleg.png" alt="Smiley face" height="400" wclassth="400">
-			<h3>attribut 3</h3>
+			<img src="images/assets/foto_3.jpg" alt="drawingpage" height="400" wclassth="400">
+			<h3>Add new postit,image or video</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra facilisis ornare.
 			</p>
 		</div>
 		<div class="attribut">
-			<img src="images/assets/uitleg.png" alt="Smiley face" height="400" width="400">
-			<h3>attribut 4</h3>
+			<img src="images/assets/foto_4.jpg" alt="delete item" height="400" width="400">
+			<h3>you can delete a item</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra facilisis ornare.
 			</p>

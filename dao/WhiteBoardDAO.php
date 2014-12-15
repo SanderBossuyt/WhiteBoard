@@ -100,6 +100,7 @@ class WhiteBoardDAO extends DAO {
 
 		$errors = $this->getValidationErrors2($data);
 		if (empty($errors)) {
+			
 			$sql = "UPDATE `items` SET `x` = :x, `y` = :y WHERE `id` = :id";
 			$stmt = $this->pdo->prepare($sql);
 			$stmt->bindValue(':x', $data['x']);

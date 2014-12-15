@@ -7,16 +7,19 @@ module.exports = (function(){
 		this.el.addEventListener('mousedown', this.mousedownHandler.bind(this));
 		
 
-		//var deleteItem = document.querySelector(".deleteitem");
+		
+		var deleteItem = document.querySelector(".deleteitem");
 
-		//deleteItem.addEventListener('click', this.changeHandler.bind(this));
-
+		deleteItem.addEventListener('click', this.clickHandler.bind(this));
 	}
-	Item.prototype.changeHandler = function(event) {
+
+	Item.prototype.clickHandler = function(first_argument) {
 		
 		event.preventDefault();
 
-		console.log("deleteItem");
+		console.log("clickHandler");
+
+		bean.fire(this,"delete", this);
 
 	};
 	

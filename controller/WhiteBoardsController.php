@@ -196,8 +196,6 @@ private $userDAO;
 
 		$this->set('board', $board);
 
-
-
 		if (!empty($_POST)) {
 		
 			$errors = array();
@@ -217,7 +215,6 @@ private $userDAO;
 					if(empty($_POST["item"]['id'])) {
 						$errors["item"]['id'] = 'Please enter an id';
 					}
-
 
 					if(empty($errors)) {
 						
@@ -273,6 +270,18 @@ private $userDAO;
 					$this->set('errors', $errors);
 
 				}
+			}else if(!empty($_POST["deleteItem"]["action"])){
+
+				if($_POST["deleteItem"]["action"] == "delete item"){
+
+					$this->itemDAO->delete_itemsEvent($_POST["deleteItem"]['id']);
+
+				}
+
+				
+
+
+
 			}else if(!empty($_POST["action"])){
 
 				if($_POST["action"] == 'upload image'){
@@ -387,16 +396,22 @@ private $userDAO;
 	
 				}else if($_POST["action"] == 'delete board'){
 
-					$this->whiteboardDAO->delete_boardEvent($_GET["id"]);
-					$this->inviteDAO->delete_invitesEvent($_GET["id"]);
-					$this->itemDAO->delete_itemsEvent($_GET["id"]);
+					$deleteboard=$_GET["id"];
+
+					$this->whiteboardDAO->delete_boardEvent($deleteboard);
+					$this->inviteDAO->delete_invitesEvent($deleteboard);
+					$this->itemDAO->delete_itemsEvent($deleteboard);
             		$this->redirect("index.php?page=index");
+
+
+            		if(!empty($deleteboard)) {
+						$_SESSION['info'] = 'your board is removed';
+						//header('Location: index.php?page=drawing&amp;id' + $board['id']);
+						//exit();
+					}else {
+							$_SESSION['error'] = 'failed to remove board';
+					}	
             		
-				}else if($_POST["action"] == 'delete item'){
-
-					//var_dump("delete");
-					$this->itemDAO->delete_item($_GET["item"]);
-
 				}
 			}
 		}

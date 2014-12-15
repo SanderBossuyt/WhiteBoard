@@ -1,4 +1,4 @@
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -444,11 +444,11 @@ nav #userinfo a {
   margin-bottom: 10px;
 }
 /* line 422, ../_scss/screen.scss */
-#home #my_boards {
+#home #my_boards_container {
   float: left;
 }
 /* line 426, ../_scss/screen.scss */
-#home #my_boards .boards {
+#home #my_boards_container .boards {
   height: 480px;
   width: 480px;
   overflow: scroll;
@@ -456,7 +456,7 @@ nav #userinfo a {
   background-color: #e3e3e3;
 }
 /* line 434, ../_scss/screen.scss */
-#home #my_boards .boards li {
+#home #my_boards_container .boards li {
   float: left;
   width: 158px;
   height: 60px;
@@ -465,23 +465,45 @@ nav #userinfo a {
   padding-top: 98px;
 }
 /* line 444, ../_scss/screen.scss */
-#home #my_boards .boards li a {
+#home #my_boards_container .boards li a {
   text-decoration: none;
   color: #ea5144;
 }
-/* line 455, ../_scss/screen.scss */
-#home #my_boards form {
+/* line 453, ../_scss/screen.scss */
+#home #my_boards_container .boards #my_boards {
+  float: left;
+  width: 480px;
+}
+/* line 458, ../_scss/screen.scss */
+#home #my_boards_container .boards #my_boards p {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/* line 471, ../_scss/screen.scss */
+#home #my_boards_container .boards #invite_boards h4 {
+  margin-left: 20px;
+  color: #363d50;
+  font-family: bebas_neueregular;
+  font-size: 2em;
+}
+/* line 479, ../_scss/screen.scss */
+#home #my_boards_container .boards #invite_boards p {
+  margin-left: 20px;
+}
+/* line 488, ../_scss/screen.scss */
+#home #my_boards_container form {
   margin-top: -20px;
 }
-/* line 459, ../_scss/screen.scss */
-#home #my_boards form span {
+/* line 492, ../_scss/screen.scss */
+#home #my_boards_container form span {
   float: left;
   color: #ffffff;
   font-family: bebas_neueregular;
   font-size: 1.3em;
 }
-/* line 467, ../_scss/screen.scss */
-#home #my_boards form input {
+/* line 500, ../_scss/screen.scss */
+#home #my_boards_container form input {
   float: left;
   margin-left: 5px;
   width: 150px;
@@ -491,8 +513,8 @@ nav #userinfo a {
   border: 1px dotted #ea5144;
   background-color: transparent;
 }
-/* line 479, ../_scss/screen.scss */
-#home #my_boards form #add_board {
+/* line 512, ../_scss/screen.scss */
+#home #my_boards_container form #add_board {
   border: 1px solid #ea5144;
   background-color: #ea5144;
   width: 100px;
@@ -500,8 +522,8 @@ nav #userinfo a {
   margin-left: 24px;
   padding: 1px;
 }
-/* line 490, ../_scss/screen.scss */
-#home #my_boards form #add_board:hover {
+/* line 523, ../_scss/screen.scss */
+#home #my_boards_container form #add_board:hover {
   border: 2px solid #ea5144;
   background-color: #363E4F;
   width: 100px;
@@ -519,12 +541,12 @@ nav #userinfo a {
   -webkit-transform: translate(2px, 2px);
   transform: translate(2px, 2px);
 }
-/* line 507, ../_scss/screen.scss */
+/* line 540, ../_scss/screen.scss */
 #home #board_users {
   float: left;
   margin-left: 20px;
 }
-/* line 512, ../_scss/screen.scss */
+/* line 545, ../_scss/screen.scss */
 #home #board_users #users {
   width: 320px;
   height: 480px;
@@ -532,8 +554,68 @@ nav #userinfo a {
   border: 3px solid #363d50;
   background-color: #e3e3e3;
 }
+/* line 554, ../_scss/screen.scss */
+#home #board_users #users li {
+  width: 320px;
+  height: 50px;
+  border-bottom: 1px solid #363d50;
+}
+/* line 560, ../_scss/screen.scss */
+#home #board_users #users li p {
+  color: #363d50;
+  font-family: bebas_neueregular;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+}
+/* line 568, ../_scss/screen.scss */
+#home #board_users #users li p span {
+  font-size: 0.7em;
+  color: #ea5144;
+}
+/* line 579, ../_scss/screen.scss */
+#home #board_users #users form {
+  margin-top: 20px;
+}
+/* line 585, ../_scss/screen.scss */
+#home #board_users #users form label span {
+  color: #363d50;
+  font-family: bebas_neueregular;
+  font-size: 1.5em;
+}
+/* line 592, ../_scss/screen.scss */
+#home #board_users #users form label input {
+  float: left;
+  width: 220px;
+  height: 25px;
+}
+/* line 602, ../_scss/screen.scss */
+#home #board_users #users form #add_invite {
+  width: 90px;
+  height: 30px;
+  border: 1px solid #ea5144;
+  background-color: #ea5144;
+  color: #ffffff;
+}
+/* line 610, ../_scss/screen.scss */
+#home #board_users #users form #add_invite:hover {
+  border: 2px solid #ea5144;
+  background-color: #363E4F;
+  width: 90px;
+  -moz-box-shadow: inset 0px 0px 2px #505050;
+  -webkit-box-shadow: inset 0px 0px 2px #505050;
+  box-shadow: inset 0px 0px 2px #505050;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  -webkit-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+}
 
-/* line 527, ../_scss/screen.scss */
+/* line 636, ../_scss/screen.scss */
 .selected {
   -moz-transition: 0.1s;
   -o-transition: 0.1s;
@@ -541,7 +623,7 @@ nav #userinfo a {
   transition: 0.1s;
   background-color: #363d50;
 }
-/* line 531, ../_scss/screen.scss */
+/* line 640, ../_scss/screen.scss */
 .selected a {
   text-transform: uppercase;
   font-size: 1.2em;
@@ -554,7 +636,7 @@ nav #userinfo a {
   color: #ea5144;
 }
 
-/* line 547, ../_scss/screen.scss */
+/* line 656, ../_scss/screen.scss */
 .leftbalk {
   padding: 140px 5px 20px 5px;
   width: 280px;
@@ -568,43 +650,43 @@ nav #userinfo a {
   -webkit-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
-/* line 559, ../_scss/screen.scss */
+/* line 668, ../_scss/screen.scss */
 .leftbalk p {
   color: #363D50;
 }
-/* line 563, ../_scss/screen.scss */
+/* line 672, ../_scss/screen.scss */
 .leftbalk p span {
   color: #EA5244;
   font-family: bebas_neueregular;
   font-size: 1.2em;
 }
-/* line 572, ../_scss/screen.scss */
+/* line 681, ../_scss/screen.scss */
 .leftbalk form {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 275px;
   height: 60px;
 }
-/* line 580, ../_scss/screen.scss */
+/* line 689, ../_scss/screen.scss */
 .leftbalk form label {
   float: left;
   color: #363D50;
   font-family: bebas_neueregular;
   font-size: 1.6em;
 }
-/* line 599, ../_scss/screen.scss */
+/* line 708, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .input input {
   width: 260px;
   height: 20px;
   font-size: 15px;
 }
-/* line 607, ../_scss/screen.scss */
+/* line 716, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group {
   float: right;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 613, ../_scss/screen.scss */
+/* line 722, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group input {
   background-color: transparent;
   color: #363D50;
@@ -615,11 +697,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 633, ../_scss/screen.scss */
+/* line 742, ../_scss/screen.scss */
 .leftbalk #formuploadimage #addImageImage {
   width: 262px;
 }
-/* line 639, ../_scss/screen.scss */
+/* line 748, ../_scss/screen.scss */
 .leftbalk #formuploadimage .uploadimage {
   float: right;
   margin-right: 15px;
@@ -633,11 +715,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 660, ../_scss/screen.scss */
+/* line 769, ../_scss/screen.scss */
 .leftbalk #formuploadvideo #addvideo {
   width: 262px;
 }
-/* line 666, ../_scss/screen.scss */
+/* line 775, ../_scss/screen.scss */
 .leftbalk #formuploadvideo .uploadvideo {
   float: right;
   margin-right: 15px;
@@ -651,13 +733,13 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 685, ../_scss/screen.scss */
+/* line 794, ../_scss/screen.scss */
 .leftbalk #back_button {
   padding-top: 15px;
   float: left;
   width: 130px;
 }
-/* line 691, ../_scss/screen.scss */
+/* line 800, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -667,13 +749,13 @@ nav #userinfo a {
   background-repeat: no-repeat;
   padding: 10px 0px 10px 45px;
 }
-/* line 707, ../_scss/screen.scss */
+/* line 816, ../_scss/screen.scss */
 .leftbalk #formdeleteboard {
   float: left;
   margin-top: -2px;
   width: 130px;
 }
-/* line 713, ../_scss/screen.scss */
+/* line 822, ../_scss/screen.scss */
 .leftbalk #formdeleteboard input {
   border: none;
   background-color: transparent;
@@ -686,18 +768,18 @@ nav #userinfo a {
   background-repeat: no-repeat;
 }
 
-/* line 731, ../_scss/screen.scss */
+/* line 840, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 736, ../_scss/screen.scss */
+/* line 845, ../_scss/screen.scss */
 #uitleg_pagina {
   width: 960px;
   margin: auto;
   margin-bottom: 100px;
 }
-/* line 742, ../_scss/screen.scss */
+/* line 851, ../_scss/screen.scss */
 #uitleg_pagina #logo {
   background: url(../images/assets/Login/Logo.png) no-repeat;
   width: 225px;
@@ -708,61 +790,61 @@ nav #userinfo a {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 756, ../_scss/screen.scss */
+/* line 865, ../_scss/screen.scss */
 #uitleg_pagina #inleiding {
   margin-bottom: 40px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 762, ../_scss/screen.scss */
+/* line 871, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header {
   margin-bottom: 30px;
 }
-/* line 766, ../_scss/screen.scss */
+/* line 875, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header h1 {
   font-family: bebas_neueregular;
   font-size: 3em;
   color: #363D50;
   text-align: center;
 }
-/* line 776, ../_scss/screen.scss */
+/* line 885, ../_scss/screen.scss */
 #uitleg_pagina #inleiding p {
   width: 750px;
   margin: auto;
   text-align: center;
 }
-/* line 784, ../_scss/screen.scss */
+/* line 893, ../_scss/screen.scss */
 #uitleg_pagina #attributen {
   margin-bottom: 50px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 791, ../_scss/screen.scss */
+/* line 900, ../_scss/screen.scss */
 #uitleg_pagina #attributen header {
   margin-bottom: 30px;
 }
-/* line 795, ../_scss/screen.scss */
+/* line 904, ../_scss/screen.scss */
 #uitleg_pagina #attributen header h2 {
   font-family: bebas_neueregular;
   font-size: 2em;
   color: #363D50;
   text-align: center;
 }
-/* line 805, ../_scss/screen.scss */
+/* line 914, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut {
   float: left;
   width: 400px;
   margin: 0 40px 20px 40px;
 }
-/* line 812, ../_scss/screen.scss */
+/* line 921, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img {
   border: 2px solid #363D50;
 }
-/* line 816, ../_scss/screen.scss */
+/* line 925, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img:hover {
   border: 2px solid #EA5244;
 }
-/* line 823, ../_scss/screen.scss */
+/* line 932, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut h3 {
   font-family: bebas_neueregular;
   font-size: 2em;
@@ -771,12 +853,12 @@ nav #userinfo a {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-/* line 834, ../_scss/screen.scss */
+/* line 943, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut p {
   margin-left: 10px;
   width: 380px;
 }
-/* line 848, ../_scss/screen.scss */
+/* line 957, ../_scss/screen.scss */
 #uitleg_pagina #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -788,7 +870,7 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 870, ../_scss/screen.scss */
+/* line 979, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -801,12 +883,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 879, ../_scss/screen.scss */
+/* line 988, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 884, ../_scss/screen.scss */
+/* line 993, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -823,12 +905,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 895, ../_scss/screen.scss */
+/* line 1004, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #363D50;
 }
 
-/* line 900, ../_scss/screen.scss */
+/* line 1009, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -842,7 +924,20 @@ nav #userinfo a {
   border: 3px solid #7de8ec;
 }
 
-/* line 914, ../_scss/screen.scss */
+/* line 1023, ../_scss/screen.scss */
+#formdeleteitem input {
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/assets/delete_button.png");
+  background-repeat: no-repeat;
+  padding: 20px;
+  position: absolute;
+  right: -15px;
+  top: -20px;
+  text-indent: -999px;
+}
+
+/* line 1039, ../_scss/screen.scss */
 .javascriptmessage .infomessageJS {
   color: #fff;
   width: 480px;
@@ -850,7 +945,7 @@ nav #userinfo a {
   background-color: #7de8ec;
   text-align: center;
 }
-/* line 922, ../_scss/screen.scss */
+/* line 1047, ../_scss/screen.scss */
 .javascriptmessage .errormessageJS {
   color: #fff;
   width: 480px;
@@ -859,7 +954,7 @@ nav #userinfo a {
   text-align: center;
 }
 
-/* line 932, ../_scss/screen.scss */
+/* line 1057, ../_scss/screen.scss */
 .item {
   z-index: 1;
 }
