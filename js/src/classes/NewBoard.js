@@ -60,8 +60,8 @@ module.exports = (function(){
 		
 		var $el = $(this);
 
-		if ($el.val().length > 19) {
-			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+		if ($el.val().length > 13) {
+			showInvalid($el, $('#errorboard'), "please fill in a maximum of 12 characters");
 		}else{
 			showValid($el, $('#errorboard'));
 		}

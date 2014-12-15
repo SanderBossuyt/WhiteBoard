@@ -178,21 +178,14 @@ module.exports = (function(){
 
 	//ajax voor delete van item
 	Application.prototype.itemkeDeleteHandler = function(item){
-
-
 		console.log("delete item");
-
 		var splitting = document.URL.split("id=")[1];
 		
 		var data = {
-
     		id : item.el.classList[2],
     		action : "delete item"
-
 		};
-
 		console.log(data);
-
 		$.ajax({ 
 			type:"POST",
 			url:"index.php?page=drawing&id="+ splitting, 
@@ -202,14 +195,11 @@ module.exports = (function(){
 				var splittingPartOne = response.split("<br />")[1];
 				
 				var splittingPartTwo = splittingPartOne.split("<script")[0];
-
 		    	$(".whiteboard").html(splittingPartTwo);
-
-		    	//new Application(splittingPartTwo);
-
+		    	new Application(document.querySelector('.whiteboard'));
 		   	}
 		});
-
+		
 	};
 		
 	return Application;
@@ -653,8 +643,8 @@ module.exports = (function(){
 		
 		var $el = $(this);
 
-		if ($el.val().length > 19) {
-			showInvalid($el, $('#errorboard'), "please fill in a maximum of 19 characters");
+		if ($el.val().length > 13) {
+			showInvalid($el, $('#errorboard'), "please fill in a maximum of 12 characters");
 		}else{
 			showValid($el, $('#errorboard'));
 		}

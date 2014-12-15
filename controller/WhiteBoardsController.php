@@ -273,14 +273,10 @@ private $userDAO;
 			}else if(!empty($_POST["deleteItem"]["action"])){
 
 				if($_POST["deleteItem"]["action"] == "delete item"){
-					var_dump($_POST["deleteItem"]['id']);
-					$this->itemDAO->delete_itemsEvent($_POST["deleteItem"]['id']);
+
+					$this->itemDAO->delete_item($_POST["deleteItem"]['id']);
 
 				}
-
-				
-
-
 
 			}else if(!empty($_POST["action"])){
 

@@ -634,19 +634,20 @@ nav{
 }
 
 .selected{
-	@include transition(0.1s);
+	//@include transition(0.1s);
 	background-color: rgb(54,61,80);
 
+	background-image: url("../images/assets/new_board_white.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
 	a{
-		text-transform: uppercase;
-		font-size: 1.2em;
-		position: absolute;
-		margin-left: -80px;
-		margin-top: 30px;
-		width: 160px;
-		background-color: #fff;
+
 		text-decoration: none;
 		color: #ea5144;
+		padding: 100px 5px 1px ;
+		border-bottom: 1px solid #ffffff;
+		text-transform: uppercase;
 
 
 	}
@@ -1024,12 +1025,12 @@ nav{
 
 		border: none;
 		background-color: transparent;
-		background-image: url("../images/assets/delete_button.png");
+		background-image: url("../images/assets/delete_button_item.png");
 		background-repeat: no-repeat;
 		padding: 20px;
 		position: absolute;
-		right: -15px;
-		top:-20px;
+		right: -30px;
+		top:-25px;
 		text-indent: -999px;
 
 	}

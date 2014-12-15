@@ -617,26 +617,21 @@ nav #userinfo a {
 
 /* line 636, ../_scss/screen.scss */
 .selected {
-  -moz-transition: 0.1s;
-  -o-transition: 0.1s;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
   background-color: #363d50;
+  background-image: url("../images/assets/new_board_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* line 640, ../_scss/screen.scss */
+/* line 644, ../_scss/screen.scss */
 .selected a {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  position: absolute;
-  margin-left: -80px;
-  margin-top: 30px;
-  width: 160px;
-  background-color: #fff;
   text-decoration: none;
   color: #ea5144;
+  padding: 100px 5px 1px;
+  border-bottom: 1px solid #ffffff;
+  text-transform: uppercase;
 }
 
-/* line 656, ../_scss/screen.scss */
+/* line 657, ../_scss/screen.scss */
 .leftbalk {
   padding: 140px 5px 20px 5px;
   width: 280px;
@@ -650,43 +645,43 @@ nav #userinfo a {
   -webkit-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
-/* line 668, ../_scss/screen.scss */
+/* line 669, ../_scss/screen.scss */
 .leftbalk p {
   color: #363D50;
 }
-/* line 672, ../_scss/screen.scss */
+/* line 673, ../_scss/screen.scss */
 .leftbalk p span {
   color: #EA5244;
   font-family: bebas_neueregular;
   font-size: 1.2em;
 }
-/* line 681, ../_scss/screen.scss */
+/* line 682, ../_scss/screen.scss */
 .leftbalk form {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 275px;
   height: 60px;
 }
-/* line 689, ../_scss/screen.scss */
+/* line 690, ../_scss/screen.scss */
 .leftbalk form label {
   float: left;
   color: #363D50;
   font-family: bebas_neueregular;
   font-size: 1.6em;
 }
-/* line 708, ../_scss/screen.scss */
+/* line 709, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .input input {
   width: 260px;
   height: 20px;
   font-size: 15px;
 }
-/* line 716, ../_scss/screen.scss */
+/* line 717, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group {
   float: right;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 722, ../_scss/screen.scss */
+/* line 723, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group input {
   background-color: transparent;
   color: #363D50;
@@ -697,11 +692,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 742, ../_scss/screen.scss */
+/* line 743, ../_scss/screen.scss */
 .leftbalk #formuploadimage #addImageImage {
   width: 262px;
 }
-/* line 748, ../_scss/screen.scss */
+/* line 749, ../_scss/screen.scss */
 .leftbalk #formuploadimage .uploadimage {
   float: right;
   margin-right: 15px;
@@ -715,11 +710,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 769, ../_scss/screen.scss */
+/* line 770, ../_scss/screen.scss */
 .leftbalk #formuploadvideo #addvideo {
   width: 262px;
 }
-/* line 775, ../_scss/screen.scss */
+/* line 776, ../_scss/screen.scss */
 .leftbalk #formuploadvideo .uploadvideo {
   float: right;
   margin-right: 15px;
@@ -733,13 +728,13 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 794, ../_scss/screen.scss */
+/* line 795, ../_scss/screen.scss */
 .leftbalk #back_button {
   padding-top: 15px;
   float: left;
   width: 130px;
 }
-/* line 800, ../_scss/screen.scss */
+/* line 801, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -749,13 +744,13 @@ nav #userinfo a {
   background-repeat: no-repeat;
   padding: 10px 0px 10px 45px;
 }
-/* line 816, ../_scss/screen.scss */
+/* line 817, ../_scss/screen.scss */
 .leftbalk #formdeleteboard {
   float: left;
   margin-top: -2px;
   width: 130px;
 }
-/* line 822, ../_scss/screen.scss */
+/* line 823, ../_scss/screen.scss */
 .leftbalk #formdeleteboard input {
   border: none;
   background-color: transparent;
@@ -768,18 +763,18 @@ nav #userinfo a {
   background-repeat: no-repeat;
 }
 
-/* line 840, ../_scss/screen.scss */
+/* line 841, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 845, ../_scss/screen.scss */
+/* line 846, ../_scss/screen.scss */
 #uitleg_pagina {
   width: 960px;
   margin: auto;
   margin-bottom: 100px;
 }
-/* line 851, ../_scss/screen.scss */
+/* line 852, ../_scss/screen.scss */
 #uitleg_pagina #logo {
   background: url(../images/assets/Login/Logo.png) no-repeat;
   width: 225px;
@@ -790,61 +785,61 @@ nav #userinfo a {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 865, ../_scss/screen.scss */
+/* line 866, ../_scss/screen.scss */
 #uitleg_pagina #inleiding {
   margin-bottom: 40px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 871, ../_scss/screen.scss */
+/* line 872, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header {
   margin-bottom: 30px;
 }
-/* line 875, ../_scss/screen.scss */
+/* line 876, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header h1 {
   font-family: bebas_neueregular;
   font-size: 3em;
   color: #363D50;
   text-align: center;
 }
-/* line 885, ../_scss/screen.scss */
+/* line 886, ../_scss/screen.scss */
 #uitleg_pagina #inleiding p {
   width: 750px;
   margin: auto;
   text-align: center;
 }
-/* line 893, ../_scss/screen.scss */
+/* line 894, ../_scss/screen.scss */
 #uitleg_pagina #attributen {
   margin-bottom: 50px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 900, ../_scss/screen.scss */
+/* line 901, ../_scss/screen.scss */
 #uitleg_pagina #attributen header {
   margin-bottom: 30px;
 }
-/* line 904, ../_scss/screen.scss */
+/* line 905, ../_scss/screen.scss */
 #uitleg_pagina #attributen header h2 {
   font-family: bebas_neueregular;
   font-size: 2em;
   color: #363D50;
   text-align: center;
 }
-/* line 914, ../_scss/screen.scss */
+/* line 915, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut {
   float: left;
   width: 400px;
   margin: 0 40px 20px 40px;
 }
-/* line 921, ../_scss/screen.scss */
+/* line 922, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img {
   border: 2px solid #363D50;
 }
-/* line 925, ../_scss/screen.scss */
+/* line 926, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img:hover {
   border: 2px solid #EA5244;
 }
-/* line 932, ../_scss/screen.scss */
+/* line 933, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut h3 {
   font-family: bebas_neueregular;
   font-size: 2em;
@@ -853,12 +848,12 @@ nav #userinfo a {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-/* line 943, ../_scss/screen.scss */
+/* line 944, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut p {
   margin-left: 10px;
   width: 380px;
 }
-/* line 957, ../_scss/screen.scss */
+/* line 958, ../_scss/screen.scss */
 #uitleg_pagina #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -870,7 +865,7 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 979, ../_scss/screen.scss */
+/* line 980, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -883,12 +878,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 988, ../_scss/screen.scss */
+/* line 989, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 993, ../_scss/screen.scss */
+/* line 994, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -905,12 +900,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 1004, ../_scss/screen.scss */
+/* line 1005, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #363D50;
 }
 
-/* line 1009, ../_scss/screen.scss */
+/* line 1010, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -924,20 +919,20 @@ nav #userinfo a {
   border: 3px solid #7de8ec;
 }
 
-/* line 1023, ../_scss/screen.scss */
+/* line 1024, ../_scss/screen.scss */
 #formdeleteitem input {
   border: none;
   background-color: transparent;
-  background-image: url("../images/assets/delete_button.png");
+  background-image: url("../images/assets/delete_button_item.png");
   background-repeat: no-repeat;
   padding: 20px;
   position: absolute;
-  right: -15px;
-  top: -20px;
+  right: -30px;
+  top: -25px;
   text-indent: -999px;
 }
 
-/* line 1039, ../_scss/screen.scss */
+/* line 1040, ../_scss/screen.scss */
 .javascriptmessage .infomessageJS {
   color: #fff;
   width: 480px;
@@ -945,7 +940,7 @@ nav #userinfo a {
   background-color: #7de8ec;
   text-align: center;
 }
-/* line 1047, ../_scss/screen.scss */
+/* line 1048, ../_scss/screen.scss */
 .javascriptmessage .errormessageJS {
   color: #fff;
   width: 480px;
@@ -954,7 +949,7 @@ nav #userinfo a {
   text-align: center;
 }
 
-/* line 1057, ../_scss/screen.scss */
+/* line 1058, ../_scss/screen.scss */
 .item {
   z-index: 1;
 }
