@@ -213,6 +213,10 @@ var Invite = require('./Invite');
 	
 	function DetailPage() {
 
+		$('.boards').mCustomScrollbar({
+			theme:"my-theme"
+		});
+
 		lis = document.querySelectorAll('li');
 		
 		for(var i = 2; i< lis.length; i++){

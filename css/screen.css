@@ -953,3 +953,19 @@ nav #userinfo a {
 .item {
   z-index: 1;
 }
+
+/* line 1062, ../_scss/screen.scss */
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #363D50;
+  width: 4px;
+}
+
+/* line 1067, ../_scss/screen.scss */
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #EA5244;
+}
+
+/* line 1071, ../_scss/screen.scss */
+.boards > .mCSB_inside > .mCSB_container {
+  margin-right: 5px;
+}

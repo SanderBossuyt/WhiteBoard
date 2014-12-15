@@ -1,0 +1,21 @@
+{
+  "name": "WhiteBoard copy",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SanderBossuyt/WhiteBoard",
+  "authors": [
+    "SanderBossuyt <sander.bossuyt@student.howest.be>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "malihu-custom-scrollbar-plugin": "~3.0.6",
+    "bean": "~1.0.14",
+    "jquery": "~2.1.1"
+  }
+}

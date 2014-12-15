@@ -7,6 +7,7 @@
     <meta name="keywords" content="devine cpIII">
     <link href="css/screen.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="fonts/bebas/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"/>
     <script type="text/javascript" src="scripts/modernizr.custom.92176.js"></script>
 	<title>Whiteboard - Sketch - CPIII</title>
 
@@ -45,8 +46,9 @@
 
 <?php echo $content; ?>
 
-<script src="js/bean.min.js"></script>
-<script src="js/jquery.min.js"></script>
+<script src="bower_components/bean/bean.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
 <script src="js/script.dist.js"></script>
 </body>
 </html>

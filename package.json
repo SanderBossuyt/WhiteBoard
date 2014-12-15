@@ -2,6 +2,7 @@
   "name": "whiteboard",
   "version": "1.0.0",
   "description": "whiteboard cpIII",
+  "homepage": "https://github.com/SanderBossuyt/WhiteBoard",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "browserify": "^6.1.0",
-    "gulp": "^3.8.8",
-    "gulp-uglify": "^1.0.1",
+    "gulp": "^3.8.10",
+    "gulp-bower": "0.0.7",
+    "gulp-jshint": "^1.9.0",
+    "gulp-uglify": "^1.0.2",
     "vinyl-source-stream": "^1.0.0"
   }
 }

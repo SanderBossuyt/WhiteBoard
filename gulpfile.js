@@ -1,10 +1,13 @@
 var gulp = require('gulp'),
 	browserify = require('browserify'),
 	source = require('vinyl-source-stream'),
-	gutil = require('gulp-util'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify');
+	var bower = require('gulp-bower');
 
+gulp.task('bower', function() {
+  return bower()
+});
 
 gulp.task('compress', function() {
   gulp.src('js/script.dist.js')
@@ -15,7 +18,6 @@ gulp.task('compress', function() {
 gulp.task('lint',function() {
   return gulp.src('js/src/**/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
 });
 
 
@@ -25,13 +27,13 @@ gulp.task('scripts', ['compress'],function(){ var bundler = browserify({
 	.on('error', function(err) {
 		console.log(err.message); this.emit('end');
 
-		gutil.beep();
+		
 	})
 	.pipe(source('script.dist.js')) .pipe(gulp.dest('./js'));
 });
 
 
-gulp.task('default', function(){
+gulp.task('default', ['bower'], function(){
 	var watcher = gulp.watch('js/src/**/*.js', ['lint','scripts']); 
 	watcher.on('change', function(event) {
 		['scripts']
