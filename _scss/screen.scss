@@ -439,6 +439,7 @@ nav{
 				border: 1px solid #363d50;
 				text-align: center;
 				padding-top: 98px;
+				@include transition(0.2s);
 
 
 				a{
@@ -450,6 +451,12 @@ nav{
 				}
 
 			}
+
+			li:hover{
+				@include transition(0.2s);
+				background-color: rgb(54,61,80);
+			}
+
 			#my_boards{
 
 				float: left;
@@ -633,8 +640,8 @@ nav{
 
 }
 
-.selected{
-	//@include transition(0.1s);
+.selected {
+	@include transition(0.1s);
 	background-color: rgb(54,61,80);
 
 	background-image: url("../images/assets/new_board_white.png");
@@ -651,7 +658,11 @@ nav{
 
 
 	}
+
+
 }
+
+
 
 //whiteboard
 .leftbalk{

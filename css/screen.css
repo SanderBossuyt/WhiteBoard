@@ -463,46 +463,58 @@ nav #userinfo a {
   border: 1px solid #363d50;
   text-align: center;
   padding-top: 98px;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
-/* line 444, ../_scss/screen.scss */
+/* line 445, ../_scss/screen.scss */
 #home #my_boards_container .boards li a {
   text-decoration: none;
   color: #ea5144;
 }
-/* line 453, ../_scss/screen.scss */
+/* line 455, ../_scss/screen.scss */
+#home #my_boards_container .boards li:hover {
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #363d50;
+}
+/* line 460, ../_scss/screen.scss */
 #home #my_boards_container .boards #my_boards {
   float: left;
   width: 480px;
 }
-/* line 458, ../_scss/screen.scss */
+/* line 465, ../_scss/screen.scss */
 #home #my_boards_container .boards #my_boards p {
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
-/* line 471, ../_scss/screen.scss */
+/* line 478, ../_scss/screen.scss */
 #home #my_boards_container .boards #invite_boards h4 {
   margin-left: 20px;
   color: #363d50;
   font-family: bebas_neueregular;
   font-size: 2em;
 }
-/* line 479, ../_scss/screen.scss */
+/* line 486, ../_scss/screen.scss */
 #home #my_boards_container .boards #invite_boards p {
   margin-left: 20px;
 }
-/* line 488, ../_scss/screen.scss */
+/* line 495, ../_scss/screen.scss */
 #home #my_boards_container form {
   margin-top: -20px;
 }
-/* line 492, ../_scss/screen.scss */
+/* line 499, ../_scss/screen.scss */
 #home #my_boards_container form span {
   float: left;
   color: #ffffff;
   font-family: bebas_neueregular;
   font-size: 1.3em;
 }
-/* line 500, ../_scss/screen.scss */
+/* line 507, ../_scss/screen.scss */
 #home #my_boards_container form input {
   float: left;
   margin-left: 5px;
@@ -513,7 +525,7 @@ nav #userinfo a {
   border: 1px dotted #ea5144;
   background-color: transparent;
 }
-/* line 512, ../_scss/screen.scss */
+/* line 519, ../_scss/screen.scss */
 #home #my_boards_container form #add_board {
   border: 1px solid #ea5144;
   background-color: #ea5144;
@@ -522,7 +534,7 @@ nav #userinfo a {
   margin-left: 24px;
   padding: 1px;
 }
-/* line 523, ../_scss/screen.scss */
+/* line 530, ../_scss/screen.scss */
 #home #my_boards_container form #add_board:hover {
   border: 2px solid #ea5144;
   background-color: #363E4F;
@@ -541,12 +553,12 @@ nav #userinfo a {
   -webkit-transform: translate(2px, 2px);
   transform: translate(2px, 2px);
 }
-/* line 540, ../_scss/screen.scss */
+/* line 547, ../_scss/screen.scss */
 #home #board_users {
   float: left;
   margin-left: 20px;
 }
-/* line 545, ../_scss/screen.scss */
+/* line 552, ../_scss/screen.scss */
 #home #board_users #users {
   width: 320px;
   height: 480px;
@@ -554,13 +566,13 @@ nav #userinfo a {
   border: 3px solid #363d50;
   background-color: #e3e3e3;
 }
-/* line 554, ../_scss/screen.scss */
+/* line 561, ../_scss/screen.scss */
 #home #board_users #users li {
   width: 320px;
   height: 50px;
   border-bottom: 1px solid #363d50;
 }
-/* line 560, ../_scss/screen.scss */
+/* line 567, ../_scss/screen.scss */
 #home #board_users #users li p {
   color: #363d50;
   font-family: bebas_neueregular;
@@ -568,28 +580,28 @@ nav #userinfo a {
   text-align: center;
   padding-top: 10px;
 }
-/* line 568, ../_scss/screen.scss */
+/* line 575, ../_scss/screen.scss */
 #home #board_users #users li p span {
   font-size: 0.7em;
   color: #ea5144;
 }
-/* line 579, ../_scss/screen.scss */
+/* line 586, ../_scss/screen.scss */
 #home #board_users #users form {
   margin-top: 20px;
 }
-/* line 585, ../_scss/screen.scss */
+/* line 592, ../_scss/screen.scss */
 #home #board_users #users form label span {
   color: #363d50;
   font-family: bebas_neueregular;
   font-size: 1.5em;
 }
-/* line 592, ../_scss/screen.scss */
+/* line 599, ../_scss/screen.scss */
 #home #board_users #users form label input {
   float: left;
   width: 220px;
   height: 25px;
 }
-/* line 602, ../_scss/screen.scss */
+/* line 609, ../_scss/screen.scss */
 #home #board_users #users form #add_invite {
   width: 90px;
   height: 30px;
@@ -597,7 +609,7 @@ nav #userinfo a {
   background-color: #ea5144;
   color: #ffffff;
 }
-/* line 610, ../_scss/screen.scss */
+/* line 617, ../_scss/screen.scss */
 #home #board_users #users form #add_invite:hover {
   border: 2px solid #ea5144;
   background-color: #363E4F;
@@ -615,14 +627,18 @@ nav #userinfo a {
   transform: translate(2px, 2px);
 }
 
-/* line 636, ../_scss/screen.scss */
+/* line 643, ../_scss/screen.scss */
 .selected {
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   background-color: #363d50;
   background-image: url("../images/assets/new_board_white.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 644, ../_scss/screen.scss */
+/* line 651, ../_scss/screen.scss */
 .selected a {
   text-decoration: none;
   color: #ea5144;
@@ -631,7 +647,7 @@ nav #userinfo a {
   text-transform: uppercase;
 }
 
-/* line 657, ../_scss/screen.scss */
+/* line 668, ../_scss/screen.scss */
 .leftbalk {
   padding: 140px 5px 20px 5px;
   width: 280px;
@@ -645,43 +661,43 @@ nav #userinfo a {
   -webkit-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
-/* line 669, ../_scss/screen.scss */
+/* line 680, ../_scss/screen.scss */
 .leftbalk p {
   color: #363D50;
 }
-/* line 673, ../_scss/screen.scss */
+/* line 684, ../_scss/screen.scss */
 .leftbalk p span {
   color: #EA5244;
   font-family: bebas_neueregular;
   font-size: 1.2em;
 }
-/* line 682, ../_scss/screen.scss */
+/* line 693, ../_scss/screen.scss */
 .leftbalk form {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 275px;
   height: 60px;
 }
-/* line 690, ../_scss/screen.scss */
+/* line 701, ../_scss/screen.scss */
 .leftbalk form label {
   float: left;
   color: #363D50;
   font-family: bebas_neueregular;
   font-size: 1.6em;
 }
-/* line 709, ../_scss/screen.scss */
+/* line 720, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .input input {
   width: 260px;
   height: 20px;
   font-size: 15px;
 }
-/* line 717, ../_scss/screen.scss */
+/* line 728, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group {
   float: right;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 723, ../_scss/screen.scss */
+/* line 734, ../_scss/screen.scss */
 .leftbalk #formuploadpostit .form-group input {
   background-color: transparent;
   color: #363D50;
@@ -692,11 +708,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 743, ../_scss/screen.scss */
+/* line 754, ../_scss/screen.scss */
 .leftbalk #formuploadimage #addImageImage {
   width: 262px;
 }
-/* line 749, ../_scss/screen.scss */
+/* line 760, ../_scss/screen.scss */
 .leftbalk #formuploadimage .uploadimage {
   float: right;
   margin-right: 15px;
@@ -710,11 +726,11 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 770, ../_scss/screen.scss */
+/* line 781, ../_scss/screen.scss */
 .leftbalk #formuploadvideo #addvideo {
   width: 262px;
 }
-/* line 776, ../_scss/screen.scss */
+/* line 787, ../_scss/screen.scss */
 .leftbalk #formuploadvideo .uploadvideo {
   float: right;
   margin-right: 15px;
@@ -728,13 +744,13 @@ nav #userinfo a {
   font-size: 1em;
   padding-top: 5px;
 }
-/* line 795, ../_scss/screen.scss */
+/* line 806, ../_scss/screen.scss */
 .leftbalk #back_button {
   padding-top: 15px;
   float: left;
   width: 130px;
 }
-/* line 801, ../_scss/screen.scss */
+/* line 812, ../_scss/screen.scss */
 .leftbalk #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -744,13 +760,13 @@ nav #userinfo a {
   background-repeat: no-repeat;
   padding: 10px 0px 10px 45px;
 }
-/* line 817, ../_scss/screen.scss */
+/* line 828, ../_scss/screen.scss */
 .leftbalk #formdeleteboard {
   float: left;
   margin-top: -2px;
   width: 130px;
 }
-/* line 823, ../_scss/screen.scss */
+/* line 834, ../_scss/screen.scss */
 .leftbalk #formdeleteboard input {
   border: none;
   background-color: transparent;
@@ -763,18 +779,18 @@ nav #userinfo a {
   background-repeat: no-repeat;
 }
 
-/* line 841, ../_scss/screen.scss */
+/* line 852, ../_scss/screen.scss */
 .whiteboard {
   height: 100%;
 }
 
-/* line 846, ../_scss/screen.scss */
+/* line 857, ../_scss/screen.scss */
 #uitleg_pagina {
   width: 960px;
   margin: auto;
   margin-bottom: 100px;
 }
-/* line 852, ../_scss/screen.scss */
+/* line 863, ../_scss/screen.scss */
 #uitleg_pagina #logo {
   background: url(../images/assets/Login/Logo.png) no-repeat;
   width: 225px;
@@ -785,61 +801,61 @@ nav #userinfo a {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 866, ../_scss/screen.scss */
+/* line 877, ../_scss/screen.scss */
 #uitleg_pagina #inleiding {
   margin-bottom: 40px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 872, ../_scss/screen.scss */
+/* line 883, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header {
   margin-bottom: 30px;
 }
-/* line 876, ../_scss/screen.scss */
+/* line 887, ../_scss/screen.scss */
 #uitleg_pagina #inleiding header h1 {
   font-family: bebas_neueregular;
   font-size: 3em;
   color: #363D50;
   text-align: center;
 }
-/* line 886, ../_scss/screen.scss */
+/* line 897, ../_scss/screen.scss */
 #uitleg_pagina #inleiding p {
   width: 750px;
   margin: auto;
   text-align: center;
 }
-/* line 894, ../_scss/screen.scss */
+/* line 905, ../_scss/screen.scss */
 #uitleg_pagina #attributen {
   margin-bottom: 50px;
   border-bottom: 1px dashed #EA5244;
   padding-bottom: 40px;
 }
-/* line 901, ../_scss/screen.scss */
+/* line 912, ../_scss/screen.scss */
 #uitleg_pagina #attributen header {
   margin-bottom: 30px;
 }
-/* line 905, ../_scss/screen.scss */
+/* line 916, ../_scss/screen.scss */
 #uitleg_pagina #attributen header h2 {
   font-family: bebas_neueregular;
   font-size: 2em;
   color: #363D50;
   text-align: center;
 }
-/* line 915, ../_scss/screen.scss */
+/* line 926, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut {
   float: left;
   width: 400px;
   margin: 0 40px 20px 40px;
 }
-/* line 922, ../_scss/screen.scss */
+/* line 933, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img {
   border: 2px solid #363D50;
 }
-/* line 926, ../_scss/screen.scss */
+/* line 937, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut img:hover {
   border: 2px solid #EA5244;
 }
-/* line 933, ../_scss/screen.scss */
+/* line 944, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut h3 {
   font-family: bebas_neueregular;
   font-size: 2em;
@@ -848,12 +864,12 @@ nav #userinfo a {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-/* line 944, ../_scss/screen.scss */
+/* line 955, ../_scss/screen.scss */
 #uitleg_pagina #attributen .attribut p {
   margin-left: 10px;
   width: 380px;
 }
-/* line 958, ../_scss/screen.scss */
+/* line 969, ../_scss/screen.scss */
 #uitleg_pagina #back_button a {
   text-decoration: none;
   color: #EA5244;
@@ -865,7 +881,7 @@ nav #userinfo a {
   padding: 8px 15px 10px 45px;
 }
 
-/* line 980, ../_scss/screen.scss */
+/* line 991, ../_scss/screen.scss */
 .postit {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -878,12 +894,12 @@ nav #userinfo a {
   left: 260px;
   top: 190px;
 }
-/* line 989, ../_scss/screen.scss */
+/* line 1000, ../_scss/screen.scss */
 .postit p {
   text-align: center;
 }
 
-/* line 994, ../_scss/screen.scss */
+/* line 1005, ../_scss/screen.scss */
 .picture {
   z-index: 1;
   width: 220px;
@@ -900,12 +916,12 @@ nav #userinfo a {
   -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
-/* line 1005, ../_scss/screen.scss */
+/* line 1016, ../_scss/screen.scss */
 .picture img {
   border: 3px solid #363D50;
 }
 
-/* line 1010, ../_scss/screen.scss */
+/* line 1021, ../_scss/screen.scss */
 .video {
   -moz-box-shadow: 0 2px 6px #505050;
   -webkit-box-shadow: 0 2px 6px #505050;
@@ -919,7 +935,7 @@ nav #userinfo a {
   border: 3px solid #7de8ec;
 }
 
-/* line 1024, ../_scss/screen.scss */
+/* line 1035, ../_scss/screen.scss */
 #formdeleteitem input {
   border: none;
   background-color: transparent;
@@ -932,7 +948,7 @@ nav #userinfo a {
   text-indent: -999px;
 }
 
-/* line 1040, ../_scss/screen.scss */
+/* line 1051, ../_scss/screen.scss */
 .javascriptmessage .infomessageJS {
   color: #fff;
   width: 480px;
@@ -940,7 +956,7 @@ nav #userinfo a {
   background-color: #7de8ec;
   text-align: center;
 }
-/* line 1048, ../_scss/screen.scss */
+/* line 1059, ../_scss/screen.scss */
 .javascriptmessage .errormessageJS {
   color: #fff;
   width: 480px;
@@ -949,23 +965,23 @@ nav #userinfo a {
   text-align: center;
 }
 
-/* line 1058, ../_scss/screen.scss */
+/* line 1069, ../_scss/screen.scss */
 .item {
   z-index: 1;
 }
 
-/* line 1062, ../_scss/screen.scss */
+/* line 1073, ../_scss/screen.scss */
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #363D50;
   width: 4px;
 }
 
-/* line 1067, ../_scss/screen.scss */
+/* line 1078, ../_scss/screen.scss */
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
   background-color: #EA5244;
 }
 
-/* line 1071, ../_scss/screen.scss */
+/* line 1082, ../_scss/screen.scss */
 .boards > .mCSB_inside > .mCSB_container {
   margin-right: 5px;
 }
