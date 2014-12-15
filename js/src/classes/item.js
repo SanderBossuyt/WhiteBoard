@@ -8,16 +8,16 @@ module.exports = (function(){
 		
 
 		
-		var deleteItem = document.querySelector(".deleteitem");
+		var deleteItem = this.el.querySelector(".deleteitem");
 
 		deleteItem.addEventListener('click', this.clickHandler.bind(this));
 	}
 
-	Item.prototype.clickHandler = function(first_argument) {
+	Item.prototype.clickHandler = function(event) {
 		
 		event.preventDefault();
 
-		console.log("clickHandler");
+		console.log("clickHandler" + this);
 
 		bean.fire(this,"delete", this);
 

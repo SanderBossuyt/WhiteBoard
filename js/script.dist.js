@@ -198,14 +198,14 @@ module.exports = (function(){
 			url:"index.php?page=drawing&id="+ splitting, 
 			data: {deleteItem: data},
 			success:function(response){ 
-				
+				console.log(response);
 				var splittingPartOne = response.split("<br />")[1];
 				
 				var splittingPartTwo = splittingPartOne.split("<script")[0];
 
 		    	$(".whiteboard").html(splittingPartTwo);
 
-		    	new Application(document.querySelector(".whiteboard"));
+		    	//new Application(splittingPartTwo);
 
 		   	}
 		});
@@ -507,16 +507,16 @@ module.exports = (function(){
 		
 
 		
-		var deleteItem = document.querySelector(".deleteitem");
+		var deleteItem = this.el.querySelector(".deleteitem");
 
 		deleteItem.addEventListener('click', this.clickHandler.bind(this));
 	}
 
-	Item.prototype.clickHandler = function(first_argument) {
+	Item.prototype.clickHandler = function(event) {
 		
 		event.preventDefault();
 
-		console.log("clickHandler");
+		console.log("clickHandler" + this);
 
 		bean.fire(this,"delete", this);
 

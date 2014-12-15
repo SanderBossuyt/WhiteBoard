@@ -74,14 +74,14 @@ module.exports = (function(){
 			url:"index.php?page=drawing&id="+ splitting, 
 			data: {deleteItem: data},
 			success:function(response){ 
-				
+				console.log(response);
 				var splittingPartOne = response.split("<br />")[1];
 				
 				var splittingPartTwo = splittingPartOne.split("<script")[0];
 
 		    	$(".whiteboard").html(splittingPartTwo);
 
-		    	new Application(document.querySelector(".whiteboard"));
+		    	//new Application(splittingPartTwo);
 
 		   	}
 		});
